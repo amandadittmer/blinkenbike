@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 395.81 358">
+  <defs>
+    <symbol id="hjul" data-name="hjul" viewBox="0 0 395.81 358">
+      <polyline points="94.88 57.23 196.08 175.62 152.15 32.28" fill="none" stroke="#b4926f" stroke-miterlimit="10" stroke-width="3"/>
+      <polyline points="48.5 103.95 196.08 175.62 27.05 163.44" fill="none" stroke="#b4926f" stroke-miterlimit="10" stroke-width="3"/>
+      <polyline points="34.7 226.74 196.08 175.62 66.41 277.15" fill="none" stroke="#b4926f" stroke-miterlimit="10" stroke-width="3"/>
+      <polyline points="120.99 315.39 196.08 175.62 182.25 330.84" fill="none" stroke="#b4926f" stroke-miterlimit="10" stroke-width="3"/>
+      <polyline points="245.53 325.51 196.08 175.62 303.11 299.47" fill="none" stroke="#b4926f" stroke-miterlimit="10" stroke-width="3"/>
+      <polyline points="343.38 259.95 196.08 175.62 367.86 200.32" fill="none" stroke="#b4926f" stroke-miterlimit="10" stroke-width="3"/>
+      <polyline points="365.31 145.51 196.08 175.62 336.22 88.99" fill="none" stroke="#b4926f" stroke-miterlimit="10" stroke-width="3"/>
+      <polyline points="221.31 26.82 196.48 176.83 280.7 44.85" fill="none" stroke="#b4926f" stroke-miterlimit="10" stroke-width="3"/>
+      <ellipse cx="197.83" cy="179.14" rx="171.68" ry="152.33" fill="none" stroke="#e5c9a5" stroke-miterlimit="10" stroke-width="6"/>
+      <ellipse cx="196.08" cy="175.62" rx="14.31" ry="14.86" fill="#6e553e" opacity="0.58"/>
+      <ellipse cx="197.91" cy="179" rx="188.41" ry="169.5" fill="none" stroke="#b4926f" stroke-miterlimit="10" stroke-width="19"/>
+      <ellipse cx="197.83" cy="179.19" rx="176.92" ry="157.88" fill="none" stroke="#b4926f" stroke-miterlimit="10" stroke-width="2"/>
+    </symbol>
+  </defs>
+  <title>hjul</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <use width="395.81" height="358" xlink:href="#hjul"/>
+    </g>
+  </g>
+</svg>

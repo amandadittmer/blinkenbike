@@ -9,3 +9,34 @@
     grid-template-rows: repeat (1fr);
     grid-template-areas: "splash" "bog" "om";
 }
+
+#blinkenbike {
+    position: absolute;
+    width: 21vw;
+
+}
+
+.bike_in {
+    background-image: url(SVG/hjul.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 19vw;
+
+    left: 6vw;
+    z-index: 99;
+    animation-name: bike_in_kf;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+
+    position: absolute;
+
+}
+
+@keyframes bike_in_kf {
+    0% {
+        left: 99vw;
+    }
+    100% {
+        left: 6vw;
+    }
+}
