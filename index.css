@@ -28,7 +28,7 @@ nav {
 #blinkenbike {
     position: absolute;
     width: 21vw;
-
+    top: 75vw;
 }
 
 .bike_in {
@@ -37,7 +37,7 @@ nav {
     background-repeat: no-repeat;
     height: 19vw;
 
-    left: 6vw;
+    left: 3vw;
     z-index: 99;
     animation-name: bike_in_kf;
     animation-duration: 3s;
@@ -49,13 +49,14 @@ nav {
 
 @keyframes bike_in_kf {
     0% {
-        left: 99vw;
+        left: -30vw;
     }
     100% {
-        left: 6vw;
+        left: 3vw;
     }
 }
 
+<<<<<<< HEAD
 
 
 
@@ -72,3 +73,36 @@ nav {
     width: 45%;
     margin-left: 55%
 }
+=======
+#biketext {
+    position: absolute;
+
+    top: 77vw;
+}
+
+.btext_in {
+    background-image: url(SVG/overskrift.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 3.2vw;
+    width: 17vw;
+    left: 27vw;
+    z-index: 99;
+    animation-name: btext_in_kf;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+
+    position: absolute;
+
+}
+
+@keyframes btext_in_kf {
+
+
+    0% {
+        left: 99vw;
+    }
+    100% {
+        left: 27vw;
+    }
+>>>>>>> origin/master
