@@ -1,5 +1,20 @@
+body {
+    margin: 5%;
+}
+
 .logo img {
-    width: 70vw;
+    width: 40vw;
+    margin-top: -10%;
+}
+
+nav a {
+    color: black;
+}
+
+nav {
+    text-align: right;
+    margin-top: 5%;
+    margin-right: 5%;
 
 }
 
@@ -39,4 +54,21 @@
     100% {
         left: 6vw;
     }
+}
+
+
+
+
+
+
+
+/*koncept*/
+
+.koncept_boks_1 {
+    width: 45%;
+}
+
+.koncept_boks_3 {
+    width: 45%;
+    margin-left: 55%
 }
