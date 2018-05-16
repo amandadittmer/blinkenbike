@@ -1,0 +1,11 @@
+.logo img {
+    width: 70vw;
+
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (1fr);
+    grid-template-areas: "splash" "bog" "om";
+}
