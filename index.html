@@ -59,7 +59,9 @@
 
             }
 
+
             @keyframes bike_in_kf {
+
                 0% {
                     left: -30vw;
                 }
@@ -67,6 +69,7 @@
                     left: 3vw;
                 }
             }
+
             #biketext {
                 position: absolute;
                 width: 20vw;
@@ -95,12 +98,46 @@
                 0% {
                     left: 99vw;
                 }
-                100% {
+                0% {
                     left: 27vw;
                 }
             }
-        }
 
+            #bikep {
+                position: absolute;
+                width: 65vw;
+                left: 27vw;
+                top: 55vw;
+            }
+            .bikep_in {
+                background-image: url(SVG/overskrift.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 3.6vw;
+
+                left: 27vw;
+                z-index: 99;
+                animation-name: btext_in_kf;
+                animation-duration: 5s;
+                animation-iteration-count: 1;
+
+                position: absolute;
+
+            }
+
+            @keyframes bikep_in_kf {
+
+
+                0% {
+                    left: 99vw;
+                }
+                0% {
+                    left: 27vw;
+                }
+            }
+
+
+        }
     </style>
 </head>
 
@@ -121,8 +158,11 @@
     </header>
     <div id="blinkenbike" class=""></div>
     <div id="biketext" class="">
-        <p></p>
     </div>
+    <div id="bikep" class="">
+        <p>Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.</p>
+    </div>
+
     <div id="historie" class=""></div>
     <div id="some" class=""></div>
     <div id="om" class=""></div>

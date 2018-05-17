@@ -93,7 +93,7 @@ body {
 }
 
 
-<<<<<<< HEAD
+
 #biketext {
     position: absolute;
 
@@ -138,20 +138,18 @@ body {
         width: 45%;
         margin-left: 55%
     }
-=======
 
 
 
 
 
-/*koncept*/
 
-.koncept_boks_1 {
-    width: 45%;
-}
+    /*koncept*/
+    .koncept_boks_1 {
+        width: 45%;
+    }
 
-.koncept_boks_3 {
-    width: 45%;
-    margin-left: 55%
-}
->>>>>>> origin/master
+    .koncept_boks_3 {
+        width: 45%;
+        margin-left: 55%
+    }
