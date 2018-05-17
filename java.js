@@ -39,12 +39,29 @@ window.onscroll = function () {
 function myFunction() {
 
 
-    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         document.getElementById("myImg").className = "slideUp";
         document.getElementById("motorp").className = "slideUp";
         document.querySelector("#motorp").style.visibility = "visible";
     }
 }
+
+
+window.onscroll = function () {
+
+    myFunctionLygte()
+};
+
+function myFunctionLygte() {
+
+
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        document.getElementById("myLygte").className = "lygteUp";
+        document.getElementById("lygtep").className = "lygteUp";
+        document.querySelector("#lygtep").style.visibility = "visible";
+    }
+}
+
 
 
 

@@ -141,8 +141,8 @@
    .slideUp {
             animation-name: slideUp;
             -webkit-animation-name: slideUp;
-            animation-duration: 2s;
-            -webkit-animation-duration: 2s;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
             visibility: visible;
         }
 
@@ -205,6 +205,50 @@
             margin-top: 450px;
         }
 
+            #lygtep{
+                  width: 60vw;
+            position: absolute;
+                left: 36vw;
+            }
+             .lygte{
+                float: left;
+
+            position: relative;
+            }
+
+               .lygteUp {
+            animation-name: slideUp;
+            -webkit-animation-name: slideUp;
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            visibility: visible;
+        }
+
+
+
+        @keyframes lygteUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        @-webkit-keyframes lygteUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+
         }
 
 
@@ -241,6 +285,17 @@
        <h3>HISTORIE</h3>
         <p>Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.</p>
     </div>
+    <hr>
+     <div class="lygte">
+        <img id="myLygte" src="SVG/motor.svg" width="304" height="228">
+
+    </div>
+
+    <div id="lygtep">
+       <h3>SoMe</h3>
+        <p>Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.</p>
+    </div>
+
     <div id="historie" class=""></div>
     <div id="some" class=""></div>
     <div id="om" class=""></div>
