@@ -56,24 +56,7 @@ nav {
     }
 }
 
-<<<<<<< HEAD
 
-
-
-
-
-
-/*koncept*/
-
-.koncept_boks_1 {
-    width: 45%;
-}
-
-.koncept_boks_3 {
-    width: 45%;
-    margin-left: 55%
-}
-=======
 #biketext {
     position: absolute;
 
@@ -105,4 +88,16 @@ nav {
     100% {
         left: 27vw;
     }
->>>>>>> origin/master
+
+
+
+    /*koncept*/
+    .koncept_boks_1 {
+        width: 45%;
+        margin-right: 20%;
+    }
+
+    .koncept_boks_3 {
+        width: 45%;
+        margin-left: 55%
+    }

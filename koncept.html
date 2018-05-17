@@ -5,21 +5,61 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koncept</title>
-    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            margin: 5%;
+        }
+
+        .logo img {
+            width: 40vw;
+            margin-top: -10%;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+        }
+
+        nav {
+            text-align: right;
+            margin-top: 5%;
+            margin-right: 5%;
+            word-spacing: 10px;
+        }
+
+        a:hover {
+            color: bisque;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat (1fr);
+            grid-template-areas: "splash" "bog" "om";
+        }
+
+        .koncept_boks_1 {
+            width: 45%;
+            margin-right: 20%;
+        }
+
+        .koncept_boks_3 {
+            width: 45%;
+            margin-left: 55%
+        }
+    </style>
 </head>
 
 <body>
-
     <header>
         <nav>
-
-            <a href="cv.html">OM</a>
-            <a href="webdesign.html">KONCEPT</a>
-            <a href="video.html">PRODUKT</a>
-            <a href="animation.html">NYHEDER</a>
-
-
+            <a href="index.html">FORSIDE</a>
+            <a href="om.html">OM</a>
+            <a href="koncept.html">KONCEPT</a>
+            <a href="produkt.html">PRODUKT</a>
+            <a href="nyheder.html">NYHEDER</a>
         </nav>
+
         <div class="logo">
             <img src="logob.png" alt="logo">
         </div>
