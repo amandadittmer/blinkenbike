@@ -14,8 +14,9 @@
         @media screen and (max-width:627px) {
 
             .logo img {
-                width: 40vw;
-                margin-top: -10%;
+                width:40vw;
+                height: 35vw;
+                     visibility: visible;
             }
 
             nav a {
@@ -24,23 +25,21 @@
 
             nav {
                 text-align: right;
-                margin-top: 5%;
-                margin-right: 5%;
+                margin-top: 1%;
+                margin-right: 2%;
                 display: block;
-                width:
+
+
             }
 
-            .menu {
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat (1fr);
-                grid-template-areas: "splash" "bog" "om";
-            }
+
 
             #blinkenbike {
                 position: absolute;
                 width: 21vw;
                 top: 50vw;
+                   margin-top: 5%;
+
             }
 
             .bike_in {
@@ -74,6 +73,7 @@
                 position: absolute;
                 width: 20vw;
                 top: 52vw;
+                margin-top: 5%;
             }
 
             .btext_in {
@@ -108,7 +108,9 @@
                 width: 65vw;
                 left: 27vw;
                 top: 55vw;
+                   margin-top: 5%;
             }
+
             .bikep_in {
                 background-image: url(SVG/overskrift.svg);
                 background-size: cover;
@@ -136,8 +138,76 @@
                 }
             }
 
+   .slideUp {
+            animation-name: slideUp;
+            -webkit-animation-name: slideUp;
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            visibility: visible;
+        }
+
+
+
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        @-webkit-keyframes slideUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        #motorp {
+            width: 55vw;
+            position: absolute;
+        }
+
+        .col-1 {
+            float: left;
+            left: 58vw;
+            position: relative;
+        }
+
+
+        .col-2 {
+            float: left;
+            padding-left: 25px;
+        }
+
+
+        body {
+            height: 1500px;
+        }
+
+        img {
+            width: 140px;
+            height: 110px;
+            visibility: hidden;
+
 
         }
+
+
+        hr {
+            margin-top: 450px;
+        }
+
+        }
+
+
     </style>
 </head>
 
@@ -162,7 +232,15 @@
     <div id="bikep" class="">
         <p>Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.</p>
     </div>
+    <hr>
+    <div class="col-1">
+        <img id="myImg" src="SVG/motor.svg" width="304" height="228">
 
+    </div>
+    <div id="motorp">
+       <h3>HISTORIE</h3>
+        <p>Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.</p>
+    </div>
     <div id="historie" class=""></div>
     <div id="some" class=""></div>
     <div id="om" class=""></div>
@@ -170,6 +248,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="java.js"></script>
-</body>
+    <html>
 
-</html>
+
+
+
+    </html>

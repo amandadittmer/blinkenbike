@@ -2,6 +2,7 @@ $(window).on("load", startAnim);
 
 function startAnim() {
     $("#bikep").hide();
+    document.querySelector("#motorp").style.visibility = "hidden";
     $("#blinkenbike").addClass("bike_in");
 
 
@@ -26,7 +27,26 @@ function textIn() {
     $("#bikep").fadeIn();
     $("#bikep").fadeIn("slow");
     $("#bikep").fadeIn(7000);
+
+    setTimeout(myFunction, 1000);
 }
+
+window.onscroll = function () {
+
+    myFunction()
+};
+
+function myFunction() {
+
+
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        document.getElementById("myImg").className = "slideUp";
+        document.getElementById("motorp").className = "slideUp";
+        document.querySelector("#motorp").style.visibility = "visible";
+    }
+}
+
+
 
 //function laptopIpadIn() {
 //    console.log("laptop kommer ind");
