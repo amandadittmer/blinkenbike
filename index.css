@@ -2,61 +2,98 @@ body {
     margin: 5%;
 }
 
-.logo img {
-    width: 40vw;
-    margin-top: -10%;
-}
+@media screen and (max-width:627px) {
 
-nav a {
-    color: black;
-}
-
-nav {
-    text-align: right;
-    margin-top: 5%;
-    margin-right: 5%;
-
-}
-
-.menu {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat (1fr);
-    grid-template-areas: "splash" "bog" "om";
-}
-
-#blinkenbike {
-    position: absolute;
-    width: 21vw;
-    top: 75vw;
-}
-
-.bike_in {
-    background-image: url(SVG/hjul.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 19vw;
-
-    left: 3vw;
-    z-index: 99;
-    animation-name: bike_in_kf;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-
-    position: absolute;
-
-}
-
-@keyframes bike_in_kf {
-    0% {
-        left: -30vw;
+    .logo img {
+        width: 40vw;
+        margin-top: -10%;
     }
-    100% {
+
+    nav a {
+        color: black;
+    }
+
+    nav {
+        text-align: right;
+        margin-top: 5%;
+        margin-right: 5%;
+        display: block;
+        width:
+    }
+
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat (1fr);
+        grid-template-areas: "splash" "bog" "om";
+    }
+
+    #blinkenbike {
+        position: absolute;
+        width: 21vw;
+        top: 50vw;
+    }
+
+    .bike_in {
+        background-image: url(SVG/hjul.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 19vw;
+
         left: 3vw;
+        z-index: 99;
+        animation-name: bike_in_kf;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+
+        position: absolute;
+
+    }
+
+    @keyframes bike_in_kf {
+        0% {
+            left: -30vw;
+        }
+        100% {
+            left: 3vw;
+        }
+    }
+    #biketext {
+        position: absolute;
+        width: 20vw;
+        top: 52vw;
+    }
+
+    .btext_in {
+        background-image: url(SVG/overskrift.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 3.6vw;
+
+        left: 27vw;
+        z-index: 99;
+        animation-name: btext_in_kf;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+
+        position: absolute;
+
+    }
+
+    @keyframes btext_in_kf {
+
+
+        0% {
+            left: 99vw;
+        }
+        100% {
+            left: 27vw;
+        }
     }
 }
 
 
+<<<<<<< HEAD
 #biketext {
     position: absolute;
 
@@ -101,3 +138,20 @@ nav {
         width: 45%;
         margin-left: 55%
     }
+=======
+
+
+
+
+
+/*koncept*/
+
+.koncept_boks_1 {
+    width: 45%;
+}
+
+.koncept_boks_3 {
+    width: 45%;
+    margin-left: 55%
+}
+>>>>>>> origin/master

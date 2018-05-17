@@ -1,13 +1,14 @@
 $(window).on("load", startAnim);
 
 function startAnim() {
+//    $("#biketext").hide();
     $("#blinkenbike").addClass("bike_in");
 
 
 
     //    $("#background_sound")[0].play();
 
-//    $("#hand_container").on("animationend", handOneIn);
+    //    $("#hand_container").on("animationend", handOneIn);
     setTimeout(textIn, 2000);
 }
 
