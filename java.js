@@ -1,10 +1,14 @@
 $(window).on("load", startAnim);
 
 function startAnim() {
-//    $("#biketext").hide();
+    $("#bikep").hide();
+    document.querySelector("#motorp").style.visibility = "hidden";
     $("#blinkenbike").addClass("bike_in");
 
 
+    $("#blinkenbike").fadeIn();
+    $("#blinkenbike").fadeIn("slow");
+    $("#blinkenbike").fadeIn(7000);
 
     //    $("#background_sound")[0].play();
 
@@ -15,7 +19,51 @@ function startAnim() {
 function textIn() {
 
     $("#biketext").addClass("btext_in");
+    $("#biketext").fadeIn();
+    $("#biketext").fadeIn("slow");
+    $("#biketext").fadeIn(7000);
+
+    $("#bikep").addClass("");
+    $("#bikep").fadeIn();
+    $("#bikep").fadeIn("slow");
+    $("#bikep").fadeIn(7000);
+
+    setTimeout(myFunction, 1000);
 }
+
+window.onscroll = function () {
+
+    myFunction()
+};
+
+function myFunction() {
+
+
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("myImg").className = "slideUp";
+        document.getElementById("motorp").className = "slideUp";
+        document.querySelector("#motorp").style.visibility = "visible";
+    }
+}
+
+
+window.onscroll = function () {
+
+    myFunctionLygte()
+};
+
+function myFunctionLygte() {
+
+
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        document.getElementById("myLygte").className = "lygteUp";
+        document.getElementById("lygtep").className = "lygteUp";
+        document.querySelector("#lygtep").style.visibility = "visible";
+    }
+}
+
+
+
 
 //function laptopIpadIn() {
 //    console.log("laptop kommer ind");
