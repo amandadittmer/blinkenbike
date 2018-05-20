@@ -46,7 +46,6 @@ function myFunction() {
         document.querySelector("#motorp").style.visibility = "visible";
 
     }
-    setTimeout(myFunctionLygte, 6000);
 }
 
 
@@ -59,7 +58,7 @@ function myFunctionLygte() {
 
     console.log("sadel kommer ind");
 
-    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+    if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
         document.getElementById("myLygte").className = "lygteUp";
         document.getElementById("lygtep").className = "lygteUp";
         document.querySelector("#lygtep").style.visibility = "visible";
