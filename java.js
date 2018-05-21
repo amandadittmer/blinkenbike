@@ -2,32 +2,38 @@ $(window).on("load", startAnim);
 
 function startAnim() {
     console.log("hjul kommer ind");
+
     $("#bikep").hide();
+    $("#blinkenbike").hide();
+
     document.querySelector("#motorp").style.visibility = "hidden";
-    $("#blinkenbike").addClass("bike_in");
 
 
-    $("#blinkenbike").fadeIn();
-    $("#blinkenbike").fadeIn("slow");
-    $("#blinkenbike").fadeIn(7000);
+
+
+
 
     //    $("#background_sound")[0].play();
 
     //    $("#hand_container").on("animationend", handOneIn);
-    setTimeout(textIn, 2000);
+    setTimeout(textIn, 1000);
 }
 
 function textIn() {
     console.log("tekst kommer ind");
+    $("#blinkenbike").addClass("bike_in");
+    $("#blinkenbike").fadeIn();
+    $("#blinkenbike").fadeIn("slow");
+    $("#blinkenbike").fadeIn(4000);
     $("#biketext").addClass("btext_in");
     $("#biketext").fadeIn();
     $("#biketext").fadeIn("slow");
-    $("#biketext").fadeIn(7000);
+    $("#biketext").fadeIn(4000);
 
     $("#bikep").addClass("");
     $("#bikep").fadeIn();
     $("#bikep").fadeIn("slow");
-    $("#bikep").fadeIn(7000);
+    $("#bikep").fadeIn(4000);
 
     setTimeout(myFunction, 1000);
 }
@@ -63,4 +69,27 @@ function myFunctionLygte() {
         document.getElementById("lygtep").className = "lygteUp";
         document.querySelector("#lygtep").style.visibility = "visible";
     }
+}
+
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function () {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
 }

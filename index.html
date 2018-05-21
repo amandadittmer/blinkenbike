@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <html lang="">
 
 <head>
@@ -11,27 +12,42 @@
             margin: 5%;
         }
 
-        @media screen and (max-width:627px) {
+        @media screen and (min-width:628px) {
+            /* over 628 */
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
 
-            .logo img {
-                width: 40vw;
-                height: 35vw;
-                visibility: visible;
+                overflow: hidden;
+                background-color: #333;
+                position: relative;
+
             }
 
-            nav a {
-                color: black;
+
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
                 text-decoration: none;
             }
 
-            nav {
-                text-align: right;
-                margin-top: 1%;
-                margin-right: 2%;
-                display: block;
-
-
+            li a:hover:not(.active) {
+                background-color: #111;
             }
+
+            .active {
+                background-color: bisque;
+            }
+
+
+
             a:hover {
                 color: bisque;
             }
@@ -39,19 +55,20 @@
 
             #blinkenbike {
                 position: absolute;
-                width: 21vw;
-                top: 50vw;
+                width: 29vw;
+                top: 54vw;
                 margin-top: 5%;
+
 
             }
 
             .bike_in {
-                background-image: url(SVG/hjul.svg);
+                background-image: url(SVG/infografikcykel.png);
                 background-size: cover;
                 background-repeat: no-repeat;
-                height: 19vw;
+                height: 16vw;
 
-                left: 3vw;
+                left: 10vw;
                 z-index: 99;
                 animation-name: bike_in_kf;
                 animation-duration: 3s;
@@ -62,60 +79,17 @@
             }
 
 
-            @keyframes bike_in_kf {
-
-                0% {
-                    left: -30vw;
-                }
-                100% {
-                    left: 3vw;
-                }
-            }
-
-            #biketext {
-                position: absolute;
-                width: 20vw;
-                top: 52vw;
-                margin-top: 5%;
-            }
-
-            .btext_in {
-                background-image: url(SVG/overskrift.svg);
-                background-size: cover;
-                background-repeat: no-repeat;
-                height: 3.6vw;
-
-                left: 27vw;
-                z-index: 99;
-                animation-name: btext_in_kf;
-                animation-duration: 5s;
-                animation-iteration-count: 1;
-
-                position: absolute;
-
-            }
-
-            @keyframes btext_in_kf {
-
-
-                0% {
-                    left: 99vw;
-                }
-                0% {
-                    left: 27vw;
-                }
-            }
 
             #bikep {
                 position: absolute;
-                width: 65vw;
-                left: 27vw;
-                top: 55vw;
+                width: 45vw;
+                left: 50vw;
+                top: 35vw;
                 margin-top: 5%;
             }
 
             .bikep_in {
-                background-image: url(SVG/overskrift.svg);
+
                 background-size: cover;
                 background-repeat: no-repeat;
                 height: 3.6vw;
@@ -176,6 +150,7 @@
             #motorp {
                 width: 55vw;
                 position: absolute;
+                visibility: visible;
             }
 
             .col-1 {
@@ -247,44 +222,168 @@
             }
 
 
+            /* GØR BILLEDER STORE */
+            /* The Modal (background) */
+            .modal {
+                display: none;
+                /* Hidden by default */
+                position: fixed;
+                /* Stay in place */
+                z-index: 999;
+                /* Sit on top */
+                padding-top: 100px;
+                /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%;
+                /* Full width */
+                height: 100%;
+                /* Full height */
+                overflow: auto;
+                /* Enable scroll if needed */
+                background-color: rgb(0, 0, 0);
+                /* Fallback color */
+                background-color: rgba(212, 187, 87, 0.3);
+                /* Black w/ opacity */
+            }
+
+            /* Modal Content (image) */
+            .modal-content {
+                margin: auto;
+                display: block;
+                width: 80vw;
+                max-width: 700px;
+            }
+
+            /* Caption of Modal Image */
+            #caption {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+                text-align: center;
+                color: #ccc;
+                padding: 10px 0;
+                height: 150px;
+            }
+
+            /* Add Animation */
+            .modal-content,
+            #caption {
+                -webkit-animation-name: zoom;
+                -webkit-animation-duration: 0.6s;
+                animation-name: zoom;
+                animation-duration: 0.6s;
+            }
+
+            @-webkit-keyframes zoom {
+                from {
+                    -webkit-transform: scale(0)
+                }
+                to {
+                    -webkit-transform: scale(1)
+                }
+            }
+
+            @keyframes zoom {
+                from {
+                    transform: scale(0)
+                }
+                to {
+                    transform: scale(1)
+                }
+            }
+
+            /* The Close Button */
+            .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+
+            /* 100% Image Width on Smaller Screens */
+            @media only screen and (max-width: 700px) {
+                .modal-content {
+                    width: 200%;
+                }
+            }
+
+            .logo img {
+                margin-top: 1%;
+                opacity: 0.7;
+                width: 22.1vw;
+                height: 20vw;
+                visibility: visible;
+
+
+
+            }
+            #myImg {
+
+                border-color: #A5785A;
+                cursor: pointer;
+                margin-right: -0.2%;
+
+            }
+            .logo img:hover {
+                opacity: 100;
+            }
+        }
+
+        img#img01.modal-content {
+            width: 100%;
+            height: 70%;
+            opacity: 100;
+        }
 
         }
 
-        @media screen and (max-width:700px) {
+        @media screen and (max-width:600px) {
 
-
-
-
+            /* over 627 */
             ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
 
-    overflow: hidden;
-    background-color: #333;
+                overflow: hidden;
+                background-color: #333;
                 position: relative;
 
-}
+            }
 
-li {
-    float: left;
-}
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+            li {
+                float: left;
+            }
 
-li a:hover:not(.active) {
-    background-color: #111;
-}
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
 
-.active {
-    background-color: bisque;
-}
+            li a:hover:not(.active) {
+                background-color: #111;
+            }
+
+            .active {
+                background-color: bisque;
+            }
 
 
 
@@ -292,21 +391,24 @@ li a:hover:not(.active) {
                 color: bisque;
             }
 
+
+
             #blinkenbike {
                 position: absolute;
-                width: 31vw;
-                top: 25vw;
+                width: 29vw;
+                top: 54vw;
                 margin-top: 5%;
+
 
             }
 
             .bike_in {
-                background-image: url(SVG/hjul.svg);
+                background-image: url(SVG/infografikcykel.png);
                 background-size: cover;
                 background-repeat: no-repeat;
-                height: 28vw;
+                height: 16vw;
 
-                left: 3vw;
+                left: 10vw;
                 z-index: 99;
                 animation-name: bike_in_kf;
                 animation-duration: 3s;
@@ -317,31 +419,20 @@ li a:hover:not(.active) {
             }
 
 
-            @keyframes bike_in_kf {
-
-                0% {
-                    left: -30vw;
-                }
-                100% {
-                    left: 3vw;
-                }
-            }
-
-
 
             #bikep {
                 position: absolute;
-                width: 60vw;
-                left: 37vw;
-                top: 20vw;
-                margin-top: 8%;
+                width: 45vw;
+                left: 50vw;
+                top: 35vw;
+                margin-top: 5%;
             }
 
             .bikep_in {
-                background-image: url(SVG/overskrift.svg);
+
                 background-size: cover;
                 background-repeat: no-repeat;
-                height: vw;
+                height: 3.6vw;
 
                 left: 27vw;
                 z-index: 99;
@@ -363,6 +454,337 @@ li a:hover:not(.active) {
                     left: 27vw;
                 }
             }
+
+            .slideUp {
+                animation-name: slideUp;
+                -webkit-animation-name: slideUp;
+                animation-duration: 1s;
+                -webkit-animation-duration: 1s;
+                visibility: visible;
+            }
+
+
+
+            @keyframes slideUp {
+                0% {
+                    opacity: 0;
+                    -webkit-transform: translateY(70%);
+                }
+                100% {
+                    opacity: 1;
+                    -webkit-transform: translateY(0%);
+                }
+            }
+
+            @-webkit-keyframes slideUp {
+                0% {
+                    opacity: 0;
+                    -webkit-transform: translateY(70%);
+                }
+                100% {
+                    opacity: 1;
+                    -webkit-transform: translateY(0%);
+                }
+            }
+
+            #motorp {
+                width: 55vw;
+                position: absolute;
+                visibility: visible;
+            }
+
+            .col-1 {
+                float: left;
+                left: 58vw;
+                position: relative;
+            }
+
+
+
+
+            body {
+                height: 1500px;
+            }
+
+            img {
+                width: 140px;
+                height: 110px;
+                visibility: hidden;
+
+
+            }
+
+
+            hr {
+                margin-top: 450px;
+            }
+
+            #lygtep {
+                width: 60vw;
+                position: absolute;
+                left: 36vw;
+            }
+            .lygte {
+                float: left;
+
+                position: relative;
+            }
+
+
+            .lygteUp {
+                animation-name: lygteUp;
+                -webkit-animation-name: lygteUp;
+                animation-duration: 2s;
+                -webkit-animation-duration: 2s;
+                visibility: visible;
+            }
+
+            @keyframes lygteUp {
+                0% {
+                    opacity: 0;
+                    -webkit-transform: translateY(70%);
+                }
+                100% {
+                    opacity: 1;
+                    -webkit-transform: translateY(0%);
+                }
+            }
+
+            @-webkit-keyframes lygteUp {
+                0% {
+                    opacity: 0;
+                    -webkit-transform: translateY(70%);
+                }
+                100% {
+                    opacity: 1;
+                    -webkit-transform: translateY(0%);
+                }
+            }
+
+
+            /* GØR BILLEDER STORE */
+            /* The Modal (background) */
+            .modal {
+                display: none;
+                /* Hidden by default */
+                position: fixed;
+                /* Stay in place */
+                z-index: 999;
+                /* Sit on top */
+                padding-top: 100px;
+                /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%;
+                /* Full width */
+                height: 100%;
+                /* Full height */
+                overflow: auto;
+                /* Enable scroll if needed */
+                background-color: rgb(0, 0, 0);
+                /* Fallback color */
+                background-color: rgba(212, 187, 87, 0.3);
+                /* Black w/ opacity */
+            }
+
+            /* Modal Content (image) */
+            .modal-content {
+                margin: auto;
+                display: block;
+                width: 80vw;
+                max-width: 700px;
+            }
+
+            /* Caption of Modal Image */
+            #caption {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+                text-align: center;
+                color: #ccc;
+                padding: 10px 0;
+                height: 150px;
+            }
+
+            /* Add Animation */
+            .modal-content,
+            #caption {
+                -webkit-animation-name: zoom;
+                -webkit-animation-duration: 0.6s;
+                animation-name: zoom;
+                animation-duration: 0.6s;
+            }
+
+            @-webkit-keyframes zoom {
+                from {
+                    -webkit-transform: scale(0)
+                }
+                to {
+                    -webkit-transform: scale(1)
+                }
+            }
+
+            @keyframes zoom {
+                from {
+                    transform: scale(0)
+                }
+                to {
+                    transform: scale(1)
+                }
+            }
+
+            /* The Close Button */
+            .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+
+            /* 100% Image Width on Smaller Screens */
+            @media only screen and (max-width: 700px) {
+                .modal-content {
+                    width: 200%;
+                }
+            }
+
+            .logo img {
+                margin-top: 1%;
+                opacity: 0.7;
+                width: 22.1vw;
+                height: 20vw;
+                visibility: visible;
+
+
+
+            }
+            #myImg {
+
+                border-color: #A5785A;
+                cursor: pointer;
+                margin-right: -0.2%;
+
+            }
+            .logo img:hover {
+                opacity: 100;
+            }
+        }
+
+        img#img01.modal-content {
+            width: 100%;
+            height: 70%;
+            opacity: 100;
+        }
+
+        }
+
+        @media screen and (min-width:700px) {
+
+
+
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                overflow: hidden;
+                background-color: #333;
+                position: relative;
+
+            }
+
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover:not(.active) {
+                background-color: #111;
+            }
+
+            .active {
+                background-color: bisque;
+            }
+
+
+
+            a:hover {
+                color: bisque;
+            }
+
+            #blinkenbike {
+                position: absolute;
+                width: 30vw;
+                top: 40vw;
+
+
+            }
+
+            .bike_in {
+                background-image: url(SVG/infografikcykel.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 17vw;
+
+                left: 9vw;
+                z-index: 99;
+                animation-name: bike_in_kf;
+                animation-duration: 3s;
+                animation-iteration-count: 1;
+
+                position: absolute;
+
+            }
+
+
+
+
+
+            #bikep {
+                position: absolute;
+                width: 50vw;
+                left: 46vw;
+                top: 30vw;
+                margin-top: 8%;
+            }
+
+            .bikep_in {
+                background-image: url(SVG/overskrift.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: vw;
+
+                left: 27vw;
+                z-index: 99;
+                animation-name: btext_in_kf;
+                animation-duration: 5s;
+                animation-iteration-count: 1;
+
+                position: absolute;
+
+            }
+
+
 
             .slideUp {
                 animation-name: slideUp;
@@ -403,14 +825,353 @@ li a:hover:not(.active) {
             }
 
 
- .col-1 { float: left; position: relative; }
+            .col-1 {
+                float: left;
+                position: relative;
+
+                left: 58vw;
+
+
+            }
 
 
 
-/* body { height: 1500px; }*/
+            /* body { height: 1500px; }*/
+            img {
+                width: 140px;
+                height: 110px;
+                visibility: hidden;
+            }
 
 
- img { width: 140px; height: 110px; visibility: hidden; }
+
+            hr {
+                margin-top: 450px;
+            }
+
+            #lygtep {
+                width: 60vw;
+                position: absolute;
+                left: 36vw;
+            }
+            .lygte {
+                float: left;
+
+                position: relative;
+            }
+
+
+            .lygteUp {
+                animation-name: lygteUp;
+                -webkit-animation-name: lygteUp;
+                animation-duration: 2s;
+                -webkit-animation-duration: 2s;
+                visibility: visible;
+            }
+
+            @keyframes lygteUp {
+                0% {
+                    opacity: 0;
+                    -webkit-transform: translateY(70%);
+                }
+                100% {
+                    opacity: 1;
+                    -webkit-transform: translateY(0%);
+                }
+            }
+
+            @-webkit-keyframes lygteUp {
+                0% {
+                    opacity: 0;
+                    -webkit-transform: translateY(70%);
+                }
+                100% {
+                    opacity: 1;
+                    -webkit-transform: translateY(0%);
+                }
+            }
+            /* The Modal (background) */
+            .modal {
+                display: none;
+                /* Hidden by default */
+                position: fixed;
+                /* Stay in place */
+                z-index: 999;
+                /* Sit on top */
+                padding-top: 100px;
+                /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%;
+                /* Full width */
+                height: 100%;
+                /* Full height */
+                overflow: auto;
+                /* Enable scroll if needed */
+                background-color: rgb(0, 0, 0);
+                /* Fallback color */
+                background-color: rgba(212, 187, 87, 0.3);
+                /* Black w/ opacity */
+            }
+
+            /* Modal Content (image) */
+            .modal-content {
+                margin: auto;
+                display: block;
+                width: 80vw;
+                max-width: 700px;
+            }
+
+            /* Caption of Modal Image */
+            #caption {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+                text-align: center;
+                color: #ccc;
+                padding: 10px 0;
+                height: 150px;
+            }
+
+            /* Add Animation */
+            .modal-content,
+            #caption {
+                -webkit-animation-name: zoom;
+                -webkit-animation-duration: 0.6s;
+                animation-name: zoom;
+                animation-duration: 0.6s;
+            }
+
+            @-webkit-keyframes zoom {
+                from {
+                    -webkit-transform: scale(0)
+                }
+                to {
+                    -webkit-transform: scale(1)
+                }
+            }
+
+            @keyframes zoom {
+                from {
+                    transform: scale(0)
+                }
+                to {
+                    transform: scale(1)
+                }
+            }
+
+            /* The Close Button */
+            .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+
+            /* 100% Image Width on Smaller Screens */
+            @media only screen and (max-width: 700px) {
+                .modal-content {
+                    width: 200%;
+                }
+            }
+
+            .logo img {
+                margin-top: 1%;
+                opacity: 0.7;
+                width: 22.1vw;
+                height: 20vw;
+                visibility: visible;
+
+
+
+            }
+            #myImg {
+
+                border-color: #A5785A;
+                cursor: pointer;
+                margin-right: -0.2%;
+
+            }
+            .logo img:hover {
+                opacity: 100;
+            }
+        }
+
+        img#img01.modal-content {
+            width: 100%;
+            height: 70%;
+            opacity: 100;
+        }
+
+
+        }
+
+        @media screen and (max-width:1024px) {
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                overflow: hidden;
+                background-color: #333;
+                position: relative;
+
+            }
+
+            /*
+            ul img{
+                width: 8vw;
+                height: 5vw;
+                visibility: visible;
+            }
+*/
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover:not(.active) {
+                background-color: #111;
+            }
+
+            .active {
+                background-color: #DBC49A;
+            }
+
+
+
+            a:hover {
+                color: #DBC49A;
+            }
+
+            /* javascript */
+            #blinkenbike {
+                position: absolute;
+                width: 28vw;
+                top: 30vw;
+                margin-top: 5%;
+                left: 6.1vw;
+
+            }
+
+            .bike_in {
+                background-image: url(SVG/infografikcykel.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 15vw;
+                left: 3vw;
+                z-index: 99;
+                animation-name: bike_in_kf;
+                animation-duration: 10s;
+                animation-iteration-count: 1;
+
+                position: absolute;
+
+            }
+
+
+
+
+
+
+            #bikep {
+                position: absolute;
+                width: 56vw;
+                left: 37vw;
+                top: 30vw;
+                margin-top: 8%;
+            }
+
+            .bikep_in {
+
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: vw;
+
+                left: 27vw;
+                z-index: 99;
+                animation-name: btext_in_kf;
+                animation-duration: 5s;
+                animation-iteration-count: 1;
+
+                position: absolute;
+
+            }
+
+
+
+            .slideUp {
+                animation-name: slideUp;
+                -webkit-animation-name: slideUp;
+                animation-duration: 2s;
+                -webkit-animation-duration: 2s;
+                visibility: visible;
+            }
+
+
+
+            @keyframes slideUp {
+                0% {
+                    opacity: 0;
+                    -webkit-transform: translateY(70%);
+                }
+                100% {
+                    opacity: 1;
+                    -webkit-transform: translateY(0%);
+                }
+            }
+
+            @-webkit-keyframes slideUp {
+                0% {
+                    opacity: 0;
+                    -webkit-transform: translateY(70%);
+                }
+                100% {
+                    opacity: 1;
+                    -webkit-transform: translateY(0%);
+                }
+            }
+
+            #motorp {
+                width: 40vw;
+                position: absolute;
+
+            }
+
+
+            .col-1 {
+                float: left;
+                position: relative;
+
+                left: 50vw;
+
+
+            }
+
+            img {
+                width: 140px;
+                height: 110px;
+                visibility: hidden;
+            }
 
 
 
@@ -461,73 +1222,172 @@ li a:hover:not(.active) {
             }
 
 
-
-        }
-
-        @media screen and (max-width:1024px){
-                        ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    overflow: hidden;
-    background-color: #333;
-                position: relative;
-
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover:not(.active) {
-    background-color: #111;
-}
-
-.active {
-    background-color: bisque;
-}
-
-
-
-            a:hover {
-                color: bisque;
+            /* GØR BILLEDER STORE */
+            /* The Modal (background) */
+            .modal {
+                display: none;
+                /* Hidden by default */
+                position: fixed;
+                /* Stay in place */
+                z-index: 999;
+                /* Sit on top */
+                padding-top: 100px;
+                /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%;
+                /* Full width */
+                height: 100%;
+                /* Full height */
+                overflow: auto;
+                /* Enable scroll if needed */
+                background-color: rgb(0, 0, 0);
+                /* Fallback color */
+                background-color: rgba(212, 187, 87, 0.3);
+                /* Black w/ opacity */
             }
+
+            /* Modal Content (image) */
+            .modal-content {
+                margin: auto;
+                display: block;
+                width: 80vw;
+                max-width: 700px;
+            }
+
+            /* Caption of Modal Image */
+            #caption {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+                text-align: center;
+                color: #ccc;
+                padding: 10px 0;
+                height: 150px;
+            }
+
+            /* Add Animation */
+            .modal-content,
+            #caption {
+                -webkit-animation-name: zoom;
+                -webkit-animation-duration: 0.6s;
+                animation-name: zoom;
+                animation-duration: 0.6s;
+            }
+
+            @-webkit-keyframes zoom {
+                from {
+                    -webkit-transform: scale(0)
+                }
+                to {
+                    -webkit-transform: scale(1)
+                }
+            }
+
+            @keyframes zoom {
+                from {
+                    transform: scale(0)
+                }
+                to {
+                    transform: scale(1)
+                }
+            }
+
+            /* The Close Button */
+            .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+
+            /* 100% Image Width on Smaller Screens */
+            /*
+            @media only screen and (max-width: 700px) {
+                .modal-content {
+                    width: 200%;
+                }
+*/
         }
 
+        .logo img {
+            margin-top: 1%;
+            opacity: 0.7;
+            width: 22.3vw;
+            height: 20vw;
+            visibility: visible;
+
+
+
+        }
+
+        #myImg {
+
+            border-color: #A5785A;
+            cursor: pointer;
+            margin-right: -0.2%;
+
+        }
+
+        .logo img:hover {
+            opacity: 100;
+        }
+
+        }
+
+        img#img01.modal-content {
+            width: 100%;
+            height: 70%;
+            opacity: 100;
+        }
     </style>
 </head>
 
 <body>
     <header>
 
-<!--
-        <nav>
-            <a href="index.html">FORSIDE</a>
-            <a href="om.html">OM</a>
-            <a href="koncept.html">KONCEPT</a>
-            <a href="produkt.html">PRODUKT</a>
-            <a href="nyheder.html">NYHEDER</a>
-        </nav>
--->
 
-<ul>
-<!--  <li> <img src="logob.png" alt="logo"></li>-->
-  <li><a href="index.html">Forside</a></li>
-  <li> <a href="om.html">Produkt</a></li>
-  <li> <a href="koncept.html">Koncept</a></li>
- <li><a href="produkt.html">Nyheder</a></li>
-  <li style="float:right"><a class="active" href="#about">Om</a></li>
-</ul>
-     <div class="logo">
+        <ul>
+
+            <!--<a href=""><img src="SVG/LOGO.png" alt="logo"></a>-->
+            <li><a href="index.html">Forside</a></li>
+            <li> <a href="om.html">Produkt</a></li>
+            <li> <a href="koncept.html">Koncept</a></li>
+            <li><a href="produkt.html">Nyheder</a></li>
+            <li style="float:right"><a class="active" href="#about">Om</a></li>
+        </ul>
+
+        <div class="logo">
+
+            <img id="myImg" src="SVG/pigec.png" alt="" width="700" height="700">
+
+            <img id="myImg" src="SVG/nc.png" alt="" width="700" height="700">
+            <img id="myImg" src="SVG/solc.png" alt="" width="700" height="700">
+            <img id="myImg" src="SVG/vc.png" alt="" width="700" height="700">
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <img class="modal-content" id="img02">
+                <div id="caption"></div>
+            </div>
+
+
+
+
 
         </div>
 
@@ -535,7 +1395,7 @@ li a:hover:not(.active) {
     <div id="blinkenbike" class=""></div>
 
     <div id="bikep" class="">
-            <h3>BLINKENBIKE</h3>
+        <h3>BLINKENBIKE</h3>
         <p>Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.</p>
     </div>
     <hr>
@@ -561,13 +1421,17 @@ li a:hover:not(.active) {
     <div id="historie" class=""></div>
     <div id="some" class=""></div>
     <div id="om" class=""></div>
-    <script src=""></script>
+    <script>
+    </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="java.js"></script>
-    <html>
 
 
 
 
-    </html>
+
+
+</body>
+
+</html>
