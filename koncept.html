@@ -6,6 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koncept</title>
     <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            overflow: hidden;
+            background-color: #333;
+            position: relative;
+
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: bisque;
+        }
+
+
+
+        a:hover {
+            color: bisque;
+        }
+
         body {
             margin: 5%;
         }
@@ -52,16 +89,17 @@
 
 <body>
     <header>
-        <nav>
-            <a href="index.html">FORSIDE</a>
-            <a href="om.html">OM</a>
-            <a href="koncept.html">KONCEPT</a>
-            <a href="produkt.html">PRODUKT</a>
-            <a href="nyheder.html">NYHEDER</a>
-        </nav>
+        <ul>
+            <!--  <li> <img src="logob.png" alt="logo"></li>-->
+            <li><a href="index.html">Forside</a></li>
+            <li> <a href="om.html">Produkt</a></li>
+            <li> <a href="koncept.html">Koncept</a></li>
+            <li><a href="produkt.html">Nyheder</a></li>
+            <li style="float:right"><a class="active" href="#about">Om</a></li>
+        </ul>
 
         <div class="logo">
-            <img src="logob.png" alt="logo">
+<!--         <img src="logob.png" alt="logo">-->
         </div>
 
     </header>
