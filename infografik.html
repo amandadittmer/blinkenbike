@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>infografik</title>
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            runProgram();
+        });
+
+        async function runProgram() {
+            let selected;
+            let selectedID;
+            let color;
+            let active;
+            let infotekst
+
+            let mySvg = await fetch("infografik/infografikcykel.svg");
+            let svg = await mySvg.text();
+
+            document.querySelector("#map").innerHTML = svg;
+
+            let sadel_tekst = document.querySelector("#map #sadel_tekst");
+            let stel_tekst = document.querySelector("#map #stel_tekst");
+            let skrue_tekst = document.querySelector("#map #skrue_tekst");
+            let hjul_tekst = document.querySelector("#map #hjul_tekst");
+
+            sadel_tekst.style.visibility = "hidden";
+            stel_tekst.style.visibility = "hidden";
+            skrue_tekst.style.visibility = "hidden";
+            hjul_tekst.style.visibility = "hidden";
+
+            //3. skift farve ved klik, og vis tekst //
+            document.querySelector("#map #prikker").addEventListener("mouseover", function(evt) {
+                clicked(evt);
+            })
+            //funktion clicked
+            function clicked(obj) {
+                if (infotekst != undefined) {
+                    infotekst.style.visibility = "hidden";
+                }
+
+                //find det klikkede element
+                selected = obj.target;
+
+                //find det klikkede elementets ID
+                selectedID = selected.getAttribute("id");
+
+                //find det klikkede elements fillfarve
+                color = selected.getAttribute("fill");
+
+                // vis infobokse
+                if (selectedID === "prik_1") {
+                    hjul_tekst.style.visibility = "visible";
+                    infotekst = hjul_tekst;
+                    document.getElementById("cykel").style.opacity = "0.3";
+                    document.getElementById("stel").style.opacity = "0.3";
+                    document.getElementById("sadel").style.opacity = "0.3";
+                    document.getElementById("skrue").style.opacity = "0.3";
+                }
+
+                if (selectedID === "prik_2") {
+                    stel_tekst.style.visibility = "visible";
+                    infotekst = stel_tekst;
+                    document.getElementById("cykel").style.opacity = "0.3";
+                    document.getElementById("hjul").style.opacity = "0.3";
+                    document.getElementById("sadel").style.opacity = "0.3";
+                    document.getElementById("skrue").style.opacity = "0.3";
+                }
+                if (selectedID === "prik_3") {
+                    sadel_tekst.style.visibility = "visible";
+                    infotekst = sadel_tekst;
+                    document.getElementById("cykel").style.opacity = "0.3";
+                    document.getElementById("hjul").style.opacity = "0.3";
+                    document.getElementById("skrue").style.opacity = "0.3";
+                    document.getElementById("stel").style.opacity = "0.3";
+                }
+                if (selectedID === "prik_4") {
+                    skrue_tekst.style.visibility = "visible";
+                    infotekst = skrue_tekst;
+                    document.getElementById("cykel").style.opacity = "0.3";
+                    document.getElementById("hjul").style.opacity = "0.3";
+                    document.getElementById("sadel").style.opacity = "0.3";
+                    document.getElementById("stel").style.opacity = "0.3";
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
