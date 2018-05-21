@@ -1,6 +1,7 @@
 $(window).on("load", startAnim);
 
 function startAnim() {
+    console.log("hjul kommer ind");
     $("#bikep").hide();
     document.querySelector("#motorp").style.visibility = "hidden";
     $("#blinkenbike").addClass("bike_in");
@@ -17,7 +18,7 @@ function startAnim() {
 }
 
 function textIn() {
-
+    console.log("tekst kommer ind");
     $("#biketext").addClass("btext_in");
     $("#biketext").fadeIn();
     $("#biketext").fadeIn("slow");
@@ -38,11 +39,12 @@ window.onscroll = function () {
 
 function myFunction() {
 
-
+    console.log("motor kommer ind");
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         document.getElementById("myImg").className = "slideUp";
         document.getElementById("motorp").className = "slideUp";
         document.querySelector("#motorp").style.visibility = "visible";
+
     }
 }
 
@@ -54,29 +56,11 @@ window.onscroll = function () {
 
 function myFunctionLygte() {
 
+    console.log("sadel kommer ind");
 
-    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+    if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
         document.getElementById("myLygte").className = "lygteUp";
         document.getElementById("lygtep").className = "lygteUp";
         document.querySelector("#lygtep").style.visibility = "visible";
     }
 }
-
-
-
-
-//function laptopIpadIn() {
-//    console.log("laptop kommer ind");
-//
-//    $("#vidersend").removeClass("v_knap");
-//    $("#finger_klik").removeClass("f_klik");
-//
-//    $("#comp").addClass("desktop");
-//    $("#ipad").addClass("ipad_in");
-//    $("#ipad").addClass("ipad_in");
-//    $("#ipad_s").addClass("ipad_in_sort");
-//
-//    $("#button_sound")[0].play();
-//
-//    setTimeout(billedeIn, 4000);
-//}
