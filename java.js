@@ -47,7 +47,7 @@ function myFunction() {
 
     console.log("motor kommer ind");
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("myImg").className = "slideUp";
+        document.getElementById("myMotor").className = "slideUp";
         document.getElementById("motorp").className = "slideUp";
         document.querySelector("#motorp").style.visibility = "visible";
 
