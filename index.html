@@ -9,50 +9,83 @@
 
     <link rel="stylesheet" href="">
     <style>
+        .topnav {
+            overflow: hidden;
+            background-color: white;
+        }
+
+
+
+        .topnav a:hover {
+            background-color: black;
+
+        }
+
+        .active {
+
+            color: black;
+        }
+
+        .topnav .icon {
+            display: none;
+            z-index: 999;
+            background-color: black;
+        }
+
+
+
+
+
+
         body {
-            margin: 5%;
+            margin: ;
         }
 
         @media screen and (max-width:410px) {
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
 
-                overflow: hidden;
-                background-color: #333;
-                position: relative;
 
-            }
-
-            /* over 628 */
-            li {
+            .topnav a {
                 float: left;
-            }
-
-            li a {
                 display: block;
-                color: white;
+                color: black;
                 text-align: center;
-                padding: 14px 12px;
+                padding: 14px 16px;
                 text-decoration: none;
+                font-size: 17px;
+            }
+            .topnav img {
+                visibility: visible;
+                width: 35vw;
+                height: 5vw;
+
             }
 
-            li a:hover:not(.active) {
-                background-color: #111;
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+            .topnav a.icon {
+                float: right;
+                display: block;
+                z-index: 999;
+
+            }
+            .topnav.responsive {
+                position: relative;
+            }
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+
             }
 
-            .active {
-                background-color: bisque;
-            }
-
-
-
-            a:hover {
-                color: bisque;
-            }
-
-
+            /* NAV SLUT */
             #blinkenbike {
                 position: absolute;
                 width: 29vw;
@@ -310,7 +343,7 @@
             .logo img {
 
 
-                width: 21.9vw;
+                width: 23.3vw;
                 height: 20vw;
 
 
@@ -342,39 +375,11 @@
         }
 
         @media screen and (min-width:410px) {
-            /* over 628 */
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
 
-                overflow: hidden;
-                background-color: #333;
-                position: relative;
 
+            ul img {
+                visibility: visible;
             }
-
-
-            li {
-                float: left;
-            }
-
-            li a {
-                display: block;
-                color: white;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-            }
-
-            li a:hover:not(.active) {
-                background-color: #111;
-            }
-
-            .active {
-                background-color: bisque;
-            }
-
 
 
             a:hover {
@@ -674,45 +679,26 @@
 
         }
 
-        @media screen and (max-width:627px) {
+        @media screen and (min-width:627px) {
 
             /* over 627 */
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-
-                overflow: hidden;
-                background-color: #333;
-                position: relative;
-
-            }
-
-
-            li {
+            .topnav a {
                 float: left;
-            }
-
-            li a {
                 display: block;
-                color: white;
+                color: black;
                 text-align: center;
-                padding: 14px 12px;
+                padding: 35px 16px;
                 text-decoration: none;
+                font-size: 17px;
             }
+            .topnav img {
+                visibility: visible;
+                height: 4vw;
+                margin-right: 15vw;
 
-            li a:hover:not(.active) {
-                background-color: #111;
             }
-
-            .active {
-                background-color: bisque;
-            }
-
-
-
             a:hover {
-                color: bisque;
+                color: #DBC49A;
             }
 
 
@@ -969,17 +955,12 @@
             }
 
 
-            /* 100% Image Width on Smaller Screens */
-            @media only screen and (max-width: 700px) {
-                .modal-content {
-                    width: 200%;
-                }
-            }
+
 
             .logo img {
                 margin-top: 1%;
                 opacity: 0.7;
-                width: 22vw;
+                width: 24vw;
                 height: 20vw;
                 visibility: visible;
 
@@ -1009,31 +990,32 @@
         @media screen and (min-width:700px) {
 
 
-
-
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-
-                overflow: hidden;
-                background-color: #333;
-                position: relative;
+            .sog img {
+                width: 16px;
 
             }
-
-            li {
+            .topnav a {
                 float: left;
-            }
-
-            li a {
                 display: block;
-                color: white;
+                color: black;
                 text-align: center;
-                padding: 14px 16px;
+                padding: px 16px;
                 text-decoration: none;
+
+            }
+            .topnav img {
+                visibility: visible;
+                height: 3vw;
+
+
+            }
+            a:hover {
+                color: #DBC49A;
             }
 
+
+
+            /*
             li a:hover:not(.active) {
                 background-color: #111;
             }
@@ -1041,9 +1023,7 @@
             .active {
                 background-color: #DBC49A;
             }
-
-
-
+*/
             a:hover {
                 color: #DBC49A;
             }
@@ -1082,6 +1062,7 @@
                 left: 46vw;
 
                 margin-top: 8%;
+
             }
 
             .bikep_in {
@@ -1295,17 +1276,12 @@
             }
 
 
-            /* 100% Image Width on Smaller Screens */
-            @media only screen and (max-width: 700px) {
-                .modal-content {
-                    width: 200%;
-                }
-            }
+
 
             .logo img {
-                margin-top: 1%;
+
                 opacity: 0.7;
-                width: 22.1vw;
+                width: 24.2vw;
                 height: 20vw;
                 visibility: visible;
 
@@ -1630,23 +1606,39 @@
             }
 
         }
-
     </style>
 </head>
 
 <body>
     <header>
 
+        <div class="topnav" id="myTopnav">
 
+            <a href="#home" class="active"><img src="SVG/overskrift.svg" alt="logo"></a>
+            <a href="#news">Produkt</a>
+            <a href="#contact">Koncept</a>
+            <a href="#about">Nyheder</a>
+            <a href="">Kontakt</a>
+            <a href="#søg" class="sog"><img src="SVG/icon-search.png" alt=""></a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+        </div>
+
+        <!--
         <ul>
 
-            <!--<a href=""><img src="SVG/LOGO.png" alt="logo"></a>-->
-            <li><a href="index.html">Forside</a></li>
-            <li> <a href="om.html">Produkt</a></li>
+
+
+            <li><a href="index.html">Kontakt</a></li>
+            <li> <a href="om.html">Nyheder</a></li>
             <li> <a href="koncept.html">Koncept</a></li>
-            <li><a href="produkt.html">Nyheder</a></li>
-            <li style="float:right"><a class="active" href="#about">Om</a></li>
+            <li><a href="produkt.html">Produkt</a></li>
+            <li><a href="#about">Hjem</a></li>
+            <a href=""><img src="SVG/overskrift.svg" alt="logo"></a>
         </ul>
+-->
+
 
         <div class="logo">
 
@@ -1668,12 +1660,14 @@
         </div>
 
     </header>
-    <div id="blinkenbike" class=""></div>
+
+    <div id="blinkenbike" class=""> </div>
 
     <div id="bikep" class="">
         <h3>BLINKENBIKE</h3>
         <p>En cykel dit barn vil få glæde af gennem mange år og og på flere fronter, end bare en løbecykel. Blinkenbikes cykler kan mere end de traditionelle løbecykler. Få aktiveret dit barns motorik og lad dit barn få et unikt forhold til sit legetøj. Blinkenbike er et funktionelt design af en løbecykel der kan skilles og samles at et barn. </p>
     </div>
+
     <hr>
     <div class="col-1">
         <img id="myMotor" src="SVG/motor.svg" width="304" height="228">
@@ -1698,8 +1692,6 @@
     <div id="some" class=""></div>
     <div id="om" class=""></div>
     <script>
-
-
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
