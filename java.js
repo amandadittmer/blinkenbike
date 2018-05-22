@@ -1,7 +1,7 @@
-$(window).on("load", startAnim);
+$(window).on("load", start);
 
-function startAnim() {
-    console.log("hjul kommer ind");
+function start() {
+    console.log("start");
 
     $("#bikep").hide();
     $("#blinkenbike").hide();
@@ -17,6 +17,26 @@ function startAnim() {
 
     //    $("#hand_container").on("animationend", handOneIn);
     setTimeout(textIn, 1000);
+
+
+    window.onscroll = function () {
+        console.log(document.documentElement.scrollTop);
+
+        if (document.querySelector("body").scrollTop > 250 || document.documentElement.scrollTop > 200) {
+            console.log("sadel kommer ind");
+            document.getElementById("myMotor").className = "slideUp";
+            document.getElementById("motorp").className = "slideUp";
+            document.querySelector("#motorp").style.visibility = "visible";
+        }
+
+
+        if (document.querySelector("body").scrollTop > 350 || document.documentElement.scrollTop > 350) {
+            console.log("sadel start");
+            document.getElementById("myLygte").className = "lygteUp";
+            document.getElementById("lygtep").className = "lygteUp";
+            document.querySelector("#lygtep").style.visibility = "visible";
+        }
+    }
 }
 
 function textIn() {
@@ -38,38 +58,16 @@ function textIn() {
     setTimeout(myFunction, 1000);
 }
 
-window.onscroll = function () {
-
-    myFunction()
-};
-
-function myFunction() {
-
-    console.log("motor kommer ind");
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("myMotor").className = "slideUp";
-        document.getElementById("motorp").className = "slideUp";
-        document.querySelector("#motorp").style.visibility = "visible";
-
-    }
-}
 
 
-window.onscroll = function () {
 
-    myFunctionLygte()
-};
 
-function myFunctionLygte() {
 
-    console.log("sadel kommer ind");
 
-    if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-        document.getElementById("myLygte").className = "lygteUp";
-        document.getElementById("lygtep").className = "lygteUp";
-        document.querySelector("#lygtep").style.visibility = "visible";
-    }
-}
+function myFunctionLygte() {}
+
+
+
 
 
 // Get the modal
@@ -102,4 +100,5 @@ function myFunction() {
     } else {
         x.className = "topnav";
     }
+
 }

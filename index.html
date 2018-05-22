@@ -47,17 +47,20 @@
             margin: ;
         }
 
-        @media screen and (max-width:410px) {
+        @media screen and (max-width:579px) {
 
-
+            .sog img {
+                display: block;
+                visibility: hidden;
+            }
             .topnav a {
                 float: left;
                 display: block;
                 color: black;
                 text-align: center;
-                padding: 14px 16px;
+                padding: 12px 10px;
                 text-decoration: none;
-                font-size: 17px;
+
             }
             .topnav img {
                 visibility: visible;
@@ -95,7 +98,7 @@
             #blinkenbike {
                 position: absolute;
                 width: 29vw;
-                top: 50vw;
+                top: 80vw;
                 margin-top: 5%;
 
 
@@ -120,10 +123,10 @@
 
 
             #bikep {
-                position: absolute;
+                position: relative;
                 width: 90vw;
 
-                top: 70vw;
+                top: 20vw;
                 margin-top: 5%;
             }
 
@@ -380,13 +383,34 @@
             }
         }
 
-        @media screen and (min-width:410px) {
+        @media screen and (min-width:580px) {
 
 
-            ul img {
+            .topnav a {
+                float: left;
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 20px 16px;
+                text-decoration: none;
+
+            }
+            .topnav img {
                 visibility: visible;
+                height: 3vw;
+
+
+            }
+            a:hover {
+                color: #DBC49A;
             }
 
+            .sog img {
+                width: 16px;
+                margin: auto;
+                visibility: hidden;
+
+            }
 
             a:hover {
                 color: bisque;
@@ -699,12 +723,18 @@
             }
             .topnav img {
                 visibility: visible;
-                height: 4vw;
-                margin-right: 15vw;
+                height: 3vw;
+
 
             }
             a:hover {
                 color: #DBC49A;
+            }
+
+            .sog img {
+                width: 16px;
+                margin: auto;
+
             }
 
 
@@ -712,7 +742,7 @@
             #blinkenbike {
                 position: absolute;
                 width: 29vw;
-                top: 55vw;
+                top: 50vw;
                 margin-top: 5%;
 
 
@@ -762,6 +792,7 @@
 
 
             .slideUp {
+                animation-fill-mode: forwards;
                 animation-name: slideUp;
                 -webkit-animation-name: slideUp;
                 animation-duration: 1s;
@@ -993,13 +1024,17 @@
         }
 
 
+
         @media screen and (min-width:700px) {
+
 
 
             .sog img {
                 width: 16px;
+                margin: auto;
 
             }
+
             .topnav a {
                 float: left;
                 display: block;
@@ -1009,27 +1044,16 @@
                 text-decoration: none;
 
             }
+
             .topnav img {
                 visibility: visible;
                 height: 3vw;
 
 
             }
-            a:hover {
-                color: #DBC49A;
-            }
 
 
 
-            /*
-            li a:hover:not(.active) {
-                background-color: #111;
-            }
-
-            .active {
-                background-color: #DBC49A;
-            }
-*/
             a:hover {
                 color: #DBC49A;
             }
@@ -1625,7 +1649,7 @@
             <a href="#contact">Koncept</a>
             <a href="#about">Nyheder</a>
             <a href="">Kontakt</a>
-            <a href="#søg" class="sog"><img src="SVG/icon-search.png" alt=""></a>
+
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
