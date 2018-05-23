@@ -17,17 +17,20 @@
         }
     </style>
 </head>
-<header>
-    <section id="header"></section>
-</header>
+
 
 <body>
+    <header>
+        <section id="header"></section>
+    </header>
+
     <script>
         async function hentHeader() {
             let headerData = await fetch("header.html");
             let header = await headerData.text();
             document.querySelector("#header").innerHTML = header;
         }
+        document.addEventListener("DOMContentLoaded", hentHeader);
     </script>
 </body>
 </html>
