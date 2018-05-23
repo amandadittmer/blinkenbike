@@ -92,6 +92,7 @@ span.onclick = function () {
     modal.style.display = "none";
 }
 
+// NAV BURGER MENU
 
 function myFunction() {
     var x = document.getElementById("myTopnav");
