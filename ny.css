@@ -2,6 +2,10 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
+footer {
+    text-align: center;
+}
+
 body {
     margin: 0 auto;
     background-color: #F4F4F4;
