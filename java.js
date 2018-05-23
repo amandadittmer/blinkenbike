@@ -1,7 +1,21 @@
-$(window).on("load", start);
+//$(window).on("load", start);
+document.addEventListener("DOMContentLoaded", startProgram);
 
-function start() {
+// NAV BURGER MENU
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+
+}
+
+function startProgram() {
     console.log("start");
+
 
     $("#bikep").hide();
     $("#blinkenbike").hide();
@@ -90,16 +104,4 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
     modal.style.display = "none";
-}
-
-// NAV BURGER MENU
-
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-
 }
