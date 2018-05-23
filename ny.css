@@ -1,0 +1,716 @@
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0 auto;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: white;
+}
+
+
+
+.topnav a:hover {}
+
+.active {
+
+    color: black;
+}
+
+.topnav .icon {
+    display: none;
+    z-index: 999;
+    background-color: black;
+}
+
+
+
+
+
+@media screen and (max-width:579px) {
+
+
+    .container {
+        display: grid;
+
+        grid-gap: 10px;
+
+        grid-template-columns: ;
+        grid-template-rows: (4, 1fr);
+        grid-template-areas: "tekst infografik motor sadel";
+    }
+
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 12px 10px;
+        text-decoration: none;
+
+    }
+    .topnav img {
+        visibility: visible;
+        width: 35vw;
+        height: 5vw;
+
+    }
+
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+        z-index: 999;
+
+    }
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+
+    }
+
+    /* NAV SLUT */
+    #blinkenbike {
+        position: relative;
+        top: 60vw;
+        left: 19vw;
+        width: 55vw;
+        grid-area: infografik;
+
+    }
+
+    .bike_in {
+        background-image: url(SVG/infografikcykel.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 30vw;
+
+        left: 34vw;
+        z-index: 99;
+        animation-name: bike_in_kf;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+
+        position: absolute;
+
+    }
+
+
+
+    #bikep {
+        margin-top: 2vw;
+        width: 90vw;
+
+        grid-area: infografik;
+
+
+    }
+
+    .bikep_in {
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 3.6vw;
+
+
+        z-index: 99;
+        animation-name: btext_in_kf;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+
+        position: absolute;
+
+    }
+
+
+
+    .slideUp {
+        animation-name: slideUp;
+        -webkit-animation-name: slideUp;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        visibility: visible;
+    }
+
+
+
+    @keyframes slideUp {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(70%);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0%);
+        }
+    }
+
+    @-webkit-keyframes slideUp {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(70%);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0%);
+        }
+    }
+
+    #motorp {
+        width: 90vw;
+        top: 100vw;
+        left: -90vw;
+        position: relative;
+
+        /*        visibility: visible;*/
+        grid-area: motor;
+    }
+
+    #myMotor {
+        visibility: hidden;
+    }
+
+    #myLygte {
+        visibility: hidden;
+
+    }
+    .col-1 {
+
+        float: left;
+        top: 85vw;
+        left: -55vw;
+        grid-area: motor;
+        position: relative;
+
+        visibility: hidden;
+    }
+
+
+
+
+
+
+
+    hr {
+        margin-top: 450px;
+    }
+
+    #lygtep {
+        width: 90vw;
+        position: absolute;
+        top: 250vw;
+        margin-top: 50vw;
+        grid-area: sadel;
+
+    }
+
+
+
+    .lygteUp {
+        animation-name: lygteUp;
+        -webkit-animation-name: lygteUp;
+        animation-duration: 2s;
+        -webkit-animation-duration: 2s;
+        visibility: visible;
+    }
+
+    @keyframes lygteUp {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(70%);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0%);
+        }
+    }
+
+    @-webkit-keyframes lygteUp {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(70%);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0%);
+        }
+    }
+
+
+    /* GØR BILLEDER STORE */
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 999;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(212, 187, 87, 0.3);
+        /* Black w/ opacity */
+    }
+
+    /* Modal Content (image) */
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80vw;
+        max-width: 700px;
+    }
+
+    /* Caption of Modal Image */
+    #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    /* Add Animation */
+    .modal-content,
+    #caption {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+        from {
+            -webkit-transform: scale(0)
+        }
+        to {
+            -webkit-transform: scale(1)
+        }
+    }
+
+    @keyframes zoom {
+        from {
+            transform: scale(0)
+        }
+        to {
+            transform: scale(1)
+        }
+    }
+
+    /* The Close Button */
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+    .logo img {
+
+
+        width: 24.4vw;
+        height: 20vw;
+
+
+
+
+    }
+
+    #myImg {
+        cursor: pointer;
+        margin-right: -0.9%;
+        visibility: visible;
+        margin-top: 1%;
+        opacity: 0.7;
+    }
+
+    .logo img:hover {
+        opacity: 100;
+    }
+
+
+    img#img01.modal-content {
+        width: 100%;
+        height: 70%;
+        opacity: 100;
+        visibility: visible;
+    }
+}
+
+@media screen and (min-width:580px) {
+
+
+
+    .container {
+        display: grid;
+        margin-left: 30px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    }
+
+    /*        grid-template-areas: "tekst infografik motor";*/
+}
+
+
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+
+}
+
+.topnav img {
+    visibility: visible;
+    height: 3vw;
+
+
+}
+
+a:hover {
+    color: #DBC49A;
+}
+
+
+
+#blinkenbike {
+    position: absolute;
+    width: 30vw;
+    top: 50vw;
+    grid-row-start: 1;
+}
+
+.bike_in {
+    background-image: url(SVG/infografikcykel.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 17vw;
+
+    left: 9vw;
+    z-index: 99;
+    animation-name: bike_in_kf;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+
+
+}
+
+
+
+
+
+#bikep {
+    position: absolute;
+    width: 50vw;
+    left: 46vw;
+    grid-column-start: 2;
+    margin-top: 8%;
+    grid-row-start: 1;
+
+}
+
+.bikep_in {
+    background-image: url(SVG/overskrift.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: vw;
+
+    left: 27vw;
+    z-index: 99;
+    animation-name: btext_in_kf;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+
+    position: absolute;
+
+}
+
+
+
+.slideUp {
+    animation-name: slideUp;
+    -webkit-animation-name: slideUp;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    visibility: visible;
+}
+
+
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slideUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+#motorp {
+    width: 45vw;
+    position: absolute;
+    grid-row-start: 2;
+    top: 90vw;
+
+}
+
+
+.col-1 {
+    float: left;
+    position: relative;
+    top: 20vw;
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+
+
+
+/* body { height: 1500px; }*/
+
+img {
+    width: 180px;
+    height: 120px;
+    visibility: hidden;
+}
+
+
+
+hr {
+    margin-top: 450px;
+}
+
+#lygtep {
+    width: 45vw;
+    position: absolute;
+    left: 46vw;
+    top: 160vw;
+    grid-row-start: 3;
+}
+
+.lygte {
+    float: left;
+    top: 20vw;
+    position: relative;
+    grid-row-start: 3;
+}
+
+
+.lygteUp {
+    animation-name: lygteUp;
+    -webkit-animation-name: lygteUp;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    visibility: visible;
+}
+
+@keyframes lygteUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes lygteUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 999;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(212, 187, 87, 0.3);
+    /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80vw;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+
+.modal-content,
+#caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+.logo img {
+
+    opacity: 0.7;
+    width: 24.2vw;
+    height: 20vw;
+    visibility: visible;
+
+
+
+}
+
+#myImg {
+
+    border-color: #A5785A;
+    cursor: pointer;
+    margin-right: -0.2%;
+
+}
+
+.logo img:hover {
+    opacity: 100;
+}
+
+}
+
+img#img01.modal-content {
+    width: 100%;
+    height: 70%;
+    opacity: 100;
+}
+
+
+}

@@ -24,7 +24,7 @@ function start() {
 
         if (document.querySelector("body").scrollTop > 250 || document.documentElement.scrollTop > 200) {
             console.log("sadel kommer ind");
-            document.getElementById("myMotor").className = "slideUp";
+   document.getElementById("myMotor").className = "slideUp";
             document.getElementById("motorp").className = "slideUp";
             document.querySelector("#motorp").style.visibility = "visible";
         }
