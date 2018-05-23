@@ -4,6 +4,7 @@ p {
 
 body {
     margin: 0 auto;
+    background-color: #F4F4F4;
 }
 
 .topnav {
@@ -12,13 +13,22 @@ body {
 }
 
 
-.topnav .icon {
-    display: none;
-    z-index: 999;
-    background-color: black;
+.topnav a:hover {
+
+    color: #DBC49A;
 }
 
+
+.topnav .icon {
+    display: none;
+    background-color: #DBC49A;
+}
+
+
+
 /* GØR BILLEDER STORE */
+
+/* The Modal (background) */
 
 .modal {
     display: none;
@@ -113,17 +123,17 @@ body {
 }
 
 
+
 @media screen and (max-width:490px) {
 
-    .container {
-        background-color: aqua;
+    .logo img {
+        width: 24vw;
     }
-    .logo img {}
 
     #myImg {
         cursor: pointer;
         margin-right: -0.9%;
-        visibility: visible;
+        visibility: hidden;
         margin-top: 1%;
         opacity: 0.7;
         width: 24vw;
@@ -167,8 +177,7 @@ body {
     }
     .topnav img {
         visibility: visible;
-        width: 35vw;
-        height: 5vw;
+        height: 20px;
 
     }
 
@@ -358,6 +367,95 @@ body {
         }
     }
 
+    /* GØR BILLEDER STORE */
+    /* The Modal (background) */
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 999;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(212, 187, 87, 0.3);
+        /* Black w/ opacity */
+    }
+
+    /* Modal Content (image) */
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80vw;
+        max-width: 700px;
+    }
+
+    /* Caption of Modal Image */
+    #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    /* Add Animation */
+    .modal-content,
+    #caption {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+        from {
+            -webkit-transform: scale(0)
+        }
+        to {
+            -webkit-transform: scale(1)
+        }
+    }
+
+    @keyframes zoom {
+        from {
+            transform: scale(0)
+        }
+        to {
+            transform: scale(1)
+        }
+    }
+
+    /* The Close Button */
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
 
     .logo img {
 
@@ -419,7 +517,7 @@ body {
 
     .topnav img {
         visibility: visible;
-        height: 2.5vw;
+        height: 20px;
 
 
     }
@@ -597,6 +695,7 @@ body {
 
 
 
+
     .logo img {
 
         opacity: 0.7;
@@ -607,6 +706,7 @@ body {
 
 
     }
+
 
     #myImg {
 
@@ -654,7 +754,7 @@ body {
 
     .topnav img {
         visibility: visible;
-        height: 2.5vw;
+        height: 20px;
 
 
     }
@@ -887,7 +987,7 @@ body {
 
     .topnav img {
         visibility: visible;
-        height: 2vw;
+        height: 30px;
 
 
     }
