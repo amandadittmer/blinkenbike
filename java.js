@@ -22,15 +22,15 @@ function start() {
     window.onscroll = function () {
         console.log(document.documentElement.scrollTop);
 
-        if (document.querySelector("body").scrollTop > 250 || document.documentElement.scrollTop > 200) {
+        if (document.querySelector("body").scrollTop > 250 || document.documentElement.scrollTop > 250) {
             console.log("sadel kommer ind");
-   document.getElementById("myMotor").className = "slideUp";
+            document.getElementById("myMotor").className = "slideUp";
             document.getElementById("motorp").className = "slideUp";
             document.querySelector("#motorp").style.visibility = "visible";
         }
 
 
-        if (document.querySelector("body").scrollTop > 350 || document.documentElement.scrollTop > 350) {
+        if (document.querySelector("body").scrollTop > 500 || document.documentElement.scrollTop > 500) {
             console.log("sadel start");
             document.getElementById("myLygte").className = "lygteUp";
             document.getElementById("lygtep").className = "lygteUp";
