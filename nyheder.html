@@ -11,6 +11,16 @@
     <header>
         <section id="header"></section>
     </header>
+
+    <div class="container">
+        <h2>Tilmeld nyhedsbrev</h2>
+        <form id="nyhedsbrev" action="" method="post" enctype="multipart/form-data">
+            <input type="email" name="email" placeholder="email">
+            <input type="submit" value="Tilmeld">
+
+        </form>
+    </div>
+
     <script>
         async function hentHeader() {
             let headerData = await fetch("header.html");
