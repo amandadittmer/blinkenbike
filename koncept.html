@@ -24,7 +24,6 @@
 
         body {
             margin: 0 auto;
-
         }
 
         .container {
@@ -32,159 +31,7 @@
 
             grid-template-columns: ;
             grid-template-rows: 1fr 1fr 1fr;
-
         }
-
-
-        .topnav {
-            overflow: hidden;
-            background-color: white;
-        }
-
-
-        .topnav a:hover {
-
-            color: #DBC49A;
-        }
-
-
-        .topnav .icon {
-            display: none;
-            color: #A5785A;
-        }
-
-
-
-        @media screen and (max-width:579px) {
-            .topnav a {
-                float: left;
-                display: block;
-                color: black;
-                text-align: center;
-                padding: 12px 10px;
-                text-decoration: none;
-            }
-            .topnav img {
-                visibility: visible;
-                width: 35vw;
-                height: 5vw;
-                =======
-            }
-
-            .topnav img {
-                width: ;
-                height: 20px;
-            }
-
-
-            .topnav a:not(:first-child) {
-                display: none;
-            }
-            .topnav a.icon {
-                float: right;
-                display: block;
-
-            }
-
-
-            .topnav.responsive {
-                position: relative;
-            }
-            .topnav.responsive .icon {
-                position: absolute;
-                right: 0;
-                top: 0;
-            }
-            .topnav.responsive a {
-                float: none;
-                display: block;
-                text-align: left;
-            }
-            a:hover {
-                color: #DBC49A;
-            }
-
-
-        }
-
-        @media screen and (min-width:580px) {
-            .topnav a {
-                float: left;
-                display: block;
-                color: black;
-                text-align: center;
-                padding: 18px;
-                text-decoration: none;
-
-            }
-
-
-            .topnav img {
-                visibility: visible;
-                width: ;
-                height: 20px;
-
-
-            }
-
-            a:hover {
-                color: #DBC49A;
-            }
-        }
-
-        @media screen and (min-width:700px) {
-            .topnav a {
-                float: left;
-                display: block;
-                color: black;
-                text-align: center;
-                padding: 20px;
-                text-decoration: none;
-
-            }
-
-
-            .topnav img {
-                visibility: visible;
-                height: 20px;
-
-
-            }
-
-
-            a:hover {
-                color: #DBC49A;
-            }
-
-        }
-
-        @media screen and (min-width:1024px) {
-            .topnav a {
-                float: left;
-
-                color: black;
-                text-align: center;
-                padding: 30px 16px;
-                text-decoration: none;
-
-            }
-
-
-            .topnav img {
-                visibility: visible;
-                height: 25px;
-
-
-            }
-
-
-            a:hover {
-                color: #DBC49A;
-            }
-
-        }
-
-
 
         .koncept_boks_1 {
             width: 90vw;
@@ -202,32 +49,7 @@
 
 <body>
     <header>
-
-
-        <div class="topnav" id="myTopnav">
-
-            <a href="#home" class="active"><img src="SVG/logoover.svg" alt="logo"></a>
-            <a href="#news">Produkt</a>
-            <a href="#contact">Koncept</a>
-            <a href="#about">Nyheder</a>
-            <a href="">Kontakt</a>
-
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-        </div>
-        <!--
-        <div class="logo">
-
-            <div id="myModal" class="modal">
-                <span class="close">&times;</span>
-                <img class="modal-content" id="img01">
-                <img class="modal-content" id="img02">
-                <div id="caption"></div>
-            </div>
-        </div>
--->
-
+        <section id="header"></section>
     </header>
     <section class="container">
 
@@ -360,19 +182,19 @@
 
             console.log(out);
         }
-
-        // NAV BURGER MENU
-
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-
-        }
     </script>
+
+    <!--       HENTER HEADER-->
+    <script>
+        async function hentHeader() {
+            let headerData = await fetch("header.html");
+            let header = await headerData.text();
+            document.querySelector("#header").innerHTML = header;
+        }
+        document.addEventListener("DOMContentLoaded", hentHeader);
+    </script>
+
+    <script src="java.js"></script>
 
 </body>
 
