@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="">
+    <style>
+        iframe {
+            border: 1px solid;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,14 +19,67 @@
 
     <iframe src="nyhedsbrev.html"></iframe>
 
+    <section id="nyheder"></section>
+
+    <template>
+        <article>
+            <h2 data_titel></h2>
+            <p data_dato></p>
+            <img src="" alt="" data_image>
+            <p data_korttekst></p>
+            <p data_forfatter></p>
+        </article>
+    </template>
+
     <script>
+        //HENTER HEADER
         async function hentHeader() {
             let headerData = await fetch("header.html");
             let header = await headerData.text();
             document.querySelector("#header").innerHTML = header;
         }
         document.addEventListener("DOMContentLoaded", hentHeader);
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+
+
+
+        //WP API REST
+        let jSonUrl = "http://amandadm.dk/kea/2-sem/blinkenbike/wordpress/wp-json/wp/v2/nyheder";
+        let nyheder = [];
+        let display = document.querySelector("#nyheder");
+        let template = document.querySelector("template");
+
+        async function hentJson() {
+            let dataJson = await fetch(jSonUrl);
+            nyheder = await dataJson.json();
+            //            console.log(nyheder);
+            visNyheder();
+        }
+
+        function visNyheder() {
+            nyheder.forEach(nyhed => {
+                console.log(nyhed);
+
+                let klon = template.cloneNode(true).content;
+                console.log(klon);
+
+                klon.querySelector("[data_titel]").textContent = nyhed.acf.titel;
+                klon.querySelector("[data_image]").src = nyhed.acf.billede.url;
+                klon.querySelector("[data_image]").alt = nyhed.acf.billede.alt;
+
+                klon.querySelector("[data_korttekst]").innerHTML = nyhed.acf.kort_tekst;
+
+                klon.querySelector("[data_forfatter]").textContent = nyhed.acf.forfatter.nickname;
+
+                klon.querySelector("[data_dato]").textContent = nyhed.acf.dato;
+
+                display.appendChild(klon);
+
+            });
+        }
     </script>
     <script src="java.js"></script>
 </body>
+
 </html>
