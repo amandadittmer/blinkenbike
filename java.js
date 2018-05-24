@@ -1,6 +1,3 @@
-//$(window).on("load", start);
-document.addEventListener("DOMContentLoaded", startProgram);
-
 // NAV BURGER MENU
 
 function myFunction() {
@@ -12,6 +9,9 @@ function myFunction() {
     }
 
 }
+document.addEventListener("DOMContentLoaded", startProgram);
+
+
 
 function startProgram() {
     console.log("start");
@@ -22,14 +22,6 @@ function startProgram() {
 
     document.querySelector("#motorp").style.visibility = "hidden";
 
-
-
-
-
-
-    //    $("#background_sound")[0].play();
-
-    //    $("#hand_container").on("animationend", handOneIn);
     setTimeout(textIn, 1000);
 
 
@@ -71,14 +63,6 @@ function textIn() {
 
     setTimeout(myFunction, 1000);
 }
-
-
-
-
-
-
-
-function myFunctionLygte() {}
 
 
 

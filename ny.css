@@ -3,7 +3,7 @@ p {
 }
 
 body {
-    margin: 0 auto;
+    margin: 0;
     background-color: #F4F4F4;
 }
 
@@ -21,7 +21,7 @@ body {
 
 .topnav .icon {
     display: none;
-    background-color: #DBC49A;
+    color: rebeccapurple;
 }
 
 
@@ -124,35 +124,6 @@ body {
 
 
 
-@media screen and (max-width:490px) {
-
-    .logo img {
-        width: 24vw;
-    }
-
-    #myImg {
-        cursor: pointer;
-        margin-right: -0.9%;
-        visibility: hidden;
-        margin-top: 1%;
-        opacity: 0.7;
-        width: 24vw;
-
-
-    }
-
-    #myImg:hover {
-        opacity: 100;
-    }
-
-
-    img#img01.modal-content {
-        width: 100%;
-        height: 70%;
-        opacity: 100;
-        visibility: visible;
-    }
-}
 
 
 @media screen and (max-width:579px) {
@@ -175,11 +146,13 @@ body {
         text-decoration: none;
 
     }
+
     .topnav img {
         visibility: visible;
         height: 20px;
 
     }
+
 
     .topnav a:not(:first-child) {
         display: none;
@@ -461,7 +434,7 @@ body {
 
 
         height: 20vw;
-
+        visibility: hidden;
 
 
 
@@ -474,6 +447,7 @@ body {
         margin-top: 1%;
         opacity: 0.7;
         width: 25.3vw;
+        visibility: hidden;
     }
 
     .logo img:hover {
