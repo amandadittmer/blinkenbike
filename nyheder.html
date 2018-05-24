@@ -4,16 +4,59 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
     <title></title>
     <style>
-        iframe {
-            border: 1px solid;
+        body {
+            background-color: #F4F4F4;
         }
 
+        iframe {
+            display: flex;
+
+            border: 1px;
+            border-radius: 2px;
+            background-color: rgba(212, 187, 87, 0.5);
+            font-family: 'Open Sans Condensed';
+            margin-right: 20vw;
+            margin: 0 auto;
+
+        }
+
+        #nyheder template {
+
+            display: grid;
+            grid-template-columns: 0%;
+            grid-template-rows: 1fr 1fr;
+
+
+        }
+
+        #nyheder img {
+            width: 100vw;
+        }
+
+        #nyheder p {
+            width: 70vw;
+            margin: 0 auto;
+            font-family: 'Open Sans';
+  color: #545454;
+        }
+
+        #nyheder h2 {
+            font-family: 'Open Sans Condensed';
+ color: #545454;
+            font-size: 1.3rem;
+          text-align: center;
+        }
     </style>
 </head>
 
 <body>
+
+
+
     <header>
         <section id="header"></section>
     </header>
@@ -78,7 +121,6 @@
 
             });
         }
-
     </script>
     <script src="java.js"></script>
 </body>

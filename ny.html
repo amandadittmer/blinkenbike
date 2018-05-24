@@ -14,85 +14,59 @@
 
         p {
             font-family: 'Open Sans', sans-serif;
+            color: #545454;
         }
 
-        h1,
-        h2 {
+        h3 {
             font-family: 'Open Sans Condensed', sans-serif;
+            color: #545454;
         }
 
         body {
             margin: 0 auto;
         }
-
-        .koncept_boks_1 {
-            width: 90vw;
-            margin-left: 20px;
-            grid-row-start: 1;
-        }
-
-        .koncept_boks_3 {
-            width: 90vw;
-            margin-left: 20px;
-            grid-row-start: 2;
-        }
     </style>
 </head>
 
 <body>
+
     <header>
         <section id="header"></section>
-        <div class="logo">
-            <img id="myImg" src="SVG/pigec.png" alt="" width="700" height="700">
-
+        <div class="logo"><img id="myImg" src="SVG/pigec.png" alt="" width="700" height="700">
             <img id="myImg" src="SVG/nc.png" alt="" width="700" height="700">
             <img id="myImg" src="SVG/solc.png" alt="" width="700" height="700">
             <img id="myImg" src="SVG/vc.png" alt="" width="700" height="700">
-
             <!-- The Modal -->
-            <div id="myModal" class="modal">
-                <span class="close">&times;</span>
-                <img class="modal-content" id="img01">
-                <img class="modal-content" id="img02">
+            <div id="myModal" class="modal"><span class="close">&times;
+        </span>
+                <img class="modal-content" id="img01"><img class="modal-content" id="img02">
                 <div id="caption"></div>
             </div>
         </div>
     </header>
-
     <section id="video">
         /* indsæt video af junke her */
-    </section>
 
+    </section>
     <section class="container">
         <div id="bikep" class="">
             <h3>BLINKENBIKE</h3>
-            <p>En løbecykel med betydning, som dit barn vil elske. Blinkenbikes løbecykler er skabt ud fra konceptet "Build a Bike", hvilket betyder den er unik i forhold til andre løbecykler, da man selv samler løbecyklen.<br> Få aktiveret dit barns motorik og lad dit barn få et specielt forhold til sit legetøj med Blinkenbikes funktionelle design.</p>
-
+            <p>En løbecykel med betydning, som dit barn vil elske. Blinkenbikes løbecykler er skabt ud fra konceptet "Build a Bike", hvilket betyder den er unik i forhold til andre løbecykler, da man selv samler løbecyklen.<br>Få aktiveret dit barns motorik og lad dit barn få et specielt forhold til sit legetøj med Blinkenbikes funktionelle design.</p>
         </div>
-        <div id="blinkenbike" class=""> </div>
-
-        <div class="col-1">
-            <img id="myMotor" src="SVG/motor.svg" width="304" height="228">
-
-        </div>
+        <div id="blinkenbike" class=""></div>
+        <div class="col-1"><img id="myMotor" src="SVG/motor.svg" width="304" height="228"></div>
         <div id="motorp">
             <h3>HISTORIE</h3>
             <p>Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.</p>
         </div>
         <hr>
-        <div class="lygte">
-            <img id="myLygte" src="SVG/sadel.png" width="304" height="228">
-        </div>
-
+        <div class="lygte"><img id="myLygte" src="SVG/sadel.png" width="304" height="228"></div>
         <div id="lygtep">
             <h3>SoMe</h3>
             <p>Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.</p>
         </div>
     </section>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!--       HENTER HEADER-->
     <script>
         async function hentHeader() {
             let headerData = await fetch("header.html");
@@ -101,12 +75,10 @@
         }
         document.addEventListener("DOMContentLoaded", hentHeader);
     </script>
-
     <script src="java.js"></script>
 </body>
-
 <footer>
-    <p>BLINKENBIKE ApS - Baldersbuen 27 - 2640 Hedehusene - Denmark - Tel. +45 4242 8162 - Info@blinkenbike.dk</p>
+    <p>BLINKENBIKE ApS - Baldersbuen 27 - 2640 Hedehusene - Denmark - Tel.+45 4242 8162 - Info@blinkenbike.dk</p>
 </footer>
 
 </html>
