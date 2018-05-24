@@ -9,6 +9,7 @@
         iframe {
             border: 1px solid;
         }
+
     </style>
 </head>
 
@@ -17,8 +18,10 @@
         <section id="header"></section>
     </header>
 
+    <!--NYHEDSBREVET-->
     <iframe src="nyhedsbrev.html"></iframe>
 
+    <!--WP REST API-->
     <section id="nyheder"></section>
 
     <template>
@@ -26,8 +29,7 @@
             <h2 data_titel></h2>
             <p data_dato></p>
             <img src="" alt="" data_image>
-            <p data_korttekst></p>
-            <p data_forfatter></p>
+            <p data_langtekst></p>
         </article>
     </template>
 
@@ -68,9 +70,7 @@
                 klon.querySelector("[data_image]").src = nyhed.acf.billede.url;
                 klon.querySelector("[data_image]").alt = nyhed.acf.billede.alt;
 
-                klon.querySelector("[data_korttekst]").innerHTML = nyhed.acf.kort_tekst;
-
-                klon.querySelector("[data_forfatter]").textContent = nyhed.acf.forfatter.nickname;
+                klon.querySelector("[data_langtekst]").innerHTML = nyhed.acf.lang_tekst;
 
                 klon.querySelector("[data_dato]").textContent = nyhed.acf.dato;
 
@@ -78,6 +78,7 @@
 
             });
         }
+
     </script>
     <script src="java.js"></script>
 </body>
