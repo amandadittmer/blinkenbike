@@ -17,10 +17,12 @@
 
             border: 1px;
             border-radius: 2px;
-            background-color: rgba(212, 187, 87, 0.5);
+            background-color: rgba(219, 196, 154, 0.9);
             font-family: 'Open Sans Condensed';
             margin-right: 20vw;
             margin: 0 auto;
+            margin-top: 10vw;
+
 
         }
 
@@ -35,20 +37,56 @@
 
         #nyheder img {
             width: 100vw;
+
         }
 
         #nyheder p {
             width: 70vw;
             margin: 0 auto;
             font-family: 'Open Sans';
-  color: #545454;
+            color: #545454;
+            margin-top: 5vw;
         }
 
         #nyheder h2 {
             font-family: 'Open Sans Condensed';
- color: #545454;
+            color: #545454;
             font-size: 1.3rem;
-          text-align: center;
+            text-align: center;
+            margin-top: 10vw;
+        }
+
+        @media screen and (min-width:700px) {
+            iframe {
+                display: flex;
+                border: 1px;
+                border-radius: 2px;
+                background-color: rgba(219, 196, 154, 0.9);
+                font-family: 'Open Sans Condensed';
+                margin-right: 20vw;
+                margin: 0 auto;
+                margin-top: 10vw;
+                width: 50vw;
+                height: 30vw;
+            }
+            @media screen and (min-width:900px) {
+
+                template {
+
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+
+                }
+                #nyheder img {
+                    width: 100vw;
+                    grid-row-start: 1;
+
+                }
+
+
+            }
         }
     </style>
 </head>
