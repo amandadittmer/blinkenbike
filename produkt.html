@@ -99,25 +99,10 @@
 
 <body>
 
-<<<<<<< HEAD
-    <div id="section_1">
-        <div class="billede_1">
-            <img src="produkt_img/billede_11.png" alt="billede_11">
-            <img src="produkt_img/billede_2.png" alt="billede_2">
-            <img src="produkt_img/billede_4.png" alt="billede_4">
-        </div>
-        <!--
-        <div class="billede_2">
-            <img src="produkt_img/billede_4.png" alt="billede_4">
-        </div>
--->
-    </div>
     <footer>
         <section id="footer"></section>
     </footer>
-=======
 
->>>>>>> origin/master
 </body>
 <script>
     // HENTER HEADER
@@ -128,14 +113,15 @@
     }
     document.addEventListener("DOMContentLoaded", hentHeader);
 
-<<<<<<< HEAD
+
     async function hentFooter() {
         let footerData = await fetch("footer.html");
         let footer = await footerData.text();
         document.querySelector("#footer").innerHTML = footer;
     }
+
     document.addEventListener("DOMContentLoaded", hentFooter);
-=======
+
     document.addEventListener("DOMContentLoaded", hentJson);
 
     //WP API REST
@@ -171,7 +157,6 @@
 
         });
     }
->>>>>>> origin/master
 </script>
 
 <script src="java.js"></script>
