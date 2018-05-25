@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>footer</title>
+    <style>
+        footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            background-color: white;
+
+
+        }
+
+        .contact,
+        .find,
+        .nyhed {
+            padding: 10px;
+        }
+
+
+
+
+        footer h3 {
+            text-align: center;
+        }
+
+        iframe {
+            width: 25vw;
+            border: none;
+            background-color: rgba(219, 196, 154, 0.9);
+        }
+
+        .nederst img {
+            visibility: visible;
+            width: 4vw;
+            height: 4vw;
+
+        }
+
+
+
+        @media screen and (max-width:579px) {
+            footer {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                background-color: white;
+
+
+            }
+
+            .nyhed {
+                visibility: hidden;
+            }
+            .nederst img {
+                visibility: visible;
+                text-align: center;
+                width: 50px;
+                height: 50px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <footer>
+
+        <div class="contact">
+            <h3>Kontakt os</h3>
+            <ul style="list-style-type:none">
+                <li><b>Tlf:</b> +45 42 42 81 62</li><br>
+                <li><b>Tlf:</b> +45 29 80 39 83</li><br>
+                <li><b>Email:</b> NBW@blinkenbike.dk</li>
+
+            </ul>
+
+        </div>
+        <div class="find">
+            <h3>Find os</h3>
+
+            <ul style="list-style-type:none">
+                <li><b>BLINKENBIKE ApS</b></li><br>
+                <li>Baldersbuen 27</li><br>
+                <li>2640 Hedehusene</li><br>
+                <li> Danmark</li>
+            </ul>
+        </div>
+        <div class="nyhed">
+            <h3>Nyhedsbrev</h3>
+            <iframe src="nyhedsbrev.html"></iframe>
+        </div>
+        <div class="nederst">
+            <img src="SVG/facebook.png" alt="facebook">
+            <img src="SVG/instagram.png" alt="facebook">
+            <img src="SVG/youtube.png" alt="facebook">
+        </div>
+
+
+    </footer>
+    <script src="java.js">
+    </script>
+</body>
+
+</html>

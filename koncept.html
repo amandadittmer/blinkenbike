@@ -21,7 +21,7 @@
         }
 
         body {
-            margin: 0 auto;
+            margin: 0;
         }
 
         .explainer img {
@@ -333,10 +333,19 @@
             document.querySelector("#header").innerHTML = header;
         }
         document.addEventListener("DOMContentLoaded", hentHeader);
+
+        async function hentFooter() {
+            let footerData = await fetch("footer.html");
+            let footer = await footerData.text();
+            document.querySelector("#footer").innerHTML = footer;
+        }
+        document.addEventListener("DOMContentLoaded", hentFooter);
     </script>
 
     <script src="java.js"></script>
-
+    <footer>
+        <section id="footer"></section>
+    </footer>
 </body>
 
 </html>

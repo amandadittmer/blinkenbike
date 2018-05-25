@@ -187,6 +187,9 @@
 
 
 
+    <footer>
+        <section id="footer"></section>
+    </footer>
 
 </body>
 <script>
@@ -197,6 +200,15 @@
         document.querySelector("#header").innerHTML = header;
     }
     document.addEventListener("DOMContentLoaded", hentHeader);
+
+
+    async function hentFooter() {
+        let footerData = await fetch("footer.html");
+        let footer = await footerData.text();
+        document.querySelector("#footer").innerHTML = footer;
+    }
+
+    document.addEventListener("DOMContentLoaded", hentFooter);
 
     document.addEventListener("DOMContentLoaded", hentJson);
 
