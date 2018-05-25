@@ -10,12 +10,14 @@
     <style>
         body {
             background-color: #F4F4F4;
+
+
         }
 
         iframe {
             display: flex;
 
-            border: 1px;
+            border: none;
             border-radius: 2px;
             background-color: rgba(219, 196, 154, 0.9);
             font-family: 'Open Sans Condensed';
@@ -56,7 +58,57 @@
             margin-top: 10vw;
         }
 
+        footer {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            background-color: white;
+
+
+        }
+
+        .contact,
+        .find,
+        .nyhed {
+            padding: 10px;
+        }
+
+        iframe {
+            width: 25vw;
+            border: none;
+            background-color: rgba(219, 196, 154, 0.9);
+        }
+
+        .nederst img {
+            visibility: visible;
+            width: 4vw;
+            height: 4vw;
+
+        }
+
+
         @media screen and (min-width:700px) {
+            footer {
+                display: grid;
+
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                background-color: white;
+
+
+            }
+
+            .nyhed {
+                visibility: hidden;
+            }
+            .nederst img {
+                visibility: visible;
+                text-align: center;
+                width: 50px;
+                height: 50px;
+
+            }
             iframe {
                 display: flex;
                 border: 1px;
@@ -87,6 +139,7 @@
 
 
             }
+
         }
     </style>
 </head>
@@ -161,6 +214,7 @@
         }
     </script>
     <script src="java.js"></script>
+
 </body>
 
 </html>

@@ -74,6 +74,9 @@
         </div>
 -->
     </div>
+    <footer>
+        <section id="footer"></section>
+    </footer>
 </body>
 <!--       HENTER HEADER-->
 <script>
@@ -83,6 +86,13 @@
         document.querySelector("#header").innerHTML = header;
     }
     document.addEventListener("DOMContentLoaded", hentHeader);
+
+    async function hentFooter() {
+        let footerData = await fetch("footer.html");
+        let footer = await footerData.text();
+        document.querySelector("#footer").innerHTML = footer;
+    }
+    document.addEventListener("DOMContentLoaded", hentFooter);
 </script>
 
 <script src="java.js"></script>

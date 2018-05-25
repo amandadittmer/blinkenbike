@@ -80,22 +80,17 @@
             document.querySelector("#header").innerHTML = header;
         }
         document.addEventListener("DOMContentLoaded", hentHeader);
+        async function hentFooter() {
+            let footerData = await fetch("footer.html");
+            let footer = await footerData.text();
+            document.querySelector("#footer").innerHTML = footer;
+        }
+        document.addEventListener("DOMContentLoaded", hentFooter);
     </script>
 
     <script src="java.js"></script>
-
     <footer>
-        <div class="kontaktop">
-
-            <div class="contact">
-                Tlf 1: + 45 2980 3983 Tlf 2: + 45 4242 8162 Email: info@blinkenbike.com CVR: 11111111
-
-            </div>
-            <div class="findos"></div>
-            <div class="nyhedsbrev"></div>
-
-
-        </div>
+        <section id="footer"></section>
     </footer>
 </body>
 </html>
