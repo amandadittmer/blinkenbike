@@ -22,21 +22,6 @@
             font-family: 'Open Sans Condensed', sans-serif;
         }
 
-        body {
-            margin: 0 auto;
-        }
-
-        .koncept_boks_1 {
-            width: 90vw;
-            margin-left: 20px;
-            grid-row-start: 1;
-        }
-
-        .koncept_boks_3 {
-            width: 90vw;
-            margin-left: 20px;
-            grid-row-start: 2;
-        }
 
         /*        OVERLAY*/
 
@@ -51,6 +36,19 @@
             height: auto;
         }
 
+        #titleoverlay {
+            font-family: 'Open Sans Condensed', sans-serif;
+            text-align: center;
+            font-size: 1.5rem;
+
+        }
+
+        #data_textoverlay {
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+
+        }
+
         .overlay {
             position: absolute;
             top: 0;
@@ -61,11 +59,11 @@
             width: 100%;
             opacity: 0;
             transition: .5s ease;
-            background-color: #008CBA;
+            background-color: #dbc49a;
         }
 
         .container:hover .overlay {
-            opacity: 1;
+            opacity: 0.8;
         }
 
         .text {
@@ -77,27 +75,117 @@
             transform: translate(-50%, -50%);
             text-align: center;
         }
+
+
+
+        @media screen and (max-width:579px) {
+
+            .container {
+                margin-left: 5%;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 20% 20% 20% 20% 20%;
+            }
+
+            .image {
+                width: 90vw;
+                padding-top: 10vw;
+            }
+
+            .overlay {
+                position: absolute;
+                top: 10%;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 90%;
+                width: 90vw;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: #dbc49a;
+            }
+
+        }
+
+        @media screen and (max-width:579px) {
+
+            .container {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 30% 30% 30%;
+            }
+            .koncept_boks_1 {
+                width: 90vw;
+                margin-left: 20px;
+                grid-row-start: 1;
+            }
+            .explainer {
+                grid-row-start: 2;
+                margin-left: 20px;
+
+            }
+            .koncept_boks_3 {
+                width: 90vw;
+                margin-left: 20px;
+                grid-row-start: 3;
+            }
+            #map {
+                visibility: hidden;
+            }
+        }
+
+        @media screen and (min-width:580px) {
+
+            .container {
+                margin-left: 5%;
+                display: grid;
+                grid-template-columns: ;
+                grid-template-rows: ;
+
+            }
+
+
+            .image {
+                width: 45vw;
+                padding-top: 10vw;
+            }
+
+            .overlay {
+                position: absolute;
+                top: 8%;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 25.5%;
+                width: 45vw;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: #dbc49a;
+            }
+        }
     </style>
 </head>
 <header>
     <section id="header"></section>
 </header>
-<section id="galleri"></section>
 
-<template>
+<body>
+    <section id="galleri">
+    </section>
+    <template>
         <article>
                <div class="container">
                 <img class="image" src="" alt="" data_image>
                 <div class="overlay">
                 <div id="titleoverlay" data_titleoverlay></div>
-                    <div data_textoverlay></div>
+                    <div id="data_textoverlay" data_textoverlay></div>
                     </div>
                     </div>
         </article>
     </template>
 
 
-<body>
+
 
 
 </body>

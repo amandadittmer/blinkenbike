@@ -9,10 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Koncept</title>
     <style>
-        .container {
-            background-color: #F4F4F4;
-        }
-
         p {
             font-family: 'Open Sans', sans-serif;
             color: #545454;
@@ -28,23 +24,163 @@
             margin: 0 auto;
         }
 
-        .container {
-            display: grid;
+        .explainer img {
+            width: 40vw;
 
-            grid-template-columns: ;
-            grid-template-rows: 1fr 1fr 1fr;
         }
 
-        .koncept_boks_1 {
-            width: 90vw;
-            margin-left: 20px;
-            grid-row-start: 1;
+
+        @media screen and (max-width:579px) {
+
+            .container {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 30% 30% 30%;
+            }
+            .koncept_boks_1 {
+                width: 90vw;
+                margin-left: 20px;
+                grid-row-start: 1;
+            }
+            .explainer {
+                grid-row-start: 2;
+                margin-left: 20px;
+
+            }
+            .koncept_boks_3 {
+                width: 90vw;
+                margin-left: 20px;
+                grid-row-start: 3;
+            }
+            #map {
+                visibility: hidden;
+            }
         }
 
-        .koncept_boks_3 {
-            width: 90vw;
-            margin-left: 20px;
-            grid-row-start: 2;
+        @media screen and (min-width:580px) {
+            .container {
+                display: grid;
+                grid-template-columns: 30% 30% 30%;
+                grid-template-rows: 30% 30% 30%;
+            }
+            .koncept_boks_1 {
+                width: 65vw;
+                margin-left: 20px;
+                grid-column-start: 1;
+                grid-row-start: 1;
+            }
+            .explainer {
+                grid-column-start: 3;
+                grid-row-start: 2;
+
+            }
+            .koncept_boks_3 {
+                width: 65vw;
+                margin-left: 20px;
+                grid-column-start: 1;
+                grid-row-start: 3;
+
+            }
+            #map {
+                visibility: hidden;
+            }
+        }
+
+        @media screen and (min-width:700px) {
+            .container {
+                display: grid;
+                grid-template-columns: 30% 30% 30%;
+                grid-template-rows: 30% 30% 30%;
+            }
+            .koncept_boks_1 {
+                width: 60vw;
+                margin-left: 20px;
+                grid-column-start: 1;
+                grid-row-start: 1;
+            }
+            .explainer {
+                grid-column-start: 3;
+                grid-row-start: 2;
+
+            }
+            .koncept_boks_3 {
+                width: 60vw;
+                margin-left: 20px;
+                grid-column-start: 1;
+                grid-row-start: 3;
+
+            }
+            #map {
+                visibility: hidden;
+            }
+        }
+
+        @media screen and (min-width:900px) {
+            .container {
+                display: grid;
+                grid-template-columns: 20% 20% 20% 20%;
+                grid-template-rows: 20% 20% 20% 20%;
+                grid-gap: 10px;
+            }
+            .koncept_boks_1 {
+                width: 60vw;
+                margin-left: 20px;
+                grid-column-start: 1;
+                grid-row-start: 1;
+            }
+            .explainer {
+                grid-column-start: 4;
+                grid-row-start: 2;
+
+            }
+            .koncept_boks_3 {
+                width: 60vw;
+                margin-left: 20px;
+                grid-column-start: 1;
+                grid-row-start: 3;
+
+            }
+            #map {
+                visibility: inherit;
+                width: 90vw;
+                grid-column-start: 2;
+                grid-row-start: 4;
+            }
+        }
+
+        @media screen and (min-width:1024px) {
+            .container {
+                display: grid;
+                grid-template-columns: 20% 20% 20% 20%;
+                grid-template-rows: 20% 20% 20% 20%;
+                grid-gap: 10px;
+            }
+            .koncept_boks_1 {
+                width: 60vw;
+                margin-left: 20px;
+                grid-column-start: 1;
+                grid-row-start: 1;
+            }
+            .explainer {
+                grid-column-start: 4;
+                grid-row-start: 2;
+
+            }
+            .koncept_boks_3 {
+                width: 60vw;
+                margin-left: 20px;
+                grid-column-start: 1;
+                grid-row-start: 3;
+
+            }
+            #map {
+                visibility: inherit;
+                width: 50vw;
+                grid-column-start: 3;
+                grid-row-start: 4;
+            }
+
+
         }
     </style>
 </head>
@@ -61,7 +197,10 @@
             <p>Blinkenbike er et koncept for børn, hvor det ikke kun går ud på at lære at holde balancen på en cykel, men også kan udvikle deres motoriske færdigheder, samt opmuntre deres naturlige nysgerrighed og kreativitet ved at samle flere sorter af forskellige designs baseret på blot en grundlæggende cykel.
             </p>
         </div>
-        <div class="explainer"></div>
+        <div class="explainer">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8sdlWY6PFWY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+        </div>
         <div class="koncept_boks_3">
             <h3>Mere end bare en løbecykel</h3>
             <p>En løbecykel har den fordel, at det lærer dine børn de færdigheder, de skal bruge til at cykle på en pedal cykel. Når de skal lære bruge en pedal cykel, ved de allerede, hvordan de skal holde balancen og styre, hvilket gør overgangen hurtig og nem. Derfor vil en balancecykel få dit barn til at bevæge sig mere sikkert i trafik, fordi de ikke behøver at koncentrere sig om balance.
