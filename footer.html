@@ -4,69 +4,234 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>footer</title>
     <style>
-        footer {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr;
-            background-color: white;
+        /*
+ footer { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr; background-color: white; }*/
 
-
-        }
-
-        .contact,
-        .find,
-        .nyhed {
-            padding: 10px;
+        p,
+        li {
+            font-family: 'Open Sans', sans-serif;
+            color: #545454;
         }
 
 
+        h3 {
+            font-family: 'Open Sans Condensed', sans-serif;
+            color: #545454;
+        }
 
+        .nederst img {
+            width: 45px;
 
-        footer h3 {
-            text-align: center;
         }
 
         iframe {
-            width: 25vw;
+            max-width: 50vw;
             border: none;
             background-color: rgba(219, 196, 154, 0.9);
         }
 
-        .nederst img {
-            visibility: visible;
-            width: 4vw;
-            height: 4vw;
-
+        .contact {
+            width: 40vw;
         }
 
+        .find {
+            width: 40vw;
+        }
 
-
-        @media screen and (max-width:579px) {
+        @media screen and (min-width:400px) {
             footer {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr;
+                grid-template-columns: 40% 20% 40%;
+                grid-template-rows: 50% 50%;
                 background-color: white;
 
+            }
+            .contact {
+                grid-row-start: 1;
+                grid-row-end: 1;
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+            .find {
+                grid-row-start: 1;
+                grid-row-end: 1;
+                grid-column-start: 3;
+                grid-column-end: 4;
 
             }
 
             .nyhed {
                 visibility: hidden;
             }
-            .nederst img {
-                visibility: visible;
-                text-align: center;
-                width: 50px;
-                height: 50px;
+            .nederst {
+                grid-row-start: 2;
+                grid-row-end: 2;
+                grid-column-start: 2;
+                grid-column-end: 4;
 
             }
+            footer h3 {
+                margin-left: 40px;
+            }
         }
+
+        @media screen and (max-width:579px) {
+            footer {
+                display: grid;
+                grid-template-columns: 40% 20% 40%;
+                grid-template-rows: 50% 50%;
+                background-color: white;
+                grid-gap: 10px;
+                grid-column-gap: 10px;
+            }
+            .contact {
+                grid-row-start: 1;
+                grid-row-end: 1;
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+            .find {
+                grid-row-start: 1;
+                grid-row-end: 1;
+                grid-column-start: 4;
+                grid-column-end: 5;
+
+            }
+
+            .nyhed {
+                visibility: hidden;
+            }
+            .nederst {
+                grid-row-start: 2;
+                grid-row-end: 2;
+                grid-column-start: 3;
+                grid-column-end: 5;
+
+            }
+            footer h3 {
+                margin-left: 40px;
+            }
+        }
+
+        @media screen and (min-width:580px) {
+
+            footer {
+                display: grid;
+                grid-template-rows: 20% 20% 20% 20% 20%;
+                grid-template-columns: 20% 20% 20% 20% 20%;
+                background-color: white;
+            }
+            .contact {
+                grid-row-start: 1;
+                grid-row-end: 2;
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+            .find {
+                grid-row-start: 3;
+                grid-row-end: 5;
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+
+            .nyhed {
+                visibility: inherit;
+                grid-row-start: 1;
+                grid-row-end: 3;
+                grid-column-start: 3;
+                grid-column-end: 6;
+
+            }
+
+            .nederst {
+                grid-row-start: 4;
+                grid-row-end: 4;
+                grid-column-start: 4;
+                grid-column-end: 6;
+
+            }
+
+        }
+
+        @media screen and (min-width:800px) {
+
+            footer {
+                display: grid;
+                grid-template-columns: 20% 20% 20% 20% 20%;
+                grid-template-rows: 50% 50%;
+                background-color: white;
+
+            }
+            .contact {
+                grid-row-start: 1;
+                grid-row-end: 1;
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+            .find {
+                grid-row-start: 1;
+                grid-row-end: 1;
+                grid-column-start: 2;
+                grid-column-end: 4;
+            }
+
+            .nyhed {
+                grid-row-start: 2;
+                grid-row-end: 2;
+                grid-column-start: 3;
+                grid-column-end: 6;
+            }
+
+            .nederst {
+                grid-row-start: 2;
+                grid-row-end: 2;
+                grid-column-start: 2;
+                grid-column-end: 4;
+            }
+        }
+
+        footer h3 {
+            margin-left: 40px;
+        }
+
+        @media screen and (min-width:900px) {
+
+            footer {
+                display: grid;
+                grid-template-columns: 25% 25% 25% 25%;
+                grid-template-rows: 25% 25% 25% 25%;
+                background-color: white;
+            }
+            .contact {
+                grid-row-start: 1;
+                grid-column-start: 1;
+            }
+            .find {
+                grid-row-start: 1;
+                grid-column-start: 2;
+            }
+
+            .nyhed {
+                grid-row-start: 1;
+                grid-column-start: ;
+            }
+
+            .nederst {
+                grid-row-start: 1;
+                grid-column-start: 3/3;
+            }
+
+
+            footer h3 {
+                margin-left: 40px;
+            }
+
+        }
+
     </style>
 </head>
 
@@ -79,13 +244,11 @@
                 <li><b>Tlf:</b> +45 42 42 81 62</li><br>
                 <li><b>Tlf:</b> +45 29 80 39 83</li><br>
                 <li><b>Email:</b> NBW@blinkenbike.dk</li>
-
             </ul>
 
         </div>
         <div class="find">
             <h3>Find os</h3>
-
             <ul style="list-style-type:none">
                 <li><b>BLINKENBIKE ApS</b></li><br>
                 <li>Baldersbuen 27</li><br>
@@ -98,9 +261,9 @@
             <iframe src="nyhedsbrev.html"></iframe>
         </div>
         <div class="nederst">
-            <img src="SVG/facebook.png" alt="facebook">
-            <img src="SVG/instagram.png" alt="facebook">
-            <img src="SVG/youtube.png" alt="facebook">
+            <img class="facebook" src="SVG/facebook.png" alt="facebook">
+            <img class="instagram" src="SVG/instagram.png" alt="instagram">
+            <img class="youtube" src="SVG/youtube.png" alt="youtube">
         </div>
 
 
