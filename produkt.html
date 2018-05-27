@@ -78,7 +78,7 @@
 
 
 
-        @media screen and (max-width:579px) {
+        @media screen and (max-width:580px) {
 
             .container {
                 margin-left: 5%;
@@ -107,57 +107,54 @@
 
         }
 
-        @media screen and (max-width:579px) {
-
-            .container {
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: 30% 30% 30%;
-            }
-            .koncept_boks_1 {
-                width: 90vw;
-                margin-left: 20px;
-                grid-row-start: 1;
-            }
-            .explainer {
-                grid-row-start: 2;
-                margin-left: 20px;
-
-            }
-            .koncept_boks_3 {
-                width: 90vw;
-                margin-left: 20px;
-                grid-row-start: 3;
-            }
-            #map {
-                visibility: hidden;
-            }
-        }
-
-        @media screen and (min-width:580px) {
+        @media screen and (min-width:581px) {
 
             .container {
                 margin-left: 5%;
                 display: grid;
-                grid-template-columns: ;
-                grid-template-rows: ;
-
+                grid-template-columns: 1fr;
+                grid-template-rows: 20% 20% 20% 20% 20%;
             }
 
-
             .image {
-                width: 45vw;
+                width: 90vw;
                 padding-top: 10vw;
             }
 
             .overlay {
                 position: absolute;
-                top: 8%;
+                top: 10%;
                 bottom: 0;
                 left: 0;
                 right: 0;
-                height: 25.5%;
-                width: 45vw;
+                height: 90%;
+                width: 90vw;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: #dbc49a;
+            }
+        }
+
+        @media screen and (min-width:701px) {
+            .container {
+                margin-left: 5%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 33% 33% 33%;
+            }
+            .image {
+                width: 40vw;
+                padding-top: 10vw;
+            }
+
+            .overlay {
+                position: absolute;
+                top: 30%;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 75%;
+                width: 40vw;
                 opacity: 0;
                 transition: .5s ease;
                 background-color: #dbc49a;
