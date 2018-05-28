@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Header</title>
+    <style>
+        /*---------- FONTS -------------*/
+
+        a {
+            font-family: 'Open Sans Condensed', sans-serif;
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: #DBC49A;
+        }
+
+
+        body {
+            margin: 0 auto;
+            background-color: #F4F4F4;
+        }
+
+        /*---------------- GENERELLE STYLES ----------------*/
+
+        .topnav {
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .topnav a:hover {
+            color: #DBC49A;
+        }
+
+        .topnav .icon {
+            display: none;
+            color: #A5785A;
+        }
+
+
+        /* -----------  MOBILE -----------------*/
+
+        @media screen and (max-width: 1024px) {
+
+            .dekstop_nav {
+                display: none;
+            }
+
+            .topnav img {
+                float: left;
+                visibility: visible;
+                width: 150px;
+                padding: 15px;
+            }
+
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+            .topnav a.icon {
+                float: right;
+                display: block;
+                padding: 15px;
+            }
+
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .nav_a {
+                padding: 20px 0px 10px 20px;
+            }
+
+            .nav_a-1 {
+                padding: 65px 0px 10px 20px;
+            }
+        }
+
+
+        /*-------------- DESKTOP ---------------------*/
+
+        @media screen and (min-width:1024px) {
+            .topnav {
+                display: none;
+            }
+
+            .dekstop_nav {
+                text-align: center;
+                padding: 5px;
+                width: 100%;
+                position: absolute;
+                z-index: 999999999;
+            }
+
+            .dekstop_nav:hover {
+                opacity: 1;
+                cursor: pointer;
+            }
+
+            .dekstop_nav a {
+                padding: 20px 30px;
+                text-align: center;
+                vertical-align: middle;
+                display: inline-block;
+            }
+
+            .dekstop_nav img {
+                width: 200px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="topnav" id="myTopnav">
+            <a class="nav_img" href="ny.html" class="active"><img src="SVG/logoover.svg" alt="logo"></a>
+            <a class="nav_a-1" href="produkt.html">Produkt</a>
+            <a class="nav_a" href="koncept.html">Koncept</a>
+            <a class="nav_a" href="nyheder.html">Nyheder</a>
+            <a class="nav_a" href="kontakt.html">Kontakt</a>
+
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div class="dekstop_nav">
+            <a class="nav_a-1" href="produkt.html">Produkt</a>
+            <a class="nav_a" href="koncept.html">Koncept</a>
+            <a class="nav_img" href="ny.html" class="active"><img src="SVG/logoover.svg" alt="logo"></a>
+            <a class="nav_a" href="nyheder.html">Nyheder</a>
+            <a class="nav_a" href="kontakt.html">Kontakt</a>
+        </div>
+
+
+    </header>
+    <script src="java.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    </script>
+</body>
+
+</html>
