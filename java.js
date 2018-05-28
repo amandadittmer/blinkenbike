@@ -28,7 +28,7 @@ function startProgram() {
     window.onscroll = function () {
         console.log(document.documentElement.scrollTop);
 
-        if (document.querySelector("body").scrollTop > 250 || document.documentElement.scrollTop > 250) {
+        if (document.querySelector("body").scrollTop > 800 || document.documentElement.scrollTop > 800) {
             console.log("sadel kommer ind");
             document.getElementById("myMotor").className = "slideUp";
             document.getElementById("motorp").className = "slideUp";
@@ -36,7 +36,7 @@ function startProgram() {
         }
 
 
-        if (document.querySelector("body").scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        if (document.querySelector("body").scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
             console.log("sadel start");
             document.getElementById("myLygte").className = "lygteUp";
             document.getElementById("lygtep").className = "lygteUp";

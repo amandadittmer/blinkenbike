@@ -104,7 +104,10 @@ body {
     cursor: pointer;
 }
 
-
+#lygtep img {
+    width: 100%;
+    height: 100%;
+}
 
 
 @media screen and (max-width:579px) {
