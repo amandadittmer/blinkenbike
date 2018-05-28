@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /*
+ #video { height: 300px; width: 100%; } video { object-fit: cover; }
+*/
+
+        #linje {
+            height: 10px;
+            background-color: #c7cc94;
+            position: fixed;
+            z-index: 99999999;
+            */
+        }
+
+        #video {
+            position: relative;
+        }
+
+        #bikep {
+            font-family: 'Open Sans Condensed', sans-serif;
+            text-align: center;
+            padding: 10vw;
+            font-size: 1.5vw;
+        }
+
+        #bikep img {
+            width: 20vw;
+        }
+
+        #lygte {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            grid-gap: 10px;
+            grid-row-gap: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="linje"></div>
+    <section id="header"></section>
+
+    <section id="video">
+        <video autoplay loop controls width="100%" height="100%">
+                <source src="video/blinkenbike_explainer.mp4">
+        </video>
+    </section>
+
+    <section id="bikep">
+        <img src="img/blinkenbolts-01.png">
+        <h1>En løbecykel med betydning, som dit barn vil elske. Blinkenbikes løbecykler er skabt ud fra konceptet "Build a Bike".<br>Få aktiveret dit barns motorik og lad dit barn få et specielt forhold til sit legetøj med Blinkenbikes funktionelle design.</h1>
+    </section>
+    <section id="lygte">
+        <img id="myLygte" src="SVG/sadel.png" width="304" height="228">
+        <p>Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.</p>
+    </section>
+
+
+
+
+
+
+
+    <script>
+        //              HENTER HEADER
+        async function hentHeader() {
+            let headerData = await fetch("j-header.html");
+            let header = await headerData.text();
+            document.querySelector("#header").innerHTML = header;
+        }
+
+        document.addEventListener("DOMContentLoaded", hentHeader);
+
+    </script>
+    <script src="java.js"></script>
+</body>
+
+</html>
