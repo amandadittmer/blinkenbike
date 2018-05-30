@@ -6,15 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style>
+        /*
+        h1 {
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+*/
+
+        .submit-btn {
+            background-color: white;
+            border: 1px solid;
+            border-radius: 5px;
+            padding: 10px 42px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 0px 88px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #DBC49A;
+        }
+
+        .email-tekst {
+            text-decoration: none;
+            border-radius: 5px;
+            border: 1px solid;
+            padding: 16px 150px 16px 16px;
+            margin: 2px 2px 0px 2px;
+            text-align: left;
+            font-size: 12px;
+            color: black;
+
+        }
     </style>
 </head>
 
 <body>
-    <h1>Tilmeld nyhedsbrev</h1>
+    <!--    <h1>Tilmeld nyhedsbrev</h1>-->
     <form action="nyhedsbrev-mail.php">
-        <input type="email" name="email" required placeholder="Din email"><br><br>
+        <input class="email-tekst" type="email" name="email" required placeholder="Din email"><br><br>
 
-        <input type="submit" value="Send">
+        <input class="submit-btn" type="submit" value="Send">
 
     </form>
 </body>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .vertical_line {
+            border-left: 1px solid gray;
+            height: auto;
+        }
+
+        .vertical_middle {
+            text-align: center;
+        }
+
+        footer {
+            padding-top: 20px;
+            /* height: 500px;*/
+            background-color: white;
+            /*            border-top: 1px solid gray;*/
+        }
+
+        footer img {
+            width: 100px;
+        }
+
+        .mini_logo {
+            text-align: center;
+        }
+
+        footer h1 {
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-size: 1.5em;
+        }
+
+        iframe {
+            border: none;
+            width: 312px;
+        }
+
+        .nyhedsbrev-signup {
+            text-align: center;
+        }
+
+        .somelogoer img {
+            /*  width: 50px;*/
+            padding: 0px 30px;
+            opacity: 0.5;
+        }
+
+        .somelogoer img:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .some_container {
+            text-align: center;
+        }
+
+        .border {
+            width: 80%;
+            height: 1px;
+            background: gray;
+            display: block;
+            margin-top: 50px;
+            transform: rotate(180);
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        .info_oplysninger {
+            display: grid;
+            grid-template-columns: minmax(200px, 1fr) 200px 200px;
+            grid-template-rows: auto;
+            width: 80%;
+            margin: auto;
+            /* text-align: center;*/
+        }
+
+        .info_oplysninger h3 {
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-size: 0.8em;
+            margin-left: 39px;
+            margin-bottom: 0;
+        }
+
+        .info_oplysninger p,
+        ul,
+        li {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.8em;
+        }
+
+        .copyright p {
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-size: 0.7em;
+        }
+
+        /*------------- MOBILE PORTRAIT -----------------*/
+
+        @media only screen and (max-width: 767px) and (orientation: portrait) {
+            .info_oplysninger {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                grid-gap: 40px;
+                text-align: center;
+            }
+        }
+
+
+        /*------------- MOBILE LANDSCAPE -----------------*/
+
+        @media only screen and (min-width: 481px) and (max-height: 375px) and (orientation: landscape) {
+            .info_oplysninger {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                grid-gap: 40px;
+                text-align: center;
+            }
+        }
+
+        /*        --------------------------------------------------*/
+
+        .menu_footer a {
+            text-decoration: none;
+            color: black;
+            padding: 5px;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <footer>
+        <!--
+<div class="vertical_middle">
+    <span class="vertical_line"></span>
+</div>
+-->
+
+        <div class="mini_logo">
+            <img src="SVG/logosvg-mini.svg">
+        </div>
+        <div class="nyhedsbrev-signup">
+            <h1>Tilmeld nyhedsbrev</h1>
+            <iframe src="nyhedsbrev.html"></iframe>
+        </div>
+
+        <div class="some_container">
+            <div class="somelogoer">
+                <img class="instagram" src="SVG/instagram-logo.svg" alt="instagram">
+                <img class="facebook" src="SVG/facebook-logo.svg" alt="facebook">
+                <img class="youtube" src="SVG/youtube-logo.svg" alt="youtube">
+            </div>
+        </div>
+        <span class="border"></span>
+
+        <div class="info_oplysninger">
+            <div class="copyright">
+                <p>© 2005 Blinkenbike ApS</p>
+            </div>
+            <div class="contact">
+                <h3>Kontakt os</h3>
+                <ul style="list-style-type:none">
+                    <li><b>Tlf:</b> +45 42 42 81 62</li>
+                    <li><b>Tlf:</b> +45 29 80 39 83</li>
+                    <li><b>Email:</b> nbw@blinkenbike.dk</li>
+                </ul>
+            </div>
+            <div class="find">
+                <h3>Find os</h3>
+                <ul style="list-style-type:none">
+                    <li><b>BLINKENBIKE ApS</b></li>
+                    <li>Baldersbuen 27</li>
+                    <li>2640 Hedehusene</li>
+                    <li> Danmark</li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src=""></script>
+</body>
+
+</html>
