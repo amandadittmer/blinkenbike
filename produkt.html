@@ -22,11 +22,14 @@
             font-family: 'Open Sans Condensed', sans-serif;
         }
 
+        #bordering {
+            border-image-source: url(img/logoframe.svg);
+        }
 
         /*        OVERLAY*/
 
         .container {
-            position: relative;
+/*            position: relative;*/
             width: 50%;
         }
 
@@ -34,6 +37,7 @@
             display: block;
             width: 100%;
             height: auto;
+
         }
 
         #titleoverlay {
@@ -50,7 +54,7 @@
         }
 
         .overlay {
-            position: absolute;
+/* position: absolute;*/
             top: 0;
             bottom: 0;
             left: 0;
@@ -119,6 +123,7 @@
             .image {
                 width: 90vw;
                 padding-top: 10vw;
+
             }
 
             .overlay {
@@ -164,7 +169,6 @@
                 background-color: #dbc49a;
             }
         }
-
     </style>
 </head>
 <header>
@@ -176,7 +180,7 @@
     </section>
     <template>
         <article>
-               <div class="container">
+               <div id="bordering" class="container">
                 <img class="image" src="" alt="" data_image>
                 <div class="overlay">
                 <div id="titleoverlay" data_titleoverlay></div>
@@ -247,7 +251,6 @@
 
         });
     }
-
 </script>
 
 <script src="java.js"></script>
