@@ -6,25 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
+    <link rel="stylesheet" href="j-main.css">
     <title></title>
     <style>
-        h1 {
-            font-family: 'Open Sans Condensed', sans-serif;
-            color: #545454;
+        body {
+            text-align: center;
+        }
+
+        .submit-btn {
+            background-color: white;
+            border: 1px solid;
+            border-radius: 5px;
+            padding: 10px 42px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 0px 88px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #DBC49A;
+        }
+
+        .email-tekst,
+        .name-tekst,
+        .emne-tekst {
+            text-decoration: none;
+            border-radius: 5px;
+            border: 1px solid;
+            padding: 16px 160px 16px 16px;
+            margin: 2px 2px 0px 2px;
+            text-align: left;
+            font-size: 12px;
+            color: black;
+        }
+
+        .text-tekst {
+            text-decoration: none;
+            border-radius: 5px;
+            border: 1px solid;
+            padding: 16px 150px 16px 16px;
+            margin: 2px 2px 0px 2px;
+            text-align: left;
+            font-size: 12px;
+            color: black;
         }
 
     </style>
 </head>
 
 <body>
-    <h1>Kontakt os</h1>
     <form action="kontaktformular-mail.php">
-        <input type="name" name="navn" required placeholder="Navn"><br>
-        <input type="email" name="email" required placeholder="Email"><br>
-        <input type="text" name="emne" required placeholder="Emne"><br>
-        <textarea type="text" name="besked" required placeholder="Besked"></textarea><br><br>
+        <h1>Kontakt os</h1>
+        <input class="name-tekst" type="name" name="navn" required placeholder="Navn"><br>
+        <input class="email-tekst" type="email" name="email" required placeholder="Email"><br>
+        <input class="emne-tekst" type="text" name="emne" required placeholder="Emne"><br>
+        <textarea class="text-tekst" type="text" name="besked" required placeholder="Besked"></textarea><br><br>
 
-        <input type="submit" value="Send">
+        <input class="submit-btn" type="submit" value="Send">
 
     </form>
 </body>

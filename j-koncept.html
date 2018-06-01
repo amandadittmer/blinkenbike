@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="j-main.css">
+    <style>
+        .koncept_billede {
+            /* The image used */
+            background-image: url("img/blinkenbike_barn.jpg");
+            height: 50vh;
+            width: 20vw;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .koncept_billede img {
+            width: 50%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section id="header"></section>
+
+    <section id="koncept_container">
+        <div class="koncept_billede">
+        </div>
+
+        <div class="koncept_tekst">
+            <h3>Udvikling af barnet</h3>
+            <P>Blinkenbike er verdens første virksomhed med et build-a-bike koncept. Et dansk design som tager en løbecykel til et højre niveau. Det er ikke bare en cykel, men også et legetøj og et byggesæt. Den grundlæggende cykel kan indbygges i en række forskellige designs, afhængigt af tilkøbt tilbehør.</P>
+            <p>Blinkenbike er et koncept for børn, hvor det ikke kun går ud på at lære at holde balancen på en cykel, men også kan udvikle deres motoriske færdigheder, samt opmuntre deres naturlige nysgerrighed og kreativitet ved at samle flere sorter af forskellige designs baseret på blot en grundlæggende cykel.
+        </div>
+    </section>
+
+    <section id="explainer">
+        <video width="100%" height="100%" controls="false" autoplay="true" preload="auto" loop>
+            <source src="video/blinkenbike_explainer.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <section id="footer"></section>
+
+
+    <script>
+        // HENTER HEADER
+        async function hentHeader() {
+            let headerData = await fetch("j-header.html");
+            let header = await headerData.text();
+            document.querySelector("#header").innerHTML = header;
+        }
+
+        document.addEventListener("DOMContentLoaded", hentHeader);
+        document.addEventListener("DOMContentLoaded", onScrollAnimation);
+
+        // HENTER FOOTER
+        async function hentFooter() {
+            let footerData = await fetch("j-footer.html");
+            let footer = await footerData.text();
+            document.querySelector("#footer").innerHTML = footer;
+        }
+
+        document.addEventListener("DOMContentLoaded", hentFooter);
+
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        // ON SCROLL ANIMATION
+        function onScrollAnimation() {
+            AOS.init();
+        }
+
+    </script>
+    <script src="java.js"></script>
+</body>
+
+</html>

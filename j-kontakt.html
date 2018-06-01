@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="j-main.css">
+    <style>
+        /*-------------  DESKTOP  -----------------*/
+
+        .kontaktoplysninger img {
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+        }
+
+        #kontakt {
+            height: 100%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: minmax(600px, 1fr) 200px;
+            grid-template-rows: auto;
+            width: 80%;
+            margin: auto;
+        }
+
+        .nikolaj_line {
+            padding-top: 100px;
+        }
+
+        .kontaktformular iframe {
+            padding-top: 100px;
+            width: 500px;
+            height: 500px;
+            border: none;
+
+        }
+
+        .kontaktformular {
+            width: 100%;
+            text-align: center;
+        }
+
+        /*------------- MOBILE  -----------------*/
+
+        @media only screen and (max-width: 500px) {
+            .kontaktformular iframe {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .kontaktformular iframe {
+                padding-top: 45px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="header"></section>
+
+    <section id="kontakt">
+
+        <div class="kontaktformular">
+            <iframe class="kontaktform" src="kontaktformular.html"></iframe>
+        </div>
+
+        <div class="kontaktoplysninger">
+            <div class="nikolaj_line">
+                <img src="img/nikolaj.jpg" alt="nikolaj">
+                <p><b>Nikolaj Blinkenberg Willadsen</b><br> Email: nbw@blinkenbike.dk <br> Phone: +45 42 42 81 62</p>
+
+                <img src="img/line.jpg" alt="line">
+                <p><b>Line Cramon</b><br> Email: lc@blinkenbike.dk <br> Phone: +45 29 80 39 83</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="footer"></section>
+
+
+    <script>
+        // HENTER HEADER
+        async function hentHeader() {
+            let headerData = await fetch("j-header.html");
+            let header = await headerData.text();
+            document.querySelector("#header").innerHTML = header;
+        }
+
+        document.addEventListener("DOMContentLoaded", hentHeader);
+        document.addEventListener("DOMContentLoaded", onScrollAnimation);
+
+        // HENTER FOOTER
+        async function hentFooter() {
+            let footerData = await fetch("j-footer.html");
+            let footer = await footerData.text();
+            document.querySelector("#footer").innerHTML = footer;
+        }
+
+        document.addEventListener("DOMContentLoaded", hentFooter);
+
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        // ON SCROLL ANIMATION
+        function onScrollAnimation() {
+            AOS.init();
+        }
+    </script>
+    <script src="java.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+</body>
+
+</html>
