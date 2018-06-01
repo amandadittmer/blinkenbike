@@ -4,288 +4,8 @@ p {
 
 body {
     margin: 0;
-    background-color: #F4F4F4;
-}
 
 
-/* GØR BILLEDER STORE */
-
-/* The Modal (background) */
-
-.modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 999;
-    /* Sit on top */
-    padding-top: 100px;
-    /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(212, 187, 87, 0.3);
-    /* Black w/ opacity */
-}
-
-/* Modal Content (image) */
-
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80vw;
-    max-width: 700px;
-}
-
-/* Caption of Modal Image */
-
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
-
-/* Add Animation */
-
-.modal-content,
-#caption {
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-    from {
-        -webkit-transform: scale(0)
-    }
-    to {
-        -webkit-transform: scale(1)
-    }
-}
-
-@keyframes zoom {
-    from {
-        transform: scale(0)
-    }
-    to {
-        transform: scale(1)
-    }
-}
-
-/* The Close Button */
-
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#lygtep img {
-    width: 100%;
-    height: 100%;
-}
-
-
-@media screen and (max-width:579px) {
-
-
-
-    .container {
-        display: grid;
-
-        grid-template-columns: 0%;
-        grid-template-rows: 1fr 1fr 1fr;
-
-    }
-
-    #blinkenbike {
-        position: relative;
-        top: 60vw;
-        left: 19vw;
-        width: 55vw;
-        grid-row-start: 1;
-
-
-    }
-
-    .bike_in {
-        background-image: url(SVG/infografikcykel.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 30vw;
-
-        left: 34vw;
-        z-index: 99;
-        animation-name: bike_in_kf;
-        animation-duration: 3s;
-        animation-iteration-count: 1;
-
-        position: absolute;
-
-    }
-
-
-
-    #bikep {
-        margin-top: 2vw;
-        margin-left: 20px;
-        width: 90vw;
-        grid-row-start: 1;
-
-        text-align: center;
-
-    }
-
-    .bikep_in {
-
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 3.6vw;
-
-
-        z-index: 99;
-        animation-name: btext_in_kf;
-        animation-duration: 5s;
-        animation-iteration-count: 1;
-
-        position: absolute;
-
-    }
-
-
-
-    .slideUp {
-        animation-name: slideUp;
-        -webkit-animation-name: slideUp;
-        animation-duration: 1s;
-        -webkit-animation-duration: 1s;
-        visibility: visible;
-    }
-
-
-
-    @keyframes slideUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(70%);
-        }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0%);
-        }
-    }
-
-    @-webkit-keyframes slideUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(70%);
-        }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0%);
-        }
-    }
-
-    #motorp {
-        width: 90vw;
-
-
-        text-align: center;
-        margin-top: 80px;
-        margin-left: 20px;
-        /*        visibility: visible;*/
-        grid-row-start: 2;
-    }
-
-    #myMotor {
-        visibility: hidden;
-    }
-
-    #myLygte {
-        visibility: hidden;
-
-    }
-    .col-1 {
-
-        float: left;
-        top: 85vw;
-        left: ;
-
-        position: relative;
-
-        visibility: hidden;
-    }
-
-
-    hr {
-        margin-top: 450px;
-    }
-
-
-    #lygtep {
-        text-align: center;
-
-        width: 90vw;
-        margin-left: 20px;
-        grid-row-start: 3;
-
-    }
-
-
-
-    .lygteUp {
-        animation-name: lygteUp;
-        -webkit-animation-name: lygteUp;
-        animation-duration: 2s;
-        -webkit-animation-duration: 2s;
-        visibility: visible;
-    }
-
-    @keyframes lygteUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(70%);
-        }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0%);
-        }
-    }
-
-    @-webkit-keyframes lygteUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(70%);
-        }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0%);
-        }
-    }
 
     /* GØR BILLEDER STORE */
     /* The Modal (background) */
@@ -377,737 +97,1010 @@ body {
         cursor: pointer;
     }
 
-    .logo img {
-
-
-        height: 20vw;
-        visibility: hidden;
-
-
-
-    }
-
-    #myImg {
-        cursor: pointer;
-        margin-right: -0.9%;
-        visibility: visible;
-        margin-top: 1%;
-        opacity: 0.7;
-        width: 25.3vw;
-        visibility: hidden;
-    }
-
-    .logo img:hover {
-        opacity: 100;
-    }
-
-
-    img#img01.modal-content {
+    #lygtep img {
         width: 100%;
-        height: 70%;
-        opacity: 100;
-        visibility: visible;
-    }
-}
-
-
-
-
-@media screen and (min-width:580px) {
-
-
-
-    .container {
-        display: grid;
-        margin-left: 30px;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-
-    }
-
-    /*        grid-template-areas: "tekst infografik motor";*/
-    .topnav a {
-        float: left;
-        display: block;
-        color: black;
-        text-align: center;
-        padding: 18px;
-        text-decoration: none;
-
-    }
-
-    .topnav img {
-        visibility: visible;
-        height: 20px;
-
-
-    }
-
-    a:hover {
-        color: #DBC49A;
+        height: 100%;
     }
 
 
-
-    #blinkenbike {
-        position: absolute;
-        width: 30vw;
-        top: 50vw;
-        grid-row-start: 1;
-    }
-
-    .bike_in {
-        background-image: url(SVG/infografikcykel.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 17vw;
-
-        left: 9vw;
-        z-index: 99;
-        animation-name: bike_in_kf;
-        animation-duration: 3s;
-        animation-iteration-count: 1;
-
-
-    }
+    @media screen and (max-width:579px) {
 
 
 
+        .container {
+            display: grid;
 
+            grid-template-columns: 0%;
+            grid-template-rows: 1fr 1fr 1fr;
 
-    #bikep {
-        position: absolute;
-        width: 50vw;
-        left: 46vw;
-        grid-column-start: 2;
-        margin-top: 8%;
-        grid-row-start: 1;
-
-    }
-
-    .bikep_in {
-        background-image: url(SVG/overskrift.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: vw;
-
-        left: 27vw;
-        z-index: 99;
-        animation-name: btext_in_kf;
-        animation-duration: 5s;
-        animation-iteration-count: 1;
-
-        position: absolute;
-
-    }
-
-
-
-    .slideUp {
-        animation-name: slideUp;
-        -webkit-animation-name: slideUp;
-        animation-duration: 2s;
-        -webkit-animation-duration: 2s;
-        visibility: visible;
-    }
-
-
-
-    @keyframes slideUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(70%);
         }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0%);
+
+        #blinkenbike {
+            position: relative;
+            top: 60vw;
+            left: 19vw;
+            width: 55vw;
+            grid-row-start: 1;
+
+
         }
-    }
 
-    @-webkit-keyframes slideUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(70%);
+        .bike_in {
+            background-image: url(SVG/infografikcykel.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 30vw;
+
+            left: 34vw;
+            z-index: 99;
+            animation-name: bike_in_kf;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+
+            position: absolute;
+
         }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0%);
+
+
+
+        #bikep {
+            margin-top: 2vw;
+            margin-left: 20px;
+            width: 90vw;
+            grid-row-start: 1;
+
+            text-align: center;
+
         }
-    }
 
-    #motorp {
-        width: 45vw;
-        position: absolute;
-        grid-row-start: 2;
-        top: 90vw;
+        .bikep_in {
 
-    }
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 3.6vw;
 
 
-    .col-1 {
-        float: left;
-        position: relative;
-        top: 20vw;
-        grid-row-start: 2;
-        grid-column-start: 2;
-    }
+            z-index: 99;
+            animation-name: btext_in_kf;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
 
+            position: absolute;
 
-
-    /* body { height: 1500px; }*/
-    img {
-        width: 180px;
-        height: 120px;
-        visibility: hidden;
-    }
-
-
-
-    hr {
-        margin-top: 450px;
-    }
-
-    #lygtep {
-        width: 45vw;
-        position: absolute;
-        left: 46vw;
-        top: 160vw;
-        grid-row-start: 3;
-    }
-
-    .lygte {
-        float: left;
-        top: 20vw;
-        position: relative;
-        grid-row-start: 3;
-    }
-
-
-    .lygteUp {
-        animation-name: lygteUp;
-        -webkit-animation-name: lygteUp;
-        animation-duration: 2s;
-        -webkit-animation-duration: 2s;
-        visibility: visible;
-    }
-
-    @keyframes lygteUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(70%);
         }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0%);
+
+
+
+        .slideUp {
+            animation-name: slideUp;
+            -webkit-animation-name: slideUp;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
         }
-    }
 
-    @-webkit-keyframes lygteUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(70%);
+
+
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
         }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0%);
+
+        @-webkit-keyframes slideUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
         }
-    }
+
+        #motorp {
+            width: 90vw;
 
 
-
-
-
-    .logo img {
-
-        opacity: 0.7;
-        width: 24.66vw;
-        height: 20vw;
-        visibility: visible;
-
-
-
-    }
-
-
-    #myImg {
-
-        border-color: #A5785A;
-        cursor: pointer;
-        margin-right: -0.2%;
-
-    }
-
-    .logo img:hover {
-        opacity: 100;
-    }
-
-
-
-    img#img01.modal-content {
-        width: 100%;
-        height: 70%;
-        opacity: 100;
-    }
-
-
-}
-
-@media screen and (min-width:700px) {
-
-    .container {
-        display: grid;
-
-        grid-template-columns: 50%;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-
-    }
-
-    /*        grid-template-areas: "tekst infografik motor";*/
-    .topnav a {
-        float: left;
-        display: block;
-        color: black;
-        text-align: center;
-        padding: 20px;
-        text-decoration: none;
-
-    }
-
-    .topnav img {
-        visibility: visible;
-        height: 20px;
-
-
-    }
-
-    a:hover {
-        color: #DBC49A;
-    }
-
-
-
-    #blinkenbike {
-        position: absolute;
-        width: 35vw;
-        top: 50vw;
-        grid-row-start: 1;
-    }
-
-    .bike_in {
-        background-image: url(SVG/infografikcykel.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 19vw;
-
-        z-index: 99;
-        animation-name: bike_in_kf;
-        animation-duration: 3s;
-        animation-iteration-count: 1;
-
-
-    }
-
-
-
-
-
-    #bikep {
-        position: absolute;
-        width: 50vw;
-        left: 46vw;
-        grid-column-start: 2;
-        margin-top: 8%;
-        grid-row-start: 1;
-
-    }
-
-    .bikep_in {
-        background-image: url(SVG/overskrift.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: vw;
-
-        left: 27vw;
-        z-index: 99;
-        animation-name: btext_in_kf;
-        animation-duration: 5s;
-        animation-iteration-count: 1;
-
-        position: absolute;
-
-    }
-
-
-
-    .slideUp {
-        animation-name: slideUp;
-        -webkit-animation-name: slideUp;
-        animation-duration: 2s;
-        -webkit-animation-duration: 2s;
-        visibility: visible;
-    }
-
-
-
-    @keyframes slideUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(70%);
+            text-align: center;
+            margin-top: 80px;
+            margin-left: 20px;
+            /*        visibility: visible;*/
+            grid-row-start: 2;
         }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0%);
+
+        #myMotor {
+            visibility: hidden;
         }
-    }
 
-    @-webkit-keyframes slideUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(70%);
+        #myLygte {
+            visibility: hidden;
+
         }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0%);
+        .col-1 {
+
+            float: left;
+            top: 85vw;
+            left: ;
+
+            position: relative;
+
+            visibility: hidden;
         }
-    }
-
-    #motorp {
-        width: 45vw;
-        position: absolute;
-        grid-row-start: 2;
-        top: 90vw;
-
-    }
 
 
-    .col-1 {
-        float: left;
-        position: relative;
-        top: 20vw;
-        grid-row-start: 2;
-        grid-column-start: 2;
-    }
-
-
-
-    /* body { height: 1500px; }*/
-    img {
-        width: 180px;
-        height: 120px;
-        visibility: hidden;
-    }
-
-
-
-    hr {
-        margin-top: 450px;
-    }
-
-    #lygtep {
-        width: 45vw;
-        position: absolute;
-        left: 46vw;
-        top: 160vw;
-        grid-row-start: 3;
-    }
-
-    .lygte {
-        float: left;
-        top: 20vw;
-        position: relative;
-        grid-row-start: 3;
-    }
-
-
-    .lygteUp {
-        animation-name: lygteUp;
-        -webkit-animation-name: lygteUp;
-        animation-duration: 2s;
-        -webkit-animation-duration: 2s;
-        visibility: visible;
-    }
-
-    @keyframes lygteUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(70%);
+        hr {
+            margin-top: 450px;
         }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0%);
-        }
-    }
 
-    @-webkit-keyframes lygteUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(70%);
+
+        #lygtep {
+            text-align: center;
+
+            width: 90vw;
+            margin-left: 20px;
+            grid-row-start: 3;
+
         }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0%);
+
+
+
+        .lygteUp {
+            animation-name: lygteUp;
+            -webkit-animation-name: lygteUp;
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            visibility: visible;
+        }
+
+        @keyframes lygteUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        @-webkit-keyframes lygteUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        /* GØR BILLEDER STORE */
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 999;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(212, 187, 87, 0.3);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80vw;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content,
+        #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .logo img {
+
+
+            height: 20vw;
+            visibility: hidden;
+
+
+
+        }
+
+        #myImg {
+            cursor: pointer;
+            margin-right: -0.9%;
+            visibility: visible;
+            margin-top: 1%;
+            opacity: 0.7;
+            width: 25.3vw;
+            visibility: hidden;
+        }
+
+        .logo img:hover {
+            opacity: 100;
+        }
+
+
+        img#img01.modal-content {
+            width: 100%;
+            height: 70%;
+            opacity: 100;
+            visibility: visible;
         }
     }
 
 
 
 
-    .logo img {
-
-        opacity: 0.7;
-        width: 24.7vw;
-        height: 20vw;
-        visibility: visible;
+    @media screen and (min-width:580px) {
 
 
 
-    }
+        .container {
+            display: grid;
+            margin-left: 30px;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
 
-    #myImg {
-
-        border-color: #A5785A;
-        cursor: pointer;
-        margin-right: -0.2%;
-
-    }
-
-    .logo img:hover {
-        opacity: 100;
-    }
-
-
-
-    img#img01.modal-content {
-        width: 100%;
-        height: 70%;
-        opacity: 100;
-    }
-}
-
-@media screen and (min-width:1024px) {
-
-
-    .container {
-
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-
-    }
-
-    /*        grid-template-areas: "tekst infografik motor";*/
-    .topnav a {
-        float: left;
-
-        color: black;
-        text-align: center;
-        padding: 30px 16px;
-        text-decoration: none;
-
-    }
-
-    .topnav img {
-        visibility: visible;
-        height: 30px;
-
-
-    }
-
-    a:hover {
-        color: #DBC49A;
-    }
-
-
-
-    #blinkenbike {
-        position: absolute;
-        width: 35vw;
-        top: 45vw;
-        grid-row-start: 1;
-    }
-
-    .bike_in {
-        background-image: url(SVG/infografikcykel.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 20vw;
-
-        left: 9vw;
-        z-index: 99;
-        animation-name: bike_in_kf;
-        animation-duration: 3s;
-        animation-iteration-count: 1;
-
-
-    }
-
-
-
-
-
-    #bikep {
-        position: absolute;
-        width: 40vw;
-        left: 55vw;
-        grid-column-start: 2;
-        margin-top: 15%;
-        grid-row-start: 1;
-
-    }
-
-    .bikep_in {
-        background-image: url(SVG/overskrift.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: vw;
-
-        left: 27vw;
-        z-index: 99;
-        animation-name: btext_in_kf;
-        animation-duration: 5s;
-        animation-iteration-count: 1;
-
-        position: absolute;
-
-    }
-
-
-
-    .slideUp {
-        animation-name: slideUp;
-        -webkit-animation-name: slideUp;
-        animation-duration: 2s;
-        -webkit-animation-duration: 2s;
-        visibility: visible;
-    }
-
-
-
-    @keyframes slideUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(70%);
         }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0%);
+
+        /*        grid-template-areas: "tekst infografik motor";*/
+        .topnav a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 18px;
+            text-decoration: none;
+
+        }
+
+        .topnav img {
+            visibility: visible;
+            height: 20px;
+
+
+        }
+
+        a:hover {
+            color: #DBC49A;
+        }
+
+
+
+        #blinkenbike {
+            position: absolute;
+            width: 30vw;
+            top: 50vw;
+            grid-row-start: 1;
+        }
+
+        .bike_in {
+            background-image: url(SVG/infografikcykel.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 17vw;
+
+            left: 9vw;
+            z-index: 99;
+            animation-name: bike_in_kf;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+
+
+        }
+
+
+
+
+
+        #bikep {
+            position: absolute;
+            width: 50vw;
+            left: 46vw;
+            grid-column-start: 2;
+            margin-top: 8%;
+            grid-row-start: 1;
+
+        }
+
+        .bikep_in {
+            background-image: url(SVG/overskrift.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: vw;
+
+            left: 27vw;
+            z-index: 99;
+            animation-name: btext_in_kf;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+
+            position: absolute;
+
+        }
+
+
+
+        .slideUp {
+            animation-name: slideUp;
+            -webkit-animation-name: slideUp;
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            visibility: visible;
+        }
+
+
+
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        @-webkit-keyframes slideUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        #motorp {
+            width: 45vw;
+            position: absolute;
+            grid-row-start: 2;
+            top: 90vw;
+
+        }
+
+
+        .col-1 {
+            float: left;
+            position: relative;
+            top: 20vw;
+            grid-row-start: 2;
+            grid-column-start: 2;
+        }
+
+
+
+        /* body { height: 1500px; }*/
+        img {
+            width: 180px;
+            height: 120px;
+            visibility: hidden;
+        }
+
+
+
+        hr {
+            margin-top: 450px;
+        }
+
+        #lygtep {
+            width: 45vw;
+            position: absolute;
+            left: 46vw;
+            top: 160vw;
+            grid-row-start: 3;
+        }
+
+        .lygte {
+            float: left;
+            top: 20vw;
+            position: relative;
+            grid-row-start: 3;
+        }
+
+
+        .lygteUp {
+            animation-name: lygteUp;
+            -webkit-animation-name: lygteUp;
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            visibility: visible;
+        }
+
+        @keyframes lygteUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        @-webkit-keyframes lygteUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+
+
+
+
+        .logo img {
+
+            opacity: 0.7;
+            width: 24.66vw;
+            height: 20vw;
+            visibility: visible;
+
+
+
+        }
+
+
+        #myImg {
+
+            border-color: #A5785A;
+            cursor: pointer;
+            margin-right: -0.2%;
+
+        }
+
+        .logo img:hover {
+            opacity: 100;
+        }
+
+
+
+        img#img01.modal-content {
+            width: 100%;
+            height: 70%;
+            opacity: 100;
+        }
+
+
+    }
+
+    @media screen and (min-width:700px) {
+
+        .container {
+            display: grid;
+
+            grid-template-columns: 50%;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        }
+
+        /*        grid-template-areas: "tekst infografik motor";*/
+        .topnav a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            text-decoration: none;
+
+        }
+
+        .topnav img {
+            visibility: visible;
+            height: 20px;
+
+
+        }
+
+        a:hover {
+            color: #DBC49A;
+        }
+
+
+
+        #blinkenbike {
+            position: absolute;
+            width: 35vw;
+            top: 50vw;
+            grid-row-start: 1;
+        }
+
+        .bike_in {
+            background-image: url(SVG/infografikcykel.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 19vw;
+
+            z-index: 99;
+            animation-name: bike_in_kf;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+
+
+        }
+
+
+
+
+
+        #bikep {
+            position: absolute;
+            width: 50vw;
+            left: 46vw;
+            grid-column-start: 2;
+            margin-top: 8%;
+            grid-row-start: 1;
+
+        }
+
+        .bikep_in {
+            background-image: url(SVG/overskrift.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: vw;
+
+            left: 27vw;
+            z-index: 99;
+            animation-name: btext_in_kf;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+
+            position: absolute;
+
+        }
+
+
+
+        .slideUp {
+            animation-name: slideUp;
+            -webkit-animation-name: slideUp;
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            visibility: visible;
+        }
+
+
+
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        @-webkit-keyframes slideUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        #motorp {
+            width: 45vw;
+            position: absolute;
+            grid-row-start: 2;
+            top: 90vw;
+
+        }
+
+
+        .col-1 {
+            float: left;
+            position: relative;
+            top: 20vw;
+            grid-row-start: 2;
+            grid-column-start: 2;
+        }
+
+
+
+        /* body { height: 1500px; }*/
+        img {
+            width: 180px;
+            height: 120px;
+            visibility: hidden;
+        }
+
+
+
+        hr {
+            margin-top: 450px;
+        }
+
+        #lygtep {
+            width: 45vw;
+            position: absolute;
+            left: 46vw;
+            top: 160vw;
+            grid-row-start: 3;
+        }
+
+        .lygte {
+            float: left;
+            top: 20vw;
+            position: relative;
+            grid-row-start: 3;
+        }
+
+
+        .lygteUp {
+            animation-name: lygteUp;
+            -webkit-animation-name: lygteUp;
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            visibility: visible;
+        }
+
+        @keyframes lygteUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        @-webkit-keyframes lygteUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+
+
+
+        .logo img {
+
+            opacity: 0.7;
+            width: 24.7vw;
+            height: 20vw;
+            visibility: visible;
+
+
+
+        }
+
+        #myImg {
+
+            border-color: #A5785A;
+            cursor: pointer;
+            margin-right: -0.2%;
+
+        }
+
+        .logo img:hover {
+            opacity: 100;
+        }
+
+
+
+        img#img01.modal-content {
+            width: 100%;
+            height: 70%;
+            opacity: 100;
         }
     }
 
-    @-webkit-keyframes slideUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(70%);
+    @media screen and (min-width:1024px) {
+
+
+        .container {
+
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+
         }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0%);
+
+        /*        grid-template-areas: "tekst infografik motor";*/
+        .topnav a {
+            float: left;
+
+            color: black;
+            text-align: center;
+            padding: 30px 16px;
+            text-decoration: none;
+
+        }
+
+        .topnav img {
+            visibility: visible;
+            height: 30px;
+
+
+        }
+
+        a:hover {
+            color: #DBC49A;
+        }
+
+
+
+        #blinkenbike {
+            position: absolute;
+            width: 35vw;
+            top: 45vw;
+            grid-row-start: 1;
+        }
+
+        .bike_in {
+            background-image: url(SVG/infografikcykel.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 20vw;
+
+            left: 9vw;
+            z-index: 99;
+            animation-name: bike_in_kf;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+
+
+        }
+
+
+
+
+
+        #bikep {
+            position: absolute;
+            width: 40vw;
+            left: 55vw;
+            grid-column-start: 2;
+            margin-top: 15%;
+            grid-row-start: 1;
+
+        }
+
+        .bikep_in {
+            background-image: url(SVG/overskrift.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: vw;
+
+            left: 27vw;
+            z-index: 99;
+            animation-name: btext_in_kf;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+
+            position: absolute;
+
+        }
+
+
+
+        .slideUp {
+            animation-name: slideUp;
+            -webkit-animation-name: slideUp;
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            visibility: visible;
+        }
+
+
+
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        @-webkit-keyframes slideUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        #motorp {
+            width: 40vw;
+            position: absolute;
+            grid-row-start: 2;
+            top: 90vw;
+
+        }
+
+
+        .col-1 {
+            float: left;
+            position: relative;
+            top: 30vw;
+            width: 50vw;
+            grid-row-start: 2;
+            grid-column-start: 2;
+        }
+
+
+
+
+        hr {
+            margin-top: 450px;
+        }
+
+        #lygtep {
+            width: 45vw;
+            position: absolute;
+            left: 46vw;
+            top: 130vw;
+            grid-row-start: 3;
+        }
+
+        .lygte {
+            float: left;
+            top: 30vw;
+            padding-left: 150px;
+            position: relative;
+            grid-row-start: 3;
+        }
+
+
+        .lygteUp {
+            animation-name: lygteUp;
+            -webkit-animation-name: lygteUp;
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            visibility: visible;
+        }
+
+        @keyframes lygteUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        @-webkit-keyframes lygteUp {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+
+
+
+        .logo img {
+
+            opacity: 0.7;
+            width: 24.9vw;
+            height: 20vw;
+            visibility: visible;
+
+
+
+        }
+
+        #myImg {
+
+            border-color: #A5785A;
+            cursor: pointer;
+            margin-right: -0.2%;
+
+        }
+
+        .logo img:hover {
+            opacity: 100;
+        }
+
+
+
+        img#img01.modal-content {
+            width: 100%;
+            height: 70%;
+            opacity: 100;
         }
     }
-
-    #motorp {
-        width: 40vw;
-        position: absolute;
-        grid-row-start: 2;
-        top: 90vw;
-
-    }
-
-
-    .col-1 {
-        float: left;
-        position: relative;
-        top: 30vw;
-        width: 50vw;
-        grid-row-start: 2;
-        grid-column-start: 2;
-    }
-
-
-
-
-    hr {
-        margin-top: 450px;
-    }
-
-    #lygtep {
-        width: 45vw;
-        position: absolute;
-        left: 46vw;
-        top: 130vw;
-        grid-row-start: 3;
-    }
-
-    .lygte {
-        float: left;
-        top: 30vw;
-        padding-left: 150px;
-        position: relative;
-        grid-row-start: 3;
-    }
-
-
-    .lygteUp {
-        animation-name: lygteUp;
-        -webkit-animation-name: lygteUp;
-        animation-duration: 2s;
-        -webkit-animation-duration: 2s;
-        visibility: visible;
-    }
-
-    @keyframes lygteUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(70%);
-        }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0%);
-        }
-    }
-
-    @-webkit-keyframes lygteUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(70%);
-        }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0%);
-        }
-    }
-
-
-
-
-    .logo img {
-
-        opacity: 0.7;
-        width: 24.9vw;
-        height: 20vw;
-        visibility: visible;
-
-
-
-    }
-
-    #myImg {
-
-        border-color: #A5785A;
-        cursor: pointer;
-        margin-right: -0.2%;
-
-    }
-
-    .logo img:hover {
-        opacity: 100;
-    }
-
-
-
-    img#img01.modal-content {
-        width: 100%;
-        height: 70%;
-        opacity: 100;
-    }
-}
