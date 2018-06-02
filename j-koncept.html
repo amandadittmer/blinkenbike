@@ -6,28 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="j-main.css">
     <style>
         body {
-            background-color: rgba(199, 204, 148, 0.5);
+            background-color: #f4f4f4;
         }
+
+        #koncept_body {
+            background-color: rgba(199, 204, 148, 0.5);
+            height: 100%;
+        }
+
+        #infografik {
+            padding-top: 84px;
+            padding-bottom: 84px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            width: 80%;
+        }
+
+        #map {
+            padding-top: 20%;
+        }
+
+        #map svg {
+            width: 122%;
+        }
+
+        /*
+        .koncept_boks_3 {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+*/
+
+        #explainer {
+            padding-top: 60px;
+        }
+
+        #explainer video {}
 
         #koncept_container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto;
-            grid-gap: 13px;
+            grid-gap: 50px;
             padding-top: 84px;
-            width: 80%;
+            padding-bottom: 84px;
             margin: auto;
+            width: 80%;
         }
 
-        .plakat img {
-            width: 100%;
-            max-height: 70vh;
+        .blinkenbike-koncept-images img {
+            border-radius: 50%;
+            max-width: 350px;
+            min-height: 350px;
             object-fit: cover;
+            text-align: center;
+        }
+
+        .blinkenbike-koncept-images {
+            padding-left: 30%;
+        }
+
+        .koncept_boks_3 {
+            padding: 0px 10%;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.2;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #prikker {
+            animation: pulse 1s infinite;
+        }
+
+        #prikker:hover {
+            animation: none;
         }
 
     </style>
@@ -36,24 +104,43 @@
 <body>
     <section id="header"></section>
 
-    <section id="koncept_container">
-
-        <div class="plakat">
-            <img src="img/nc.png">
-        </div>
-
-        <div class="koncept_tekst">
-            <h3>Udvikling af barnet</h3>
-            <P>Blinkenbike er verdens første virksomhed med et build-a-bike koncept. Et dansk design som tager en løbecykel til et højre niveau. Det er ikke bare en cykel, men også et legetøj og et byggesæt. Den grundlæggende cykel kan indbygges i en række forskellige designs, afhængigt af tilkøbt tilbehør.</P>
-            <p>Blinkenbike er et koncept for børn, hvor det ikke kun går ud på at lære at holde balancen på en cykel, men også kan udvikle deres motoriske færdigheder, samt opmuntre deres naturlige nysgerrighed og kreativitet ved at samle flere sorter af forskellige designs baseret på blot en grundlæggende cykel.
-        </div>
-    </section>
-
     <section id="explainer">
+
         <video width="100%" height="100%" controls="false" autoplay="true" preload="auto" loop>
             <source src="video/blinkenbike_explainer.mp4" type="video/mp4">
         </video>
+
     </section>
+
+    <section id="infografik">
+        <div class="koncept_boks_3" data-aos="fade-right" data-aos-duration="2000">
+            <h3>Mere end bare en løbecykel <img class="blinkenbolts_logo" src="SVG/blinkenbolts-logo.svg"></h3>
+            <p>En løbecykel har den fordel, at det lærer dine børn de færdigheder, de skal bruge til at cykle på en pedal cykel. Når de skal lære bruge en pedal cykel, ved de allerede, hvordan de skal holde balancen og styre, hvilket gør overgangen hurtig og nem. Derfor vil en balancecykel få dit barn til at bevæge sig mere sikkert i trafik, fordi de ikke behøver at koncentrere sig om balance.
+            </p>
+            <p>En løbecykel er en cykel uden pedaler, kæde eller gear. Barnet sidder på cyklen med fødderne fladt på jorden, så de føler sig trygge. Ved at bruge fødderne til at fremdrive sig, lærer de hurtigt færdighederne til at glide, starte og stoppe naturligt.
+            </p>
+            <p>Blinkenbike er den ideelle første cykel til et barn i 1-3 års alderen. Udover at lære at balancere, hjælper cyklen børn med at kunne koordinere, blive opmærksomme og udvikle deres motoriske færdigheder. Alt hvad der er vigtigt for at kære på en pedalcykel – mens du har det sjovt!
+            </p>
+        </div>
+        <div id="map" data-aos="fade-left" data-aos-duration="2000"></div>
+    </section>
+
+    <section id="koncept_body">
+        <div id="koncept_container">
+
+            <div class="blinkenbike-koncept-images" data-aos="fade-up" data-aos-duration="2000">
+                <img src="img/blinkenbike-kidmounting.jpg">
+            </div>
+
+            <div class="koncept_tekst" data-aos="fade-up" data-aos-duration="2000">
+                <h3>Udvikling af barnet <img class="blinkenbolts_logo" src="SVG/blinkenbolts-logo.svg"></h3>
+                <P>Blinkenbike er verdens første virksomhed med et build-a-bike koncept. Et dansk design som tager en løbecykel til et højre niveau. Det er ikke bare en cykel, men også et legetøj og et byggesæt. Den grundlæggende cykel kan indbygges i en række forskellige designs, afhængigt af tilkøbt tilbehør.</P>
+                <p>Blinkenbike er et koncept for børn, hvor det ikke kun går ud på at lære at holde balancen på en cykel, men også kan udvikle deres motoriske færdigheder, samt opmuntre deres naturlige nysgerrighed og kreativitet ved at samle flere sorter af forskellige designs baseret på blot en grundlæggende cykel.
+            </div>
+        </div>
+    </section>
+
+
 
     <section id="footer"></section>
 
@@ -78,8 +165,6 @@
 
         document.addEventListener("DOMContentLoaded", hentFooter);
 
-        document.addEventListener("DOMContentLoaded", hentJson);
-
         // ON SCROLL ANIMATION
         function onScrollAnimation() {
             AOS.init();
@@ -87,6 +172,8 @@
 
     </script>
     <script src="java.js"></script>
+    <script src="infografik.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 </body>
 
 </html>

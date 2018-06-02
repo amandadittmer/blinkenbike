@@ -12,3 +12,12 @@ h3 {
 body {
     margin: 0;
 }
+
+.blinkenbolts_logo {
+    width: 28px;
+}
+
+h3 {
+    font-size: 2em;
+    margin-bottom: 0;
+}
