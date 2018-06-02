@@ -2,7 +2,6 @@
 
 $to=$_REQUEST['email'];
 
-//$navn=$_REQUEST['navn'];
 $email=$_REQUEST['email'];
 $emne="Velkommen til Blinkenbikes nyhedsbrev!";
 $besked="Du er nu tilmeldt Blinkenbikes nyhedsbrev. Vi glæder os til at holde dig opdateret om vores produkter.";
@@ -16,6 +15,4 @@ $header.="from:jennifer@jenniferolid.dk";
 
 mail($to, $subject, $message, $header);
 header("Location: nyhedsbrev-tak.html");
-
-
 ?>

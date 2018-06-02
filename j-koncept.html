@@ -14,6 +14,8 @@
             background-color: #f4f4f4;
         }
 
+        /*        -------------- DESKTOP --------------*/
+
         #koncept_body {
             background-color: rgba(199, 204, 148, 0.5);
             height: 100%;
@@ -29,13 +31,46 @@
             width: 80%;
         }
 
-        #map {
-            padding-top: 20%;
+        .map-mobile {
+            display: none;
         }
 
-        #map svg {
-            width: 122%;
+
+        /*------------- MOBILE -----------------*/
+
+        @media only screen and (max-width: 1025px) {
+            #infografik {
+                padding-top: 84px;
+                padding-bottom: 10px;
+                margin: auto;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: auto;
+                width: 80%;
+            }
+
+            #map {
+                display: none;
+            }
+            .map-mobile {
+                display: block;
+                width: 90%;
+                margin: auto;
+                padding-bottom: 84px;
+            }
+
+            #koncept_container {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: auto;
+                padding-top: 84px;
+                padding-bottom: 84px;
+                width: 80%;
+                margin: auto;
+
+            }
         }
+
 
         /*
         .koncept_boks_3 {
@@ -51,15 +86,19 @@
 
         #explainer video {}
 
-        #koncept_container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto;
-            grid-gap: 50px;
-            padding-top: 84px;
-            padding-bottom: 84px;
-            margin: auto;
-            width: 80%;
+
+        @media only screen and (min-width: 1024px) {
+            #koncept_container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+                grid-gap: 50px;
+                padding-top: 84px;
+                padding-bottom: 84px;
+                margin: auto;
+                width: 80%;
+
+            }
         }
 
         .blinkenbike-koncept-images img {
@@ -124,6 +163,10 @@
         </div>
         <div id="map" data-aos="fade-left" data-aos-duration="2000"></div>
     </section>
+
+    <div class="map-mobile">
+        <img src="infografik/infografikcykel.svg">
+    </div>
 
     <section id="koncept_body">
         <div id="koncept_container">

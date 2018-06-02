@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Produkt</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+
+        #galleri img {
+            max-width: 400px;
+            height: 300px;
+            object-fit: cover;
+            border-top: 100px white solid;
+/* border-bottom: 100px white solid;*/
+        }
+
+        #galleri {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            padding-top: 200px;
+            width: 90%;
+            margin: auto;
+        }
+    </style>
+</head>
+<header>
+    <section id="header"></section>
+</header>
+
+<body>
+    <section id="galleri">
+    </section>
+    <template>
+        <article>
+               <div id="bordering" class="galleri-container">
+                <img class="image" src="" alt="" data_image>
+                <div class="overlay">
+                <div id="titleoverlay" data_titleoverlay></div>
+                    <div id="data_textoverlay" data_textoverlay></div>
+                    </div>
+                    </div>
+        </article>
+    </template>
+
+
+    <footer>
+        <section id="footer"></section>
+    </footer>
+
+</body>
+<script>
+    // HENTER HEADER
+    async function hentHeader() {
+        let headerData = await fetch("j-header.html");
+        let header = await headerData.text();
+        document.querySelector("#header").innerHTML = header;
+    }
+    document.addEventListener("DOMContentLoaded", hentHeader);
+
+
+    // HENTER FOOTER
+    async function hentFooter() {
+        let footerData = await fetch("j-footer.html");
+        let footer = await footerData.text();
+        document.querySelector("#footer").innerHTML = footer;
+    }
+
+    document.addEventListener("DOMContentLoaded", hentFooter);
+
+    document.addEventListener("DOMContentLoaded", hentJson);
+
+    //WP API REST
+    let jSonUrl = "http://amandadm.dk/kea/2-sem/blinkenbike/wordpress/wp-json/wp/v2/galleri";
+    let nyheder = [];
+    let display = document.querySelector("#galleri");
+    let template = document.querySelector("template");
+
+    async function hentJson() {
+        let dataJson = await fetch(jSonUrl);
+        produkter = await dataJson.json();
+        //            console.log(nyheder);
+        visProdukter();
+    }
+
+    function visProdukter() {
+        produkter.forEach(produkt => {
+            console.log(produkt);
+
+            let klon = template.cloneNode(true).content;
+            console.log(klon);
+
+            klon.querySelector("[data_image]").src = produkt.acf.billede.url;
+
+            klon.querySelector("[data_image]").alt = produkt.acf.billede.alt;
+
+            klon.querySelector("[data_titleoverlay]").textContent = produkt.acf.titel;
+
+            klon.querySelector("[data_textoverlay]").innerHTML = produkt.acf.tekst;
+
+
+            display.appendChild(klon);
+
+        });
+    }
+</script>
+
+<script src="java.js"></script>
+
+</html>
