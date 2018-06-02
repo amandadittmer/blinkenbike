@@ -6,58 +6,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="j-main.css">
     <style>
         /*-------------  DESKTOP  -----------------*/
 
-        .kontaktoplysninger img {
-            height: 200px;
-            width: 200px;
-            object-fit: cover;
+        body {
+            background-color: #f4f4f4;
+            height: 100%;
         }
 
         #kontakt {
-            height: 100%;
-            margin: auto;
+            padding-top: 50px;
+        }
+
+        #kontakt h3 {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        #kontakt p {
+            font-size: 12px;
+            margin: 0;
+        }
+
+        #kontakt h1 {
+            /*            transform: translate(50%, -400%);*/
+            /*            top: 300px;*/
+            font-size: 2em;
+            text-align: center;
+            /* left: 42%;*/
+        }
+
+        .parallax {
+            background-image: url(img/blinkenbike-cardboard.jpg);
+            height: 50vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .layer {
+            background-color: rgba(199, 204, 148, 0.3);
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            height: 50vh;
+        }
+
+        .blinkenbolts_logo {
+            width: 28px;
+        }
+
+        .telefon,
+        .email,
+        .location {
             display: grid;
-            grid-template-columns: minmax(600px, 1fr) 200px;
+            grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto;
-            width: 80%;
+        }
+
+        .telefon img,
+        .email img,
+        .location img {
+            width: 75px;
+            float: right;
+            padding-right: 10px;
+        }
+
+        .kontaktoplysninger {
             margin: auto;
-        }
-
-        .nikolaj_line {
-            padding-top: 100px;
-        }
-
-        .kontaktformular iframe {
-            padding-top: 100px;
-            width: 500px;
-            height: 500px;
-            border: none;
-
+            width: 60%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            padding-top: 10px;
         }
 
         .kontaktformular {
             width: 100%;
-            text-align: center;
         }
 
-        /*------------- MOBILE  -----------------*/
-
-        @media only screen and (max-width: 500px) {
-            .kontaktformular iframe {
-                width: 100%;
-            }
+        .kontaktformular iframe {
+            padding-top: 50px;
+            width: 100%;
+            height: 50vh;
+            border: none;
         }
+
+        /*------------- NÅR BURGERMENU ER VISIBLE  -----------------*/
 
         @media screen and (max-width: 1024px) {
-            .kontaktformular iframe {
-                padding-top: 45px;
+            #kontakt {
+                padding-top: 0px;
+            }
+
+            .layer {
+                height: 50vh;
             }
         }
+
+        /*------------- MOBILE PORTRAIT -----------------*/
+
+        @media only screen and (max-width: 767px) and (orientation: portrait) {
+            .kontaktoplysninger {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: auto;
+                padding-top: 10px;
+                width: 100%;
+            }
+
+            .telefon,
+            .email,
+            .location {
+                display: grid;
+                grid-template-columns: 110px 1fr;
+                grid-template-rows: auto;
+            }
+
+            .telefon-logo,
+            .email-logo,
+            .location-logo {
+                margin: auto;
+            }
+        }
+
+        /*------------- MOBILE LANDSCAPE -----------------*/
+
+        @media only screen and (min-width: 481px) and (max-height: 375px) and (orientation: landscape) {
+            .kontaktoplysninger {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: auto;
+                padding-top: 10px;
+            }
+
+            .telefon,
+            .email,
+            .location {
+                grid-template-columns: 110px 1fr;
+                grid-template-rows: auto;
+            }
+
+            .telefon-logo,
+            .email-logo,
+            .location-logo {
+                margin: auto;
+            }
+
+        }
+
     </style>
 </head>
 
@@ -65,10 +167,48 @@
     <section id="header"></section>
 
     <section id="kontakt">
+        <div class="parallax">
+            <div class="layer"></div>
+        </div>
+        <h1>Kontakt os <img class="blinkenbolts_logo" src="svg/blinkenbolts-logo.svg"></h1>
+        <div class="kontaktoplysninger">
+            <div class="telefon">
+                <div class="telefon-logo">
+                    <img src="SVG/phone-logo.svg">
+                </div>
+                <div class="telefon-nr">
+                    <h3>Telefon</h3>
+                    <p>+45 42 42 81 62</p>
+                </div>
+            </div>
+
+            <div class="email">
+                <div class="email-logo">
+                    <img src="SVG/email-logo.svg">
+                </div>
+                <div class="email-add">
+                    <h3>Email</h3>
+                    <p>info@blinkenbergcph.com</p>
+                </div>
+            </div>
+
+            <div class="location">
+                <div class="location-logo">
+                    <img src="SVG/location-logo.svg">
+                </div>
+                <div class="location-add">
+                    <h3>Adresse</h3>
+                    <p>Baldersbuen 27 2640 Hedehusene Danmark
+                    </p>
+                </div>
+            </div>
+
+        </div>
 
         <div class="kontaktformular">
             <iframe class="kontaktform" src="kontaktformular.html"></iframe>
         </div>
+        <!--
 
         <div class="kontaktoplysninger">
             <div class="nikolaj_line">
@@ -80,6 +220,7 @@
             </div>
 
         </div>
+        -->
     </section>
 
     <section id="footer"></section>
@@ -94,7 +235,6 @@
         }
 
         document.addEventListener("DOMContentLoaded", hentHeader);
-        document.addEventListener("DOMContentLoaded", onScrollAnimation);
 
         // HENTER FOOTER
         async function hentFooter() {
@@ -105,12 +245,11 @@
 
         document.addEventListener("DOMContentLoaded", hentFooter);
 
-        document.addEventListener("DOMContentLoaded", hentJson);
-
         // ON SCROLL ANIMATION
         function onScrollAnimation() {
             AOS.init();
         }
+
     </script>
     <script src="java.js"></script>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>

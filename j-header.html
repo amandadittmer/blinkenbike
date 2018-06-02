@@ -22,10 +22,8 @@
             color: #DBC49A;
         }
 
-
         body {
             margin: 0 auto;
-            background-color: #F4F4F4;
         }
 
         /*---------------- GENERELLE STYLES ----------------*/
@@ -33,6 +31,7 @@
         .topnav {
             overflow: hidden;
             background-color: white;
+            height: 50px;
         }
 
         .topnav a:hover {
@@ -49,7 +48,7 @@
 
         @media screen and (max-width: 1024px) {
 
-            .dekstop_nav {
+            #dekstop_nav {
                 display: none;
             }
 
@@ -102,7 +101,7 @@
                 display: none;
             }
 
-            .dekstop_nav {
+            #dekstop_nav {
                 text-align: center;
                 padding: 5px;
                 width: 100%;
@@ -111,19 +110,19 @@
                 background-color: white;
             }
 
-            .dekstop_nav:hover {
+            #dekstop_nav:hover {
                 opacity: 1;
                 cursor: pointer;
             }
 
-            .dekstop_nav a {
+            #dekstop_nav a {
                 padding: 20px 30px;
                 text-align: center;
                 vertical-align: middle;
                 display: inline-block;
             }
 
-            .dekstop_nav img {
+            #dekstop_nav img {
                 width: 200px;
             }
         }
@@ -138,7 +137,7 @@
             <a class="nav_a-1" href="produkt.html">Produkt</a>
             <a class="nav_a" href="koncept.html">Koncept</a>
             <a class="nav_a" href="j-nyheder.html">Nyheder</a>
-            <a class="nav_a" href="kontakt.html">Kontakt</a>
+            <a class="nav_a" href="j-kontakt.html">Kontakt</a>
 
 
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -146,12 +145,12 @@
             </a>
         </div>
 
-        <div class="dekstop_nav">
+        <div id="dekstop_nav">
             <a class="nav_a-1" href="produkt.html">Produkt</a>
             <a class="nav_a" href="koncept.html">Koncept</a>
             <a class="nav_img" href="j-index.html" class="active"><img src="SVG/logosvg.svg" alt="logo"></a>
             <a class="nav_a" href="j-nyheder.html">Nyheder</a>
-            <a class="nav_a" href="kontakt.html">Kontakt</a>
+            <a class="nav_a" href="j-kontakt.html">Kontakt</a>
         </div>
 
 

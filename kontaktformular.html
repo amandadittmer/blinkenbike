@@ -10,7 +10,15 @@
     <title></title>
     <style>
         body {
-            text-align: center;
+            width: 60%;
+            margin: auto;
+        }
+
+        .mailoplysninger {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            grid-gap: 15px;
         }
 
         .submit-btn {
@@ -22,7 +30,8 @@
             text-decoration: none;
             display: inline-block;
             font-size: 12px;
-            margin: 0px 88px;
+            margin: auto;
+            display: block;
             transition-duration: 0.4s;
             cursor: pointer;
         }
@@ -32,12 +41,28 @@
         }
 
         .email-tekst,
-        .name-tekst,
+        .name-tekst {
+            text-decoration: none;
+            border-radius: 5px;
+            border: 1px solid;
+            /*            padding: 16px 160px 16px 16px;*/
+            padding-left: 10px;
+            height: 50px;
+            width: 100%;
+            margin: 2px 2px 0px 2px;
+            text-align: left;
+            font-size: 12px;
+            color: black;
+        }
+
         .emne-tekst {
             text-decoration: none;
             border-radius: 5px;
             border: 1px solid;
-            padding: 16px 160px 16px 16px;
+            /*            padding: 16px 83% 16px 16px;*/
+            padding-left: 10px;
+            height: 50px;
+            width: 100%;
             margin: 2px 2px 0px 2px;
             text-align: left;
             font-size: 12px;
@@ -48,21 +73,25 @@
             text-decoration: none;
             border-radius: 5px;
             border: 1px solid;
-            padding: 16px 150px 16px 16px;
+            /*            padding: 16px 82% 16px 16px;*/
+            padding-left: 10px;
+            padding-top: 10px;
+            height: 100px;
+            width: 100%;
             margin: 2px 2px 0px 2px;
             text-align: left;
             font-size: 12px;
             color: black;
         }
-
     </style>
 </head>
 
 <body>
     <form action="kontaktformular-mail.php">
-        <h1>Kontakt os</h1>
-        <input class="name-tekst" type="name" name="navn" required placeholder="Navn"><br>
-        <input class="email-tekst" type="email" name="email" required placeholder="Email"><br>
+        <div class="mailoplysninger">
+            <input class="name-tekst" type="name" name="navn" required placeholder="Navn">
+            <input class="email-tekst" type="email" name="email" required placeholder="Email">
+        </div>
         <input class="emne-tekst" type="text" name="emne" required placeholder="Emne"><br>
         <textarea class="text-tekst" type="text" name="besked" required placeholder="Besked"></textarea><br><br>
 

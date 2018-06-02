@@ -10,20 +10,24 @@
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="j-main.css">
     <style>
-        .koncept_billede {
-            /* The image used */
-            background-image: url("img/blinkenbike_barn.jpg");
-            height: 50vh;
-            width: 20vw;
-            /* Create the parallax scrolling effect */
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
+        body {
+            background-color: rgba(199, 204, 148, 0.5);
         }
 
-        .koncept_billede img {
-            width: 50%;
+        #koncept_container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            grid-gap: 13px;
+            padding-top: 84px;
+            width: 80%;
+            margin: auto;
+        }
+
+        .plakat img {
+            width: 100%;
+            max-height: 70vh;
+            object-fit: cover;
         }
 
     </style>
@@ -33,7 +37,9 @@
     <section id="header"></section>
 
     <section id="koncept_container">
-        <div class="koncept_billede">
+
+        <div class="plakat">
+            <img src="img/nc.png">
         </div>
 
         <div class="koncept_tekst">
