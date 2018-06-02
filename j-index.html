@@ -100,6 +100,44 @@
             width: 50%;
         }
 
+        .special_features img {
+            width: 30%;
+            filter: brightness(150%);
+        }
+
+        .bolts img {
+            width: 40%;
+        }
+
+        #special_features {
+            background-color: #f4f4f4;
+        }
+
+        .special_features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            text-align: center;
+            width: 90%;
+            margin: auto;
+            padding-bottom: 84px;
+            padding-top: 50px;
+            grid-gap: 40px;
+        }
+
+        .accessories img {
+            width: 25%;
+        }
+
+        .special_features h4 {
+            padding: 0px 60px;
+        }
+
+        #special_features h3 {
+            text-align: center;
+            padding-top: 50px;
+        }
+
     </style>
 </head>
 
@@ -119,8 +157,29 @@
         </div>
 
         <div data-aos="fade-left" data-aos-duration="2000">
-            <h1>En løbecykel med betydning</h1>
+            <h3>En løbecykel med betydning</h3>
             <p>Blinkenbikes løbecykel er skabt ud fra konceptet "Build-a-Bike".<br>Få aktiveret dit barns motorik og lad dit barn få et specielt forhold til sit legetøj med Blinkenbikes funktionelle design.</p>
+        </div>
+    </section>
+
+    <section id="special_features">
+        <h3>Unikke specifikationer <img class="blinkenbolts_logo" src="svg/blinkenbolts-logo.svg"></h3>
+        <div class="special_features" data-aos="fade-up" data-aos-duration="2000">
+            <div class="tools">
+                <img src="SVG/blinkenbike-tools.svg">
+                <h4>Med Blinkenbike hører et set værktøj med, så dit barn set kan bygge sin cykel.</h4>
+            </div>
+
+            <div class="bolts">
+                <img src="SVG/blinkenbike-bolts.svg">
+                <h4>Med Blinkenbolts kan dit barn justere sadlen, vedhæfte udskårne pap designs.</h4>
+
+            </div>
+            <div class="accessories">
+                <img src="SVG/blinkenbike-basket.svg">
+                <h4>Der er vedhæftet udskårne tilbehør i pap, som du finder trykt i boksen eller som du kan downloade eller købe.</h4>
+
+            </div>
         </div>
     </section>
 

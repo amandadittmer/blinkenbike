@@ -24,7 +24,7 @@
             margin: auto;
             display: block;
             display: grid;
-            grid-template-columns: 100px 400px 500px;
+            grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto;
             grid-row-gap: 30px;
         }
@@ -40,8 +40,6 @@
             margin: 0;
             padding: 50px 0px 0px 0px;
         }
-
- .nyhedsbrevdato { transform: rotate(-90deg); }
 
         /*------------- MOBILE PORTRAIT -----------------*/
 
@@ -102,15 +100,13 @@
     <section id="nyheder"></section>
 
     <template>
-        <div class="nyhedsbrevdato">
-            <p class="dato" data_dato></p>
-        </div>
         <div class="nyhedsbillede">
            <img src="" alt="" data_image>
         </div>
 
            <div class="nyhedstekst">
             <h2 data_titel></h2>
+            <p class="dato" data_dato></p>
             <p data_langtekst></p>
         </div>
     </template>
