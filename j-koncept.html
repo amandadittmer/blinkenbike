@@ -21,7 +21,7 @@
             height: 100%;
         }
 
-        #infografik {
+        .infografik_container {
             padding-top: 84px;
             padding-bottom: 84px;
             margin: auto;
@@ -35,60 +35,23 @@
             display: none;
         }
 
+        #map {
+            width: 120%;
+            padding-top: 90px;
 
-        /*------------- MOBILE -----------------*/
-
-        @media only screen and (max-width: 1025px) {
-            #infografik {
-                padding-top: 84px;
-                padding-bottom: 10px;
-                margin: auto;
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-                grid-template-rows: auto;
-                width: 80%;
-            }
-
-            #map {
-                display: none;
-            }
-            .map-mobile {
-                display: block;
-                width: 90%;
-                margin: auto;
-                padding-bottom: 84px;
-            }
-
-            #koncept_container {
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-                grid-template-rows: auto;
-                padding-top: 84px;
-                padding-bottom: 84px;
-                width: 80%;
-                margin: auto;
-
-            }
         }
 
-
-        /*
-        .koncept_boks_3 {
-            width: 50%;
-            margin: auto;
+        .blinkenbike-koncept-images img,
+        .historie_img img {
+            border-radius: 50%;
+            max-width: 350px;
+            min-height: 350px;
+            object-fit: cover;
             text-align: center;
         }
-*/
-
-        #explainer {
-            padding-top: 60px;
-        }
-
-        #explainer video {}
-
 
         @media only screen and (min-width: 1024px) {
-            #koncept_container {
+            .koncept_container {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: auto;
@@ -97,45 +60,107 @@
                 padding-bottom: 84px;
                 margin: auto;
                 width: 80%;
-
             }
-        }
+            #explainer {
+                padding-top: 88px;
+                height: 619px;
+            }
 
-        .blinkenbike-koncept-images img {
-            border-radius: 50%;
-            max-width: 350px;
-            min-height: 350px;
-            object-fit: cover;
+            .blinkenbike-koncept-images {
+                padding-left: 30%;
+            }
+
+            .koncept_boks_3 {
+                padding: 0px 10%;
+            }
+            .historie_container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+                grid-gap: 20px;
+                padding-top: 50px;
+                padding-bottom: 84px;
+                margin: auto;
+                width: 70%;
+            }
+            .historie_img {
+                text-align: center;
+            }
+
+
+
+
+            /*------------- MOBILE -----------------*/
+            @media only screen and (max-width: 1025px) {
+                .infografik_container {
+                    padding-top: 84px;
+                    padding-bottom: 10px;
+                    margin: auto;
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: auto;
+                    width: 80%;
+                }
+
+                #map {
+                    display: none;
+                }
+                .map-mobile {
+                    display: block;
+                    width: 90%;
+                    margin: auto;
+                    padding-bottom: 84px;
+                }
+
+                .koncept_container {
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: auto;
+                    padding-top: 84px;
+                    padding-bottom: 84px;
+                    width: 80%;
+                    margin: auto;
+                }
+
+                #explainer {
+                    padding-top: 0px;
+                }
+
+                .blinkenbike-koncept-images {
+                    margin: auto;
+                    display: block;
+                }
+            }
+
+
+            /*
+        .koncept_boks_3 {
+            width: 50%;
+            margin: auto;
             text-align: center;
         }
-
-        .blinkenbike-koncept-images {
-            padding-left: 30%;
-        }
-
-        .koncept_boks_3 {
-            padding: 0px 10%;
-        }
-
-        @keyframes pulse {
-            0% {
-                opacity: 1;
+*/
+            /*------------- INFOGRAFIK -----------------*/
+            @keyframes pulse {
+                0% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0.2;
+                }
+                100% {
+                    opacity: 1;
+                }
             }
-            50% {
-                opacity: 0.2;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
 
-        #prikker {
-            animation: pulse 1s infinite;
-        }
 
-        #prikker:hover {
-            animation: none;
-        }
+            #prikker {
+                animation: pulse 1s infinite;
+            }
+
+            #prikker:hover {
+                animation: none;
+            }
 
     </style>
 </head>
@@ -146,31 +171,30 @@
     <section id="explainer">
 
         <video width="100%" height="100%" controls="false" autoplay="true" preload="auto" loop>
-            <source src="video/blinkenbike_explainer.mp4" type="video/mp4">
+            <source src="video/blinkenbike_explainer_smaller.mp4" type="video/mp4">
         </video>
 
     </section>
 
-    <section id="infografik">
-        <div class="koncept_boks_3" data-aos="fade-right" data-aos-duration="2000">
-            <h3>Mere end bare en løbecykel <img class="blinkenbolts_logo" src="SVG/blinkenbolts-logo.svg"></h3>
-            <p>En løbecykel har den fordel, at det lærer dine børn de færdigheder, de skal bruge til at cykle på en pedal cykel. Når de skal lære bruge en pedal cykel, ved de allerede, hvordan de skal holde balancen og styre, hvilket gør overgangen hurtig og nem. Derfor vil en balancecykel få dit barn til at bevæge sig mere sikkert i trafik, fordi de ikke behøver at koncentrere sig om balance.
-            </p>
-            <p>En løbecykel er en cykel uden pedaler, kæde eller gear. Barnet sidder på cyklen med fødderne fladt på jorden, så de føler sig trygge. Ved at bruge fødderne til at fremdrive sig, lærer de hurtigt færdighederne til at glide, starte og stoppe naturligt.
-            </p>
-            <p>Blinkenbike er den ideelle første cykel til et barn i 1-3 års alderen. Udover at lære at balancere, hjælper cyklen børn med at kunne koordinere, blive opmærksomme og udvikle deres motoriske færdigheder. Alt hvad der er vigtigt for at køre på en pedalcykel – mens du har det sjovt!
-            </p>
+    <section id="historie_body">
+        <div class="historie_container">
+            <div data-aos="fade-right" data-aos-duration="2000">
+                <h3>Historien om Blinkenbike <img class="blinkenbolts_logo" src="SVG/blinkenbolts-logo.svg"></h3>
+
+                <p>Ideen bag Blinkenberg startede tilbage til den gang Nikolajs søn var omkring 1 år gammelt og rendte rundt efter ham under renovering af deres sommerhus. Herved startede det med at han byggede legetøj ud af træ, som sønnen kunne lege med samtidig med at Nikolaj kunne få ro til at bygge videre på sommerhuset.</p>
+
+                <p>Ideen bag Blinkenbike kom så ved at stifteren Nikolaj Blinkenberg Willadsen, går meget op i at ting er funktionelt også selv om det er design.<br>Herved blev Blinkenbike hurtigt fra en ide til et produkt, som er et design, funktionelt og brugbart.
+                </p>
+            </div>
+
+            <div class="historie_img" data-aos="fade-left" data-aos-duration="2000">
+                <img src="img/nc.png" alt="Nikolaj Willadsen Blinkenberg sammen med Blinkenbike værkstedet">
+            </div>
         </div>
-        <div id="map" data-aos="fade-left" data-aos-duration="2000"></div>
     </section>
 
-    <div class="map-mobile">
-        <img src="infografik/infografikcykel.svg">
-    </div>
-
     <section id="koncept_body">
-        <div id="koncept_container">
-
+        <div class="koncept_container">
             <div class="blinkenbike-koncept-images" data-aos="fade-up" data-aos-duration="2000">
                 <img src="img/blinkenbike-kidmounting.jpg">
             </div>
@@ -183,7 +207,24 @@
         </div>
     </section>
 
+    <section id="infografik_body">
+        <div class="infografik_container">
+            <div class="koncept_boks_3" data-aos="fade-right" data-aos-duration="2000">
+                <h3>Mere end bare en løbecykel <img class="blinkenbolts_logo" src="SVG/blinkenbolts-logo.svg"></h3>
+                <p>En løbecykel har den fordel, at det lærer dine børn de færdigheder, de skal bruge til at cykle på en pedal cykel. Når de skal lære bruge en pedal cykel, ved de allerede, hvordan de skal holde balancen og styre, hvilket gør overgangen hurtig og nem. Derfor vil en balancecykel få dit barn til at bevæge sig mere sikkert i trafik, fordi de ikke behøver at koncentrere sig om balance.
+                </p>
+                <p>En løbecykel er en cykel uden pedaler, kæde eller gear. Barnet sidder på cyklen med fødderne fladt på jorden, så de føler sig trygge. Ved at bruge fødderne til at fremdrive sig, lærer de hurtigt færdighederne til at glide, starte og stoppe naturligt.
+                </p>
+                <p>Blinkenbike er den ideelle første cykel til et barn i 1-3 års alderen. Udover at lære at balancere, hjælper cyklen børn med at kunne koordinere, blive opmærksomme og udvikle deres motoriske færdigheder. Alt hvad der er vigtigt for at køre på en pedalcykel – mens du har det sjovt!
+                </p>
+            </div>
+            <div id="map" data-aos="fade-left" data-aos-duration="2000"></div>
+        </div>
+    </section>
 
+    <div class="map-mobile">
+        <img src="infografik/infografikcykel.svg">
+    </div>
 
     <section id="footer"></section>
 

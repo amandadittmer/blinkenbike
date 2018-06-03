@@ -7,46 +7,111 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="j-main.css">
     <title>Produkt</title>
     <style>
         body {
             background-color: whitesmoke;
         }
 
-        #galleri img {
-            max-width: 400px;
-            height: 300px;
+        .image {
+            display: block;
+            width: 100%;
+            max-height: 300px;
             object-fit: cover;
-            border-top: 100px white solid;
-/* border-bottom: 100px white solid;*/
+            /* border-bottom: 100px white solid;*/
         }
+
+
+        /*
+ .galleri-container { position: relative; width: 75%; margin: auto; }
+*/
 
         #galleri {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: auto;
-            padding-top: 200px;
+            grid-row-gap: 50px;
+            grid-column-gap: 20px;
+            padding-top: 40px;
             width: 90%;
             margin: auto;
+            padding-bottom: 84px;
         }
+
+        #galleri h3 {
+            text-align: center;
+            font-size: 1.4em;
+
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            background-color: white;
+            padding-top: 10px;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            max-height: 240px;
+            object-fit: scale-down;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: rgb(199, 204, 148);
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+
+        .data_textoverlay {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+
+        #produkter_overskrift {
+            padding-top: 100px;
+            text-align: center;
+        }
+
     </style>
 </head>
-<header>
-    <section id="header"></section>
-</header>
+<section id="header"></section>
 
 <body>
+    <section id="produkter_overskrift">
+        <h3>Produkter <img class="blinkenbolts_logo" src="SVG/blinkenbolts-logo.svg"></h3>
+    </section>
+
     <section id="galleri">
     </section>
     <template>
         <article>
-               <div id="bordering" class="galleri-container">
-                <img class="image" src="" alt="" data_image>
-                <div class="overlay">
-                <div id="titleoverlay" data_titleoverlay></div>
-                    <div id="data_textoverlay" data_textoverlay></div>
+               <div class="container">
+                <h3 class="title_wp" data_title></h3>
+                        <img class="image" src="" alt="" data_image>
+                    <div class="overlay">
+                        <div class="data_textoverlay" data_textoverlay></div>
                     </div>
-                    </div>
+            </div>
         </article>
     </template>
 
@@ -101,7 +166,7 @@
 
             klon.querySelector("[data_image]").alt = produkt.acf.billede.alt;
 
-            klon.querySelector("[data_titleoverlay]").textContent = produkt.acf.titel;
+            klon.querySelector("[data_title]").textContent = produkt.acf.titel;
 
             klon.querySelector("[data_textoverlay]").innerHTML = produkt.acf.tekst;
 
@@ -110,6 +175,7 @@
 
         });
     }
+
 </script>
 
 <script src="java.js"></script>
