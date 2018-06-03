@@ -14,71 +14,66 @@
             background-color: #f4f4f4;
         }
 
-        /*        -------------- DESKTOP --------------*/
+        /* ----------- EXPLAINEREN ----------- */
 
-        #explainer video {
-            width: 100%;
-            height: 100%;
+        /* ----------- DESKTOP --------------- */
+
+        @media only screen and (min-width: 1025px) {
+            #explainer video {
+                width: 100%;
+                height: 100%;
+                padding-top: 6%;
+            }
+        }
+
+        /* ----------- MOBILE/TABLET --------------- */
+
+        @media only screen and (max-width: 1024px) {
+            #explainer video {
+                width: 100%;
+                height: 100%;
+                padding-top: 0%;
+            }
+        }
+
+        /* ----------- HISTORIE/KONCEPT ----------- */
+
+        #historie_body,
+        #infografik_body {
+            background-color: #f4f4f4;
         }
 
         #koncept_body {
             background-color: rgba(199, 204, 148, 0.5);
-            height: 100%;
         }
 
-        .infografik_container {
-            padding-top: 84px;
-            padding-bottom: 84px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto;
-            width: 80%;
+        .historie_img,
+        .koncept_img {
+            text-align: center;
+            padding: 50px 0px;
         }
 
-        .map-mobile {
-            display: none;
-        }
-
-        #map {
-            width: 120%;
-            padding-top: 90px;
-
-        }
-
-        .blinkenbike-koncept-images img,
-        .historie_img img {
+        .historie_img img,
+        .koncept_img img {
             border-radius: 50%;
-            max-width: 350px;
-            min-height: 350px;
+            max-width: 300px;
+            min-height: 300px;
             object-fit: cover;
             text-align: center;
         }
 
-        @media only screen and (min-width: 1024px) {
-            .koncept_container {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: auto;
-                grid-gap: 50px;
-                padding-top: 84px;
-                padding-bottom: 84px;
-                margin: auto;
-                width: 80%;
-            }
-            #explainer {
-                padding-top: 88px;
-                height: 619px;
-            }
+        #map {
+            width: 140%;
+            padding-top: 50px;
+        }
 
-            .blinkenbike-koncept-images {
-                padding-left: 30%;
-            }
 
-            .koncept_boks_3 {
-                padding: 0px 10%;
-            }
-            .historie_container {
+        /* ----------- DESKTOP --------------- */
+
+        @media only screen and (min-width: 1025px) {
+            .historie_container,
+            .koncept_container,
+            .infografik_container {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: auto;
@@ -88,83 +83,53 @@
                 margin: auto;
                 width: 70%;
             }
-            .historie_img {
-                text-align: center;
+
+            .map-mobile {
+                display: none !important;
             }
-
-
-
-
-            /*------------- MOBILE -----------------*/
-            @media only screen and (max-width: 1025px) {
-                .infografik_container {
-                    padding-top: 84px;
-                    padding-bottom: 10px;
-                    margin: auto;
-                    display: grid;
-                    grid-template-columns: repeat(1, 1fr);
-                    grid-template-rows: auto;
-                    width: 80%;
-                }
-
-                #map {
-                    display: none;
-                }
-                .map-mobile {
-                    display: block;
-                    width: 90%;
-                    margin: auto;
-                    padding-bottom: 84px;
-                }
-
-                .koncept_container {
-                    display: grid;
-                    grid-template-columns: repeat(1, 1fr);
-                    grid-template-rows: auto;
-                    padding-top: 84px;
-                    padding-bottom: 84px;
-                    width: 80%;
-                    margin: auto;
-                }
-
-                #explainer {
-                    padding-top: 0px;
-                }
-
-                .blinkenbike-koncept-images {
-                    margin: auto;
-                    display: block;
-                }
-            }
-
-
-            /*
-        .koncept_boks_3 {
-            width: 50%;
-            margin: auto;
-            text-align: center;
         }
-*/
-            /*------------- INFOGRAFIK -----------------*/
-            @keyframes pulse {
-                0% {
-                    opacity: 1;
-                }
-                50% {
-                    opacity: 0.2;
-                }
-                100% {
-                    opacity: 1;
-                }
+
+
+        /* ----------- MOBILE/TABLET --------------- */
+
+        @media only screen and (max-width: 1024px) {
+            .historie_container,
+            .koncept_container {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: auto;
+                grid-gap: 20px;
+                padding-top: 50px;
+                padding-bottom: 84px;
+                margin: auto;
+                width: 70%;
             }
 
-            #prikker:hover {
-                animation: none;
+            #map {
+                display: none !important;
             }
 
-            #prikker {
-                animation: pulse 1s infinite;
+            .infografik_container {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: auto;
+                grid-gap: 20px;
+                padding-top: 50px;
+                margin: auto;
+                width: 70%;
             }
+
+            .map-mobile {
+                width: 70%;
+                margin: auto;
+                padding-bottom: 84px;
+            }
+        }
+
+        /* ----------- KONCEPT ----------- */
+
+        /* ----------- DESKTOP --------------- */
+
     </style>
 </head>
 
@@ -198,7 +163,7 @@
 
     <section id="koncept_body">
         <div class="koncept_container">
-            <div class="blinkenbike-koncept-images" data-aos="fade-up" data-aos-duration="2000">
+            <div class="koncept_img" data-aos="fade-up" data-aos-duration="2000">
                 <img src="img/blinkenbike-kidmounting.jpg" alt="Barn leger med Blinkenbike værksted og cykel">
             </div>
 
@@ -256,6 +221,7 @@
         function onScrollAnimation() {
             AOS.init();
         }
+
     </script>
     <script src="java.js"></script>
     <script src="infografik.js"></script>
