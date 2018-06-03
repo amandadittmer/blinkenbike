@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Koncept</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
@@ -15,6 +15,11 @@
         }
 
         /*        -------------- DESKTOP --------------*/
+
+        #explainer video {
+            width: 100%;
+            height: 100%;
+        }
 
         #koncept_body {
             background-color: rgba(199, 204, 148, 0.5);
@@ -153,15 +158,13 @@
                 }
             }
 
-
-            #prikker {
-                animation: pulse 1s infinite;
-            }
-
             #prikker:hover {
                 animation: none;
             }
 
+            #prikker {
+                animation: pulse 1s infinite;
+            }
     </style>
 </head>
 
@@ -170,7 +173,7 @@
 
     <section id="explainer">
 
-        <video width="100%" height="100%" controls="false" autoplay="true" preload="auto" loop>
+        <video controls autoplay preload loop>
             <source src="video/blinkenbike_explainer_smaller.mp4" type="video/mp4">
         </video>
 
@@ -179,7 +182,7 @@
     <section id="historie_body">
         <div class="historie_container">
             <div data-aos="fade-right" data-aos-duration="2000">
-                <h3>Historien om Blinkenbike <img class="blinkenbolts_logo" src="SVG/blinkenbolts-logo.svg"></h3>
+                <h3>Historien om Blinkenbike <img class="blinkenbolts_logo" src="SVG/blinkenbolts-logo.svg" alt="Blinkenbolts Logo"></h3>
 
                 <p>Ideen bag Blinkenberg startede tilbage til den gang Nikolajs søn var omkring 1 år gammelt og rendte rundt efter ham under renovering af deres sommerhus. Herved startede det med at han byggede legetøj ud af træ, som sønnen kunne lege med samtidig med at Nikolaj kunne få ro til at bygge videre på sommerhuset.</p>
 
@@ -196,11 +199,11 @@
     <section id="koncept_body">
         <div class="koncept_container">
             <div class="blinkenbike-koncept-images" data-aos="fade-up" data-aos-duration="2000">
-                <img src="img/blinkenbike-kidmounting.jpg">
+                <img src="img/blinkenbike-kidmounting.jpg" alt="Barn leger med Blinkenbike værksted og cykel">
             </div>
 
             <div class="koncept_tekst" data-aos="fade-up" data-aos-duration="2000">
-                <h3>Udvikling af barnet <img class="blinkenbolts_logo" src="SVG/blinkenbolts-logo.svg"></h3>
+                <h3>Udvikling af barnet <img class="blinkenbolts_logo" src="SVG/blinkenbolts-logo.svg" alt="Blinkenbolts logo"></h3>
                 <P>Blinkenbike er verdens første virksomhed med et build-a-bike koncept. Et dansk design som tager en løbecykel til et højre niveau. Det er ikke bare en cykel, men også et legetøj og et byggesæt. Den grundlæggende cykel kan indbygges i en række forskellige designs, afhængigt af tilkøbt tilbehør.</P>
                 <p>Blinkenbike er et koncept for børn, hvor det ikke kun går ud på at lære at holde balancen på en cykel, men også kan udvikle deres motoriske færdigheder, samt opmuntre deres naturlige nysgerrighed og kreativitet ved at samle flere sorter af forskellige designs baseret på blot en grundlæggende cykel.
             </div>
@@ -210,7 +213,7 @@
     <section id="infografik_body">
         <div class="infografik_container">
             <div class="koncept_boks_3" data-aos="fade-right" data-aos-duration="2000">
-                <h3>Mere end bare en løbecykel <img class="blinkenbolts_logo" src="SVG/blinkenbolts-logo.svg"></h3>
+                <h3>Mere end bare en løbecykel <img class="blinkenbolts_logo" src="SVG/blinkenbolts-logo.svg" alt="Blinkenbolts logo"></h3>
                 <p>En løbecykel har den fordel, at det lærer dine børn de færdigheder, de skal bruge til at cykle på en pedal cykel. Når de skal lære bruge en pedal cykel, ved de allerede, hvordan de skal holde balancen og styre, hvilket gør overgangen hurtig og nem. Derfor vil en balancecykel få dit barn til at bevæge sig mere sikkert i trafik, fordi de ikke behøver at koncentrere sig om balance.
                 </p>
                 <p>En løbecykel er en cykel uden pedaler, kæde eller gear. Barnet sidder på cyklen med fødderne fladt på jorden, så de føler sig trygge. Ved at bruge fødderne til at fremdrive sig, lærer de hurtigt færdighederne til at glide, starte og stoppe naturligt.
@@ -223,7 +226,7 @@
     </section>
 
     <div class="map-mobile">
-        <img src="infografik/infografikcykel.svg">
+        <img src="infografik/infografikcykel.svg" alt="Blinkenbike infografik">
     </div>
 
     <section id="footer"></section>
@@ -253,7 +256,6 @@
         function onScrollAnimation() {
             AOS.init();
         }
-
     </script>
     <script src="java.js"></script>
     <script src="infografik.js"></script>
