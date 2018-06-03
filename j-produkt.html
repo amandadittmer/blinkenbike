@@ -91,14 +91,14 @@
             padding-top: 100px;
             text-align: center;
         }
-
     </style>
 </head>
-<section id="header"></section>
 
 <body>
+
+    <section id="header"></section>
     <section id="produkter_overskrift">
-        <h3>Produkter <img class="blinkenbolts_logo" src="SVG/blinkenbolts-logo.svg"></h3>
+        <h3>Produkter <img class="blinkenbolts_logo" src="SVG/blinkenbolts-logo.svg" alt="Binkenbolts Logo"></h3>
     </section>
 
     <section id="galleri">
@@ -119,65 +119,63 @@
     <footer>
         <section id="footer"></section>
     </footer>
+    <script>
+        // HENTER HEADER
+        async function hentHeader() {
+            let headerData = await fetch("j-header.html");
+            let header = await headerData.text();
+            document.querySelector("#header").innerHTML = header;
+        }
+        document.addEventListener("DOMContentLoaded", hentHeader);
 
+
+        // HENTER FOOTER
+        async function hentFooter() {
+            let footerData = await fetch("j-footer.html");
+            let footer = await footerData.text();
+            document.querySelector("#footer").innerHTML = footer;
+        }
+
+        document.addEventListener("DOMContentLoaded", hentFooter);
+
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        //WP API REST
+        let jSonUrl = "http://amandadm.dk/kea/2-sem/blinkenbike/wordpress/wp-json/wp/v2/galleri";
+        let nyheder = [];
+        let display = document.querySelector("#galleri");
+        let template = document.querySelector("template");
+
+        async function hentJson() {
+            let dataJson = await fetch(jSonUrl);
+            produkter = await dataJson.json();
+            //            console.log(nyheder);
+            visProdukter();
+        }
+
+        function visProdukter() {
+            produkter.forEach(produkt => {
+                console.log(produkt);
+
+                let klon = template.cloneNode(true).content;
+                console.log(klon);
+
+                klon.querySelector("[data_image]").src = produkt.acf.billede.url;
+
+                klon.querySelector("[data_image]").alt = produkt.acf.billede.alt;
+
+                klon.querySelector("[data_title]").textContent = produkt.acf.titel;
+
+                klon.querySelector("[data_textoverlay]").innerHTML = produkt.acf.tekst;
+
+
+                display.appendChild(klon);
+
+            });
+        }
+    </script>
+
+    <script src="java.js"></script>
 </body>
-<script>
-    // HENTER HEADER
-    async function hentHeader() {
-        let headerData = await fetch("j-header.html");
-        let header = await headerData.text();
-        document.querySelector("#header").innerHTML = header;
-    }
-    document.addEventListener("DOMContentLoaded", hentHeader);
-
-
-    // HENTER FOOTER
-    async function hentFooter() {
-        let footerData = await fetch("j-footer.html");
-        let footer = await footerData.text();
-        document.querySelector("#footer").innerHTML = footer;
-    }
-
-    document.addEventListener("DOMContentLoaded", hentFooter);
-
-    document.addEventListener("DOMContentLoaded", hentJson);
-
-    //WP API REST
-    let jSonUrl = "http://amandadm.dk/kea/2-sem/blinkenbike/wordpress/wp-json/wp/v2/galleri";
-    let nyheder = [];
-    let display = document.querySelector("#galleri");
-    let template = document.querySelector("template");
-
-    async function hentJson() {
-        let dataJson = await fetch(jSonUrl);
-        produkter = await dataJson.json();
-        //            console.log(nyheder);
-        visProdukter();
-    }
-
-    function visProdukter() {
-        produkter.forEach(produkt => {
-            console.log(produkt);
-
-            let klon = template.cloneNode(true).content;
-            console.log(klon);
-
-            klon.querySelector("[data_image]").src = produkt.acf.billede.url;
-
-            klon.querySelector("[data_image]").alt = produkt.acf.billede.alt;
-
-            klon.querySelector("[data_title]").textContent = produkt.acf.titel;
-
-            klon.querySelector("[data_textoverlay]").innerHTML = produkt.acf.tekst;
-
-
-            display.appendChild(klon);
-
-        });
-    }
-
-</script>
-
-<script src="java.js"></script>
 
 </html>
